@@ -1,0 +1,30 @@
+{
+  "name": "ridealso-com-replica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run --passWithNoTests",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "preview": "vite preview",
+    "serve:built": "node scripts/serve-built.mjs",
+    "test:fidelity": "playwright test",
+    "reference:finalize": "node scripts/finalize-reference.mjs"
+  },
+  "dependencies": {
+    "lucide-vue-next": "latest",
+    "swiper": "^12.2.0",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@vitejs/plugin-vue": "latest",
+    "cheerio": "^1.2.0",
+    "typescript": "~5.9.3",
+    "vite": "latest",
+    "vitest": "^5.0.0",
+    "vue-tsc": "latest"
+  }
+}

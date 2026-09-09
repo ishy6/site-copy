@@ -1,0 +1,23 @@
+{
+  "name": "21tsi-homepage-clone",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "compare:source": "node scripts/compare-source.mjs",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc -b",
+    "test": "node scripts/audit.mjs"
+  },
+  "dependencies": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "typescript": "~5.9.3",
+    "vite": "latest",
+    "vue-tsc": "latest"
+  }
+}

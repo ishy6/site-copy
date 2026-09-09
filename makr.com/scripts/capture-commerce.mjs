@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+import { writeFile } from 'node:fs/promises';
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await page.goto('https://makr.com/new-fold-weekender-black-canvas', { waitUntil: 'domcontentloaded' });
+await page.locator('[id="product.add.to.cart"]:not(.out-of-stock)').click();
+await page.waitForFunction(() => [...document.querySelectorAll('.cart-count')].some(el => Number(el.textContent) > 0), null, { timeout: 20000 });
+await writeFile('/tmp/makr-fidelity/reference-filled-cart.html', await page.evaluate(() => document.getElementById('minicart-drawer').outerHTML));
+await page.screenshot({ path: '/tmp/makr-fidelity/reference-filled-cart.png' });
+await page.goto('https://makr.com/checkout', { waitUntil: 'domcontentloaded' });
+await writeFile('/tmp/makr-fidelity/reference-checkout.html', await page.content());
+await page.screenshot({ path: '/tmp/makr-fidelity/reference-checkout.png' });
+await browser.close();

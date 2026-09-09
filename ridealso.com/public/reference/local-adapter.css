@@ -1,0 +1,52 @@
+/* Local commerce and form states are styled in the source theme's typefaces. */
+@font-face { font-family: SerialC; src: url('/assets/SerialC-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+.local-cart-item { display: grid; grid-template-columns: 144px minmax(0, 1fr) auto; align-items: start; gap: 24px; padding: 28px 0; border-bottom: 1px solid #b0aaa4; }
+.local-cart-item img { width: 144px; height: 144px; object-fit: cover; border-radius: 8px; }
+.local-cart-item__title { font-size: 26px; line-height: 1.1; }
+.local-cart-item p { margin-top: 12px; font-size: 14px; }
+.local-cart-item strong { font-size: 18px; font-weight: 400; }
+.local-cart-item__actions { display: flex; align-items: center; gap: 20px; margin-top: 24px; }
+.local-cart-item__actions > button { text-decoration: underline; font-size: 14px; }
+.local-cart-quantity { display: flex; height: 36px; border: 1px solid #0b0b0b; border-radius: 4px; }
+.local-cart-quantity button { width: 32px; font-size: 20px; }
+.local-cart-quantity input { width: 36px; text-align: center; background: transparent; appearance: textfield; padding: 0; }
+.local-cart-quantity input::-webkit-inner-spin-button { appearance: none; }
+.local-external-dialog { width: min(480px, calc(100% - 32px)); border: 1px solid #111; border-radius: 16px; padding: 40px 32px 32px; background: #fcf2e8; color: #111; }
+.local-external-dialog::backdrop { background: #0008; }
+.local-external-dialog h2 { font-size: 32px; line-height: 1.1; margin-right: 12px; }
+.local-external-dialog p { font-size: 16px; line-height: 1.5; margin: 20px 0 28px; }
+.local-dialog-close { position: absolute; top: 12px; right: 16px; font-size: 28px; line-height: 1; }
+.local-cookie-consent { position: fixed; z-index: 1000; left: 16px; bottom: 16px; width: min(calc(100% - 32px), 1000px); padding: 20px; display: grid; grid-template-columns: 1fr 287px; gap: 14px; border-radius: 8px; background: #fff; color: #111; box-shadow: 0 0 14px #0008; font: 14px/21px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.local-cookie-consent h2 { grid-column: 1 / -1; font: 600 16px/24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; }
+.local-cookie-message { grid-column: 1; }
+.local-cookie-message p { margin: 0; }
+.local-cookie-message a { display: block; text-decoration: underline; }
+.local-cookie-actions { grid-column: 2; grid-row: 2; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.local-cookie-actions button { display: grid; place-items: center; min-height: 42.5px; padding: 10.5px 17.5px; border: 2px solid #111; border-radius: 8px; background: #111; color: #fff; font: 400 14px/17.5px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.local-cookie-actions button { flex: 1; }
+.local-cookie-actions button:hover { background: #333; }
+.local-newsletter { display: flex; flex-direction: column; width: 100%; padding: 40px 20px 32px; margin: 0; }
+.local-newsletter input { display: block; width: 100%; min-width: 0; height: 56px; border: 1px solid #212121; border-radius: 0; padding: 0 0 0 16px; background: #fff; color: #000; font: 400 20px SerialC, Courier, monospace; }
+.local-newsletter input::placeholder { color: #000; opacity: 1; }
+.local-newsletter > button { width: 100%; height: 56px; border: 0; border-radius: 56px; margin-top: 10px; background: #1a1a1a; color: #fff; font: 700 16px/16px SerialC, Courier, monospace; }
+.local-newsletter > button:hover { background: #333; }
+.local-newsletter p { margin: 26px 0 0; color: #000; font: 400 14px/normal Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.local-newsletter p > span { font: 400 12px/normal SerialC, Courier, monospace; }
+.local-newsletter p a { text-decoration: underline; font: 400 12px/18px ABCCameraPlainVariable, sans-serif; }
+.local-newsletter-error { font: 12px/18px Arial, sans-serif; color: #9c1623; margin-top: 4px; }
+.local-newsletter [aria-invalid="true"] { border-color: #9c1623; }
+.local-account-boundary { min-height: 520px; padding: 180px 40px 100px; max-width: 900px; margin: auto; }
+.local-account-boundary h1 { font-size: 48px; line-height: 1.1; }
+.local-account-boundary p { font-size: 18px; line-height: 1.5; margin: 24px 0 32px; }
+.local-boundary-return { display: block; width: fit-content; margin-top: 24px; text-decoration: underline; }
+@media (max-width: 600px) {
+  .local-cart-item { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; }
+  .local-cart-item img { width: 88px; height: 110px; }
+  .local-cart-item > strong { grid-column: 2; }
+  .local-cart-item__title { font-size: 22px; }
+  .local-cookie-consent { left: 0; bottom: 0; width: 100vw; display: block; padding: 0 20px 20px; border-radius: 0; font-size: 12px; line-height: 18px; }
+  .local-cookie-consent h2 { font-size: 14px; line-height: 21px; padding: 20px 0; }
+  .local-cookie-message a { margin-top: 0; }
+  .local-cookie-actions { flex-direction: column; margin-top: 20px; gap: 6px; }
+  .local-cookie-actions button { width: 100%; flex: none; min-height: 37px; padding: 9px 15px; font-size: 12px; line-height: 15px; }
+}

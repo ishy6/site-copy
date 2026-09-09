@@ -1,0 +1,28 @@
+import { chromium } from 'playwright';
+import { readFile, writeFile } from 'node:fs/promises';
+const media = JSON.parse(await readFile('public/reference/media-map.json', 'utf8'));
+const paths = new Map();
+for (const [local, remote] of Object.entries(media)) paths.set(new URL(remote).pathname, local);
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const source = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await source.route('https://media-makr-com.imgix.net/**', async route => {
+  const local = paths.get(new URL(route.request().url()).pathname);
+  if (local) await route.fulfill({ path: `public${local}`, contentType: 'image/webp' });
+  else await route.continue();
+});
+await source.goto('https://makr.com/wallets', { waitUntil: 'domcontentloaded' });
+await source.waitForSelector('#productCollection .product', { timeout: 45000 });
+await source.evaluate(async () => { await document.fonts.ready; const images = [...document.querySelectorAll('#productCollection img')]; images.forEach(image => image.loading = 'eager'); await Promise.all(images.map(image => image.decode().catch(() => {}))); });
+const local = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await local.goto('http://127.0.0.1:5176/wallets');
+await local.waitForSelector('#productCollection .product');
+await local.evaluate(async () => { await document.fonts.ready; const images = [...document.querySelectorAll('#productCollection img')]; images.forEach(image => image.loading = 'eager'); await Promise.all(images.map(image => image.decode().catch(() => {}))); });
+const metric = page => page.locator('#productCollection h1,#productCollection h2').evaluateAll(elements => elements.map(element => ({ title: element.textContent, y: element.getBoundingClientRect().y })));
+const sourceMetrics = await metric(source);
+const localMetrics = await metric(local);
+const difference = sourceMetrics.map((entry, index) => ({ title: entry.title, source: entry.y, local: localMetrics[index]?.y, delta: localMetrics[index]?.y - entry.y }));
+await writeFile('/tmp/makr-fidelity/verification/loaded-wallets-comparison.json', JSON.stringify({ method: 'Original page and original scripts, CDN images served from downloaded copies to eliminate source lazy-loading failures. Both pages decode all product images before measurement.', headings: difference }, null, 2));
+console.log(JSON.stringify(difference));
+await source.screenshot({ path: '/tmp/makr-fidelity/verification/source-wallets-loaded.png' });
+await local.screenshot({ path: '/tmp/makr-fidelity/verification/local-wallets-loaded.png' });
+await browser.close();

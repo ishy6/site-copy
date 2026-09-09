@@ -1,0 +1,85 @@
+import assert from 'node:assert/strict';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { chromium } from 'playwright';
+const base = process.env.MAKR_TEST_URL || 'http://127.0.0.1:5176';
+const output = '/tmp/makr-fidelity/verification';
+await mkdir(output, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const results = [];
+for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }]) {
+  const context = await browser.newContext({ viewport });
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto(base);
+  await page.waitForSelector('.splide.is-initialized', { state: 'attached' });
+  await page.waitForTimeout(2300);
+  await page.screenshot({ path: `${output}/home-${viewport.width}.png` });
+  assert.equal(await page.locator('.splide.is-initialized').count(), 3, 'All home galleries initialize');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth), false, 'No horizontal overflow');
+  await page.locator('[id="close.newsletter"]').click();
+  await page.locator('[id="close.notification"]').click();
+  if (viewport.width > 767) {
+    await page.locator('.desktop-drawer-open').first().click();
+    await page.locator('.shop-navigation a').filter({ hasText: /^Wallets$/ }).hover();
+    await page.screenshot({ path: `${output}/menu-${viewport.width}.png` });
+    await page.locator('.shop-navigation a').filter({ hasText: /^Wallets$/ }).click();
+  } else {
+    await page.locator('[id="mm.menu.item"]').click();
+    await page.screenshot({ path: `${output}/menu-${viewport.width}.png` });
+    await page.locator('[id="mm.mobile.drawer"] a').filter({ hasText: /^Wallets$/ }).click();
+  }
+  await page.waitForURL(`${base}/wallets`);
+  assert.ok(await page.locator('#productCollection .product').count() > 100, 'Full wallet catalog is present');
+  await page.screenshot({ path: `${output}/wallets-${viewport.width}.png` });
+  const search = page.locator(viewport.width > 767 ? '#search_term' : '#mobile_search_term');
+  await search.fill('wallet');
+  await page.waitForSelector('#searchResultCollection:not(.initial) .product');
+  assert.equal(new URL(page.url()).pathname, '/wallets', 'Search leaves route intact');
+  await page.screenshot({ path: `${output}/search-${viewport.width}.png` });
+  await search.fill('wa');
+  await page.waitForSelector('#searchResultCollection.initial', { state: 'attached' });
+  await page.goto(`${base}/new-fold-weekender-black-canvas`);
+  await page.waitForSelector('[id="product.add.to.cart"]:not(.out-of-stock)');
+  await page.screenshot({ path: `${output}/product-${viewport.width}.png` });
+  await page.locator('[id="product.add.to.cart"]').click();
+  await page.waitForSelector('#minicart-drawer.open .minicart-item');
+  await page.locator('[data-step="1"]').click();
+  assert.equal(await page.locator('.cart-count').first().textContent(), '2');
+  await page.reload();
+  await page.waitForFunction(() => document.querySelector('.cart-count')?.textContent === '2');
+  await page.locator('.cart-count').filter({ visible: true }).first().click();
+  await page.waitForSelector('#minicart-drawer.open');
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: `${output}/cart-${viewport.width}.png` });
+  await page.locator('#minicart-drawer a.checkout').click();
+  await page.waitForURL(`${base}/checkout`);
+  await page.waitForTimeout(250);
+  await page.screenshot({ path: `${output}/checkout-${viewport.width}.png` });
+  await page.locator('#email').fill('person@example.com');
+  await page.locator('.checkout-email button').click();
+  assert.match(await page.locator('.checkout-email [role="status"]').textContent(), /makr.com/);
+  await page.goto(`${base}/tan-tri-glide-belt`);
+  await page.waitForSelector('[id="mcs.item.base"]');
+  await page.locator('[id="mcs.item.base"]').click();
+  await page.locator('.mcs-item:not(.out-of-stock)').first().click();
+  await page.locator('[id="product.add.to.cart"]').click();
+  await page.waitForFunction(() => document.querySelectorAll('#minicart-drawer .minicart-item').length === 2);
+  while (await page.locator('#minicart-drawer .minicart-item').count()) await page.locator('[data-step="-1"]').first().click();
+  assert.equal(await page.locator('.cart-count').first().textContent(), '0');
+  await page.goto(`${base}/`);
+  await page.waitForSelector('.splide.is-initialized', { state: 'attached' });
+  if (viewport.width < 768) {
+    const gallery = page.locator('#bags_totes_worn');
+    await gallery.scrollIntoViewIfNeeded();
+    await gallery.getByRole('button', { name: 'Go to slide 2' }).click();
+    await page.waitForTimeout(500);
+    assert.match(await gallery.locator('.splide__slide').nth(1).getAttribute('class'), /is-active/);
+  }
+  assert.deepEqual(errors, []);
+  results.push({ viewport, passed: true });
+  await context.close();
+}
+await browser.close();
+await writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
+console.log(JSON.stringify(results));

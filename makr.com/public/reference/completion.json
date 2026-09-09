@@ -1,0 +1,27 @@
+{
+  "routes": 399,
+  "products": 374,
+  "assets": 3271,
+  "failures": [
+    {
+      "item": "/journal/p8",
+      "error": "Command failed: curl --fail -s -L --compressed --retry 1 --max-time 40 https://makr.com/journal/p8\n"
+    },
+    {
+      "item": "/journal/p5",
+      "error": "Command failed: curl --fail -s -L --compressed --retry 1 --max-time 40 https://makr.com/journal/p5\n"
+    },
+    {
+      "item": "/journal/p7",
+      "error": "Command failed: curl --fail -s -L --compressed --retry 1 --max-time 40 https://makr.com/journal/p7\n"
+    },
+    {
+      "item": "/journal/p4",
+      "error": "Command failed: curl --fail -s -L --compressed --retry 1 --max-time 40 https://makr.com/journal/p4\n"
+    },
+    {
+      "item": "/reference/media/76076ce3dcaa991e7a17.webp",
+      "error": "Missing source for /reference/media/76076ce3dcaa991e7a17.webp"
+    }
+  ]
+}

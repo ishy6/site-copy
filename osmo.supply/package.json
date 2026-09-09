@@ -1,0 +1,27 @@
+{
+  "name": "osmo-supply-replica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-vue-next": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@vitejs/plugin-vue": "latest",
+    "@vue/test-utils": "^2.5.0",
+    "happy-dom": "^20.14.0",
+    "typescript": "~5.9.3",
+    "vite": "latest",
+    "vitest": "^5.0.0",
+    "vue-tsc": "latest"
+  }
+}

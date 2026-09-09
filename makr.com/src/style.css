@@ -1,0 +1,12 @@
+html { scroll-behavior: auto; }
+button, input, a, [role="button"], [role="option"] { -webkit-tap-highlight-color: transparent; }
+button, [role="button"], [role="option"] { cursor: pointer; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [role="option"]:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+.route-loading { opacity: .6; }
+.route-error { padding: 180px 20%; }
+.route-error button { background: none; border: 0; text-decoration: underline; }
+.local-form-feedback { font-size: 12px; line-height: 1.4; margin-top: 12px; }
+.newsletter-signup input[type="email"] { font-size: 16px; }
+.minicart-quantity-adjust { background: transparent; border: 0; padding: 4px; }
+.minicart-quantity-input { -moz-appearance: textfield; }
+.minicart-quantity-input::-webkit-inner-spin-button { -webkit-appearance: none; }

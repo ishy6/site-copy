@@ -1,0 +1,266 @@
+{
+  "source": "https://makr.com",
+  "capturedAt": "2026-09-09T06:27:26.878Z",
+  "routes": 347,
+  "products": 323,
+  "media": 3053,
+  "failures": [
+    {
+      "item": "/shop/customer/register",
+      "message": "Command failed: curl --fail -L --compressed -s --retry 2 --max-time 40 https://makr.com/shop/customer/register\n"
+    },
+    {
+      "item": "/shop/customer/forgot-password",
+      "message": "Command failed: curl --fail -L --compressed -s --retry 2 --max-time 40 https://makr.com/shop/customer/forgot-password\n"
+    },
+    {
+      "item": "/info/stockists/",
+      "message": "Command failed: curl --fail -L --compressed -s --retry 2 --max-time 40 https://makr.com/info/stockists/\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-chcm-tri-glide-belt-blk-fr.png?auto=format&fm=webp&q=85&w=1000",
+        "/reference/media/d66f39f33c634c2c275b.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-chcm-tri-glide-belt-blk-fr.png?auto=format&fm=webp&q=85&w=1000 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/d66f39f33c634c2c275b.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-drk-cog-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000",
+        "/reference/media/33a1812f70a7df45837f.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-drk-cog-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/33a1812f70a7df45837f.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-brb-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000",
+        "/reference/media/40471796f076d3727110.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-brb-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/40471796f076d3727110.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-ox-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000",
+        "/reference/media/8d0a0a9bd410d02baf23.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-ox-persp-l-ud.png?auto=format&fm=webp&q=85&w=1000 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/8d0a0a9bd410d02baf23.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/images/10-28-2020-35-33.jpg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/76076ce3dcaa991e7a17.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/images/10-28-2020-35-33.jpg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/76076ce3dcaa991e7a17.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-rnd-lx-blk-fr_1.png?auto=format&fm=webp&q=85&w=1000",
+        "/reference/media/8b34a10b38f44218b761.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-rnd-lx-blk-fr_1.png?auto=format&fm=webp&q=85&w=1000 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/8b34a10b38f44218b761.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/Screenshot-2026-05-30-at-12.00.01-PM.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/3b6989d978e295d93753.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/Screenshot-2026-05-30-at-12.00.01-PM.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/3b6989d978e295d93753.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_Field_Pouch_4.png?auto=format&fm=webp&q=85&w=1600",
+        "/reference/media/b7e258fc6c1d294630c9.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_Field_Pouch_4.png?auto=format&fm=webp&q=85&w=1600 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/b7e258fc6c1d294630c9.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-ox-persp-l-ud.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/4b29a23a94f5dd1c8611.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-cordovan-cam-wrist-strap-ox-persp-l-ud.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/4b29a23a94f5dd1c8611.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_org_cnvs_detail_1_10_1_1_1.jpg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/9de34f2bbf038328e192.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_org_cnvs_detail_1_10_1_1_1.jpg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/9de34f2bbf038328e192.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_op_m_khki_persp_2.jpg?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/6036042aa1ef16b9b161.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_op_m_khki_persp_2.jpg?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/6036042aa1ef16b9b161.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-loop-keychain-nat-persp-fr.png?auto=format&fm=webp&q=85&w=1600",
+        "/reference/media/cde8c084ae5ca15e2467.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-loop-keychain-nat-persp-fr.png?auto=format&fm=webp&q=85&w=1600 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/cde8c084ae5ca15e2467.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-loop-keychain-bourbon-fr.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/390477a7b0936ee9c203.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-loop-keychain-bourbon-fr.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/390477a7b0936ee9c203.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_key_sh_side_drk_cog_cord.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/bc4d58d88d1de9719cac.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_key_sh_side_drk_cog_cord.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/bc4d58d88d1de9719cac.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-crd-trn-nat-stch-fr.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/1fcacee3a83992cd8151.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-crd-trn-nat-stch-fr.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/1fcacee3a83992cd8151.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_RLP_HS_CORD_BLK_FR.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/37efb356271ec7c37501.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_RLP_HS_CORD_BLK_FR.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/37efb356271ec7c37501.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_ZIP_V2_CORD_OX_PERSP_OP.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/e9df715520fd2f0c165d.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_ZIP_V2_CORD_OX_PERSP_OP.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/e9df715520fd2f0c165d.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_FLAP_PLUS_V2_NAT_LAT_PERSP.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/84a8a8e528ec327dad6e.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_FLAP_PLUS_V2_NAT_LAT_PERSP.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/84a8a8e528ec327dad6e.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR-Side-Slip-FR-BRK.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/3517b76f17818d1e6716.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR-Side-Slip-FR-BRK.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/3517b76f17818d1e6716.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_005_Billfold_Ox_PERSP_UD.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/17aeaebf8368320b4e1c.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_005_Billfold_Ox_PERSP_UD.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/17aeaebf8368320b4e1c.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_new_landscape_billfold_detail_1_13_1_2.png?auto=format&fm=webp&q=85&w=1600",
+        "/reference/media/34bef5db722f89d4b8da.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_new_landscape_billfold_detail_1_13_1_2.png?auto=format&fm=webp&q=85&w=1600 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/34bef5db722f89d4b8da.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/cascade-wallet-flax-fr.jpg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/746977cf98ee4463c012.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/cascade-wallet-flax-fr.jpg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/746977cf98ee4463c012.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_rnd_nvy_prsp_1.jpg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/3ed7ea52aa272421af96.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_rnd_nvy_prsp_1.jpg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/3ed7ea52aa272421af96.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-rnd-navy-fr.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/3bd7d730f0a8976f2f0a.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-rnd-navy-fr.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/3bd7d730f0a8976f2f0a.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_flp_slm_blk_fr.jpg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/cbac1c4cbab27979007c.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_flp_slm_blk_fr.jpg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/cbac1c4cbab27979007c.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/Fold_Wk_brwn_Lthr_FR.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/c461fdd2559253dbadec.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/Fold_Wk_brwn_Lthr_FR.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/c461fdd2559253dbadec.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_Eyewear_V3_HS_Support_1.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/dcad180ec7d4b19ab7cd.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_Eyewear_V3_HS_Support_1.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/dcad180ec7d4b19ab7cd.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr_midori_cov_lg_grn_persp.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/ab664f55e761dd110df3.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr_midori_cov_lg_grn_persp.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/ab664f55e761dd110df3.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_Vert_Sling_Tote_BLK_PERSP_FR.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/83e23d530ad6ddc7955e.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_Vert_Sling_Tote_BLK_PERSP_FR.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/83e23d530ad6ddc7955e.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_FLD_WK_Nat_FR_UD.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11",
+        "/reference/media/46e8a57f77ad6b38dfe6.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_FLD_WK_Nat_FR_UD.png?auto=format&fm=webp&q=85&w=1600&blend-color=000000&blend-mode=multiply&blend-alpha=11 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/46e8a57f77ad6b38dfe6.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/MAKR_WRK_CA_Black_Fr_ST.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/eb54da9d7cd5680241a2.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/MAKR_WRK_CA_Black_Fr_ST.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/eb54da9d7cd5680241a2.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-bracket-sacoche-detail-2.png?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/5a646794b8a468879360.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-bracket-sacoche-detail-2.png?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/5a646794b8a468879360.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/makr-bracket-sacoche-ink-pano.png?auto=format&fm=webp&q=85&w=1600",
+        "/reference/media/8636c8ab39000c174989.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/makr-bracket-sacoche-ink-pano.png?auto=format&fm=webp&q=85&w=1600 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/8636c8ab39000c174989.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/Screenshot-2025-05-04-at-9.06.23-AM.jpeg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/94a0dfd364b00bd2e409.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/Screenshot-2025-05-04-at-9.06.23-AM.jpeg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/94a0dfd364b00bd2e409.webp\n"
+    },
+    {
+      "item": [
+        "https://media-makr-com.imgix.net/product/Screenshot-2024-05-02-at-7.19.42-PM.jpeg?auto=format&fm=webp&q=85&w=1400",
+        "/reference/media/d579d54681cce545303e.webp"
+      ],
+      "message": "Command failed: curl --fail -L -s --retry 1 --max-time 35 https://media-makr-com.imgix.net/product/Screenshot-2024-05-02-at-7.19.42-PM.jpeg?auto=format&fm=webp&q=85&w=1400 -o /Users/cds-dn367/Desktop/demo-project/site-copy/makr.com/public/reference/media/d579d54681cce545303e.webp\n"
+    }
+  ]
+}

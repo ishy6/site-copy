@@ -1,0 +1,29 @@
+{
+  "name": "makr-com-replica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run --passWithNoTests",
+    "test:fidelity": "node scripts/verify-fidelity.mjs",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^3.6.12",
+    "lucide-vue-next": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "linkedom": "^0.18.13",
+    "playwright": "^1.61.1",
+    "sharp": "^0.35.4",
+    "typescript": "~5.9.3",
+    "vite": "latest",
+    "vitest": "^5.0.0",
+    "vue-tsc": "latest"
+  }
+}

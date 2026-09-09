@@ -1,0 +1,17 @@
+{
+  "name": "site-copy",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:wise": "npm --prefix wise.com run dev",
+    "dev:osmo": "npm --prefix osmo.supply run dev",
+    "dev:shop": "npm --prefix shop.app run dev",
+    "dev:21tsi": "npm --prefix 21tsi.com run dev",
+    "dev:jitter": "npm --prefix jitter.video run dev",
+    "dev:makr": "npm --prefix makr.com run dev",
+    "dev:ridealso": "npm --prefix ridealso.com run dev",
+    "test": "npm --prefix wise.com run test && npm --prefix osmo.supply run test && npm --prefix shop.app run test && npm --prefix 21tsi.com run test && npm --prefix jitter.video run test && npm --prefix makr.com run test && npm --prefix ridealso.com run test",
+    "typecheck": "npm --prefix wise.com run typecheck && npm --prefix osmo.supply run typecheck && npm --prefix shop.app run typecheck && npm --prefix 21tsi.com run typecheck && npm --prefix jitter.video run typecheck && npm --prefix makr.com run typecheck && npm --prefix ridealso.com run typecheck",
+    "build": "npm --prefix wise.com run build && npm --prefix osmo.supply run build && npm --prefix shop.app run build && npm --prefix 21tsi.com run build && npm --prefix jitter.video run build && npm --prefix makr.com run build && npm --prefix ridealso.com run build"
+  }
+}
