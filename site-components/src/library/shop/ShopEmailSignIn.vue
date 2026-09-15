@@ -1,0 +1,26 @@
+<script setup lang="ts">
+import { computed, ref, useId, watch } from 'vue'
+import { ArrowRight, Check, LoaderCircle, Mail } from 'lucide-vue-next'
+import ShopBrandMark from './ShopBrandMark.vue'
+const props = withDefaults(defineProps<{ title?: string; subtitle?: string; initialEmail?: string; status?: 'idle' | 'pending' | 'success' | 'error'; errorMessage?: string }>(), { title: 'Sign in to Shop', subtitle: 'One account for everything you love.', initialEmail: '', status: 'idle', errorMessage: 'Something went wrong. Please try again.' })
+const emit = defineEmits<{ submit: [email: string]; reset: []; 'update:email': [email: string] }>()
+const email = ref(props.initialEmail)
+const input = ref<HTMLInputElement>()
+const error = ref('')
+const valid = ref(false)
+const id = useId()
+const visibleError = computed(() => error.value || (props.status === 'error' ? props.errorMessage : ''))
+watch(() => props.initialEmail, value => { email.value = value; valid.value = false })
+function submit() { if (props.status === 'pending') return; email.value = email.value.trim(); if (!input.value?.validity.valid || !email.value) { error.value = 'Enter a valid email address.'; valid.value = false; input.value?.focus(); return } error.value = ''; valid.value = true; emit('submit', email.value) }
+function edit() { error.value = ''; valid.value = false; emit('update:email', email.value) }
+</script>
+<template>
+  <section class="shop-sign-in" aria-label="Sign in">
+    <ShopBrandMark class="brand-mark" />
+    <template v-if="status === 'success'"><Mail class="success-mail" :size="28" aria-hidden="true" /><h3>Check your email</h3><p>Continue signing in with the link sent to <strong>{{ email }}</strong>.</p><button class="submit" type="button" @click="emit('reset')">Use another email</button></template>
+    <template v-else><h3>{{ title }}</h3><p>{{ subtitle }}</p><form novalidate @submit.prevent="submit"><div class="email-input" :class="{ invalid: visibleError }"><input ref="input" v-model="email" type="email" autocomplete="email" required placeholder="Email address" aria-label="Email address" :aria-invalid="Boolean(visibleError)" :aria-describedby="visibleError ? `${id}-error` : valid ? `${id}-valid` : undefined" :disabled="status === 'pending'" @input="edit" /><Check v-if="valid" :size="18" aria-hidden="true" /></div><p v-if="visibleError" :id="`${id}-error`" class="form-error" role="alert">{{ visibleError }}</p><p v-else-if="valid" :id="`${id}-valid`" class="valid-email" role="status">Email address confirmed</p><button class="submit" type="submit" :disabled="status === 'pending'"><LoaderCircle v-if="status === 'pending'" class="loading" :size="18" aria-hidden="true" /><span>{{ status === 'pending' ? 'Signing in' : 'Continue' }}</span><ArrowRight v-if="status !== 'pending'" :size="17" aria-hidden="true" /></button></form><small>By continuing, you agree to Shop's <a href="https://shop.app/terms-of-service" target="_blank" rel="noreferrer">Terms of Service</a> and <a href="https://www.shopify.com/legal/privacy/app-users" target="_blank" rel="noreferrer">Privacy Policy</a>.</small></template>
+  </section>
+</template>
+<style scoped>
+@font-face{font-family:'Library Shop';src:url('/assets/shop/GTStandard-MRegular.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'Library Shop';src:url('/assets/shop/GTStandard-MSemibold.woff2') format('woff2');font-weight:600 800;font-display:swap}.shop-sign-in,.shop-sign-in *{box-sizing:border-box}.shop-sign-in{width:100%;max-width:355px;color:#080808;font-family:'Library Shop',Arial,sans-serif;letter-spacing:0}.brand-mark{display:block;margin-bottom:20px;color:#5433eb}.shop-sign-in h3{font-size:29px;line-height:1.1;margin:0;overflow-wrap:anywhere}.shop-sign-in>p{margin:10px 0 22px;color:#707070;font-size:14px;line-height:1.5;overflow-wrap:anywhere}.email-input{display:flex;align-items:center;gap:6px;min-height:49px;padding:0 16px;border:1px solid transparent;border-radius:999px;background:#f1f1f1}.email-input:focus-within{outline:2px solid #5433eb;outline-offset:2px}.email-input.invalid{border-color:#d92a0f}.email-input input{width:100%;min-width:0;height:47px;padding:0;border:0;outline:0;background:transparent;color:#080808;font:inherit;font-size:14px}.email-input svg{flex-shrink:0;color:#318000}.submit{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:48px;margin-top:15px;padding:12px 16px;border:.5px solid #fff;border-radius:999px;background:#5433eb;color:#fff;box-shadow:0 4px 24px #5433eb3d;font:inherit;font-size:14px;cursor:pointer;transition:background 150ms ease}.submit:hover{background:#4524db}.submit:disabled{cursor:wait;opacity:.65}.submit:focus-visible{outline:2px solid #5433eb;outline-offset:3px}.shop-sign-in small{display:block;margin-top:19px;color:#707070;font-size:10px;line-height:1.6}.shop-sign-in a{color:inherit;text-underline-offset:2px}.form-error,.valid-email{margin:8px 8px 0;font-size:11px;line-height:1.4}.form-error{color:#d92a0f}.valid-email{color:#318000}.success-mail{display:block;margin-bottom:18px;color:#5433eb}.loading{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.loading{animation:none}.submit{transition:none}}
+</style>

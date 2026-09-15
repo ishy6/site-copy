@@ -3,6 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "dev:components": "npm --prefix site-components run dev",
+    "test:components": "npm --prefix site-components test",
+    "typecheck:components": "npm --prefix site-components run typecheck",
+    "build:components": "npm --prefix site-components run build",
     "dev:wise": "npm --prefix wise.com run dev",
     "dev:osmo": "npm --prefix osmo.supply run dev",
     "dev:shop": "npm --prefix shop.app run dev",
@@ -10,8 +14,12 @@
     "dev:jitter": "npm --prefix jitter.video run dev",
     "dev:makr": "npm --prefix makr.com run dev",
     "dev:ridealso": "npm --prefix ridealso.com run dev",
-    "test": "npm --prefix wise.com run test && npm --prefix osmo.supply run test && npm --prefix shop.app run test && npm --prefix 21tsi.com run test && npm --prefix jitter.video run test && npm --prefix makr.com run test && npm --prefix ridealso.com run test",
-    "typecheck": "npm --prefix wise.com run typecheck && npm --prefix osmo.supply run typecheck && npm --prefix shop.app run typecheck && npm --prefix 21tsi.com run typecheck && npm --prefix jitter.video run typecheck && npm --prefix makr.com run typecheck && npm --prefix ridealso.com run typecheck",
-    "build": "npm --prefix wise.com run build && npm --prefix osmo.supply run build && npm --prefix shop.app run build && npm --prefix 21tsi.com run build && npm --prefix jitter.video run build && npm --prefix makr.com run build && npm --prefix ridealso.com run build"
+    "dev:shupatto": "npm --prefix prod-raw.shupatto.com run dev",
+    "test:shupatto": "npm --prefix prod-raw.shupatto.com test",
+    "typecheck:shupatto": "npm --prefix prod-raw.shupatto.com run typecheck",
+    "build:shupatto": "npm --prefix prod-raw.shupatto.com run build",
+    "test": "npm --prefix wise.com run test && npm --prefix osmo.supply run test && npm --prefix shop.app run test && npm --prefix 21tsi.com run test && npm --prefix jitter.video run test && npm --prefix makr.com run test && npm --prefix ridealso.com run test && npm --prefix prod-raw.shupatto.com run test && npm --prefix site-components run test",
+    "typecheck": "npm --prefix wise.com run typecheck && npm --prefix osmo.supply run typecheck && npm --prefix shop.app run typecheck && npm --prefix 21tsi.com run typecheck && npm --prefix jitter.video run typecheck && npm --prefix makr.com run typecheck && npm --prefix ridealso.com run typecheck && npm --prefix prod-raw.shupatto.com run typecheck && npm --prefix site-components run typecheck",
+    "build": "npm --prefix wise.com run build && npm --prefix osmo.supply run build && npm --prefix shop.app run build && npm --prefix 21tsi.com run build && npm --prefix jitter.video run build && npm --prefix makr.com run build && npm --prefix ridealso.com run build && npm --prefix prod-raw.shupatto.com run build && npm --prefix site-components run build"
   }
 }

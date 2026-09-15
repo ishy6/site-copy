@@ -1,0 +1,25 @@
+<script setup lang="ts">
+import { computed, ref, watch } from 'vue'
+import { CircleHelp, ArrowUpRight } from 'lucide-vue-next'
+import { transferProviders, type TransferProvider } from './wiseProviders'
+const props = withDefaults(defineProps<{ amount?: number; sourceCurrency?: string; targetCurrency?: string; providers?: TransferProvider[]; title?: string }>(), { amount: 1000, sourceCurrency: 'GBP', targetCurrency: 'EUR', providers: () => transferProviders, title: 'More arrives with Wise.' })
+const emit = defineEmits<{ 'update:amount': [amount: number] }>()
+const value = ref(props.amount)
+const expanded = ref('')
+watch(() => props.amount, amount => { value.value = amount })
+const rows = computed(() => props.providers.map(provider => ({ ...provider, received: Math.max(0, (Math.max(0, Number(value.value) || 0) - provider.fee) * provider.rate) })))
+const best = computed(() => Math.max(1, ...rows.value.map(row => row.received)))
+const money = (value: number) => new Intl.NumberFormat('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value)
+function update(event: Event) { value.value = Math.max(0, (event.target as HTMLInputElement).valueAsNumber || 0); emit('update:amount', value.value) }
+</script>
+<template>
+  <section class="provider-comparison" :aria-label="title">
+    <h3>{{ title }}</h3><div class="comparison-input"><label>You send<input type="number" aria-label="Comparison amount" :value="value" min="0" step="100" @input="update" /></label><span>{{ sourceCurrency }}<ArrowUpRight :size="18" aria-hidden="true" />{{ targetCurrency }}</span></div>
+    <div class="table-labels"><span>Provider</span><span>Recipient gets</span></div>
+    <div v-for="(provider,index) in rows" :key="`${provider.name}-${index}`" class="provider" :class="{ featured: provider.featured }"><div class="provider-bar" :style="{ width: `${Math.max(35, provider.received / best * 100)}%` }"></div><div class="provider-row"><span><strong>{{ provider.name }}</strong><small>Total fees {{ money(provider.fee) }} {{ sourceCurrency }}</small></span><b>{{ money(provider.received) }} {{ targetCurrency }}</b><button type="button" :aria-label="`Fees for ${provider.name}`" :title="`Fees for ${provider.name}`" :aria-expanded="expanded === provider.name" @click="expanded = expanded === provider.name ? '' : provider.name"><CircleHelp :size="17" aria-hidden="true" /></button></div><p v-if="expanded === provider.name" class="provider-details">Exchange rate: 1 {{ sourceCurrency }} = {{ provider.rate }} {{ targetCurrency }}<br />Transfer fee: {{ money(provider.fee) }} {{ sourceCurrency }}</p></div>
+    <p v-if="!rows.length" class="empty">No providers available</p>
+  </section>
+</template>
+<style scoped>
+@font-face{font-family:'Library Wise';src:url('/assets/wise/inter-variable.woff2') format('woff2');font-weight:100 900;font-display:swap}.provider-comparison,.provider-comparison *{box-sizing:border-box}.provider-comparison{width:100%;max-width:600px;color:#163300;font-family:'Library Wise',Arial,sans-serif;letter-spacing:0;container-type:inline-size}.provider-comparison h3{margin:0 0 18px;font-size:28px;font-weight:750;line-height:1.1;overflow-wrap:anywhere}.comparison-input{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid #c7d8bc;border-radius:8px;background:#fff}.comparison-input label{display:grid;gap:5px;color:#454745;font-size:10px}.comparison-input input{width:100%;min-width:0;max-width:230px;border:0;font:inherit;font-size:25px;font-weight:650;color:#163300;background:transparent}.comparison-input>span{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:650;white-space:nowrap}.table-labels{display:flex;justify-content:space-between;margin:19px 5px 8px;color:#454745;font-size:10px}.provider{position:relative;isolation:isolate;margin-top:8px;background:#e8f0e3;overflow:hidden;border-radius:8px}.provider-bar{position:absolute;inset:0 auto 0 0;background:#d4e5c8;z-index:-1}.provider.featured{background:#c6f3a6}.featured .provider-bar{background:#9fe870}.provider-row{display:flex;align-items:center;gap:10px;padding:14px 16px;min-height:68px}.provider-row>span{display:grid;flex:1;min-width:0;gap:5px}.provider-row strong{font-size:14px;overflow-wrap:anywhere}.provider-row small{font-size:10px;color:#454745}.provider-row b{font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums}.provider-row button{display:grid;place-items:center;flex-shrink:0;width:26px;height:26px;padding:0;border:0;background:transparent;color:#163300;cursor:pointer}.provider-details{margin:0;padding:0 16px 13px;font-size:11px;line-height:1.6}.provider-comparison :is(button,input):focus-visible{outline:2px solid #163300;outline-offset:2px}.empty{font-size:13px}@container(max-width:360px){.provider-comparison h3{font-size:25px}.comparison-input{gap:8px;padding:12px}.comparison-input>span{gap:5px;font-size:10px}.comparison-input input{max-width:110px;font-size:23px}.provider-row{padding:12px;gap:5px;flex-wrap:wrap}.provider-row>span{flex:1 1 100%}.provider-row b{font-size:16px}.provider-row button{margin-left:auto}}
+</style>

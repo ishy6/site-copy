@@ -1,0 +1,200 @@
+{
+  "origin": "https://prod-raw.shupatto.com",
+  "captured": "2026-09-09T09:23:24.391Z",
+  "pages": {
+    "/": {
+      "file": "home.json",
+      "title": "Shupatto - シュパッとたためるデザインバッグ"
+    },
+    "/en/": {
+      "file": "en.json",
+      "title": "Shupatto Bags: Designed to Fold with a Snap"
+    },
+    "/about/": {
+      "file": "about.json",
+      "title": "ABOUT | Shupatto"
+    },
+    "/product/": {
+      "file": "product.json",
+      "title": "LINEUP | Shupatto"
+    },
+    "/shoplist/": {
+      "file": "shoplist.json",
+      "title": "SHOPLIST | Shupatto"
+    },
+    "/product/shupatto10th/": {
+      "file": "product__shupatto10th.json",
+      "title": "10th ANNIVERSARY | Shupatto"
+    },
+    "/product/compactbag-m/": {
+      "file": "product__compactbag-m.json",
+      "title": "コンパクトバッグ M | Shupatto"
+    },
+    "/product/compactbag-drop-m/": {
+      "file": "product__compactbag-drop-m.json",
+      "title": "コンパクトバッグ Drop M | Shupatto"
+    },
+    "/product/minimalbag-drop-12l/": {
+      "file": "product__minimalbag-drop-12l.json",
+      "title": "ミニマルバッグ 12L | Shupatto"
+    },
+    "/product/japan-collection-l/": {
+      "file": "product__japan-collection-l.json",
+      "title": "和 コンパクトバッグ L | Shupatto"
+    },
+    "/product/compactbag-m-wa/": {
+      "file": "product__compactbag-m-wa.json",
+      "title": "和 コンパクトバッグ M | Shupatto"
+    },
+    "/product/umbrella/": {
+      "file": "product__umbrella.json",
+      "title": "アンブレラ 58cm・65cm | Shupatto"
+    },
+    "/product/compactbag-s/": {
+      "file": "product__compactbag-s.json",
+      "title": "コンパクトバッグ S | Shupatto"
+    },
+    "/product/compactbag-l/": {
+      "file": "product__compactbag-l.json",
+      "title": "コンパクトバッグ L | Shupatto"
+    },
+    "/product/umbrella-uv/": {
+      "file": "product__umbrella-uv.json",
+      "title": "アンブレラ UV 55cm | Shupatto"
+    },
+    "/product/insulatedbag-20l/": {
+      "file": "product__insulatedbag-20l.json",
+      "title": "保冷バッグ 20L | Shupatto"
+    },
+    "/product/dreamy-conservatory/": {
+      "file": "product__dreamy-conservatory.json",
+      "title": "コンパクトバッグM | Dreamy Conservatory | Shupatto"
+    },
+    "/product/moon-and-sun/": {
+      "file": "product__moon-and-sun.json",
+      "title": "MOON AND SUN | Shupatto"
+    },
+    "/product/packablebag-8l/": {
+      "file": "product__packablebag-8l.json",
+      "title": "パッカブルバッグ 8L | Shupatto"
+    },
+    "/product/meshbag-25l/": {
+      "file": "product__meshbag-25l.json",
+      "title": "メッシュバッグ 25L | Shupatto"
+    },
+    "/product/meshbag-drop-9l/": {
+      "file": "product__meshbag-drop-9l.json",
+      "title": "メッシュバッグ Drop 9L | Shupatto"
+    },
+    "/product/packablebag-27l/": {
+      "file": "product__packablebag-27l.json",
+      "title": "パッカブルバッグ 27L | Shupatto"
+    },
+    "/product/mountain-views/": {
+      "file": "product__mountain-views.json",
+      "title": "コンパクトバッグM | Mountain Views | Shupatto"
+    },
+    "/product/jewels-of-the-sea/": {
+      "file": "product__jewels-of-the-sea.json",
+      "title": "コンパクトバッグM | Jewels of the sea | Shupatto"
+    },
+    "/en/product/": {
+      "file": "en__product.json",
+      "title": "LINEUP | Shupatto"
+    },
+    "/en/about/": {
+      "file": "en__about.json",
+      "title": "ABOUT | Shupatto"
+    },
+    "/en/product/shupatto10th/": {
+      "file": "en__product__shupatto10th.json",
+      "title": "10th ANNIVERSARY | Shupatto"
+    },
+    "/en/shoplist/": {
+      "file": "en__shoplist.json",
+      "title": "SHOPLIST | Shupatto"
+    },
+    "/en/product/compactbag-s/": {
+      "file": "en__product__compactbag-s.json",
+      "title": "Compact Bag S | Shupatto"
+    },
+    "/en/product/compactbag-drop-m/": {
+      "file": "en__product__compactbag-drop-m.json",
+      "title": "Compact Bag Drop M | Shupatto"
+    },
+    "/en/product/japan-collection-l/": {
+      "file": "en__product__japan-collection-l.json",
+      "title": "Compact Bag L | Japan Collection | Shupatto"
+    },
+    "/en/product/compactbag-m/": {
+      "file": "en__product__compactbag-m.json",
+      "title": "Compact Bag M | Shupatto"
+    },
+    "/en/product/compactbag-m-wa/": {
+      "file": "en__product__compactbag-m-wa.json",
+      "title": "Compact Bag M | Japan Collection | Shupatto"
+    },
+    "/en/product/umbrella/": {
+      "file": "en__product__umbrella.json",
+      "title": "Umbrella 58cm・65cm | Shupatto"
+    },
+    "/en/product/minimalbag-drop-12l/": {
+      "file": "en__product__minimalbag-drop-12l.json",
+      "title": "Minimal Bag 12L | Shupatto"
+    },
+    "/en/product/compactbag-l/": {
+      "file": "en__product__compactbag-l.json",
+      "title": "Compact Bag L | Shupatto"
+    },
+    "/en/product/umbrella-uv/": {
+      "file": "en__product__umbrella-uv.json",
+      "title": "UMBRELLA UV 55cm | Shupatto"
+    },
+    "/en/product/moon-and-sun/": {
+      "file": "en__product__moon-and-sun.json",
+      "title": "MOON AND SUN | Shupatto"
+    },
+    "/en/product/dreamy-conservatory/": {
+      "file": "en__product__dreamy-conservatory.json",
+      "title": "Compact Bag M | Dreamy Conservatory | Shupatto"
+    },
+    "/en/product/packablebag-8l/": {
+      "file": "en__product__packablebag-8l.json",
+      "title": "Packable Bag 8L | Shupatto"
+    },
+    "/en/product/meshbag-drop-9l/": {
+      "file": "en__product__meshbag-drop-9l.json",
+      "title": "Mesh Bag Drop 9L | Shupatto"
+    },
+    "/en/product/meshbag-25l/": {
+      "file": "en__product__meshbag-25l.json",
+      "title": "Mesh Bag 25L | Shupatto"
+    },
+    "/en/product/jewels-of-the-sea/": {
+      "file": "en__product__jewels-of-the-sea.json",
+      "title": "Compact Bag M | Jewels of the sea | Shupatto"
+    },
+    "/en/product/packablebag-27l/": {
+      "file": "en__product__packablebag-27l.json",
+      "title": "Packable Bag 27L | Shupatto"
+    },
+    "/en/product/insulatedbag-20l/": {
+      "file": "en__product__insulatedbag-20l.json",
+      "title": "Insulated Bag 20L | Shupatto"
+    },
+    "/en/product/mountain-views/": {
+      "file": "en__product__mountain-views.json",
+      "title": "Compact Bag M | Mountain Views | Shupatto"
+    },
+    "/downloads/": {
+      "file": "downloads.json",
+      "title": "取扱説明書 | Shupatto"
+    },
+    "/en/downloads/": {
+      "file": "en__downloads.json",
+      "title": "HANDLING INSTRUCTIONS | Shupatto"
+    }
+  },
+  "assets": 2440,
+  "failures": []
+}

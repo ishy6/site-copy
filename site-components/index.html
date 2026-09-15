@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f4f4" />
+    <meta name="description" content="Site Components - 跨站点可复用 Vue 组件与风格库" />
+    <title>Site Components · The collection</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/osmo/star.svg" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="boot-loading" role="status" aria-label="正在加载组件库">
+        <span class="boot-brand">site / components</span>
+        <span class="boot-progress" aria-hidden="true"></span>
+        <span>Loading collection...</span>
+      </div>
+    </div>
+    <style>
+      body { margin: 0; }
+      .boot-loading { min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; background: #f4f4f4; color: #787572; font: 12px/1.5 Arial, sans-serif; }
+      .boot-brand { color: #201d1d; font-size: 21px; font-weight: 600; }
+      .boot-progress { position: relative; width: 150px; height: 2px; overflow: hidden; background: #deddd9; }
+      .boot-progress::after { content: ''; position: absolute; width: 60px; height: 2px; background: #6541f4; animation: boot-slide 1.2s ease-in-out infinite; }
+      @keyframes boot-slide { from { transform: translateX(-60px); } to { transform: translateX(150px); } }
+      @media(prefers-reduced-motion: reduce) { .boot-progress::after { animation: none; left: 45px; } }
+    </style>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

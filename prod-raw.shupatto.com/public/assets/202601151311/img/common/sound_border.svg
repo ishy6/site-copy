@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 106">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        isolation: isolate;
+        opacity: .9;
+        stroke: #000;
+        stroke-width: 3.5px;
+      }
+    </style>
+  </defs>
+  <path id="b" class="cls-1" d="m61.09859,1.75c32.74381,0,59.13641,18.43029,59.13641,51.36826s-26.3926,51.13174-59.13641,51.13174S1.735,86.04639,1.735,53.11826,28.35478,1.75,61.09859,1.75Z"/>
+</svg>

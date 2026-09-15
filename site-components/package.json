@@ -1,0 +1,31 @@
+{
+  "name": "site-components",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5190",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "test": "vitest run",
+    "test:browser": "node scripts/verify-browser.mjs",
+    "test:loading": "node scripts/verify-loading.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 5191"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "lucide-vue-next": "^1.0.0",
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/test-utils": "^2.5.0",
+    "happy-dom": "^20.14.0",
+    "playwright": "^1.58.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0",
+    "vue-tsc": "^3.3.11"
+  }
+}

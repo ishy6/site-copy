@@ -1,0 +1,30 @@
+{
+  "name": "shupatto-replica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5178",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "preview": "vite preview --host 127.0.0.1 --port 5189",
+    "test": "playwright test",
+    "reference:sync": "node scripts/sync-reference.mjs",
+    "reference:fonts": "node scripts/cache-fonts.mjs",
+    "reference:audit": "node scripts/audit-reference.mjs",
+    "reference:compare": "node scripts/compare-reference.mjs",
+    "test:routes": "node scripts/smoke-routes.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.4.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "cheerio": "^1.2.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2",
+    "vue-tsc": "^3.3.11"
+  }
+}

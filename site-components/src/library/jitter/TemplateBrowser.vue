@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+import { ArrowUpRight, Search, X } from 'lucide-vue-next'
+export interface MotionTemplate { id: string; name: string; category: string; image: string }
+const props = withDefaults(defineProps<{ title?: string; showSearch?: boolean; items?: MotionTemplate[] }>(), {
+  title: 'Made to make your own.', showSearch: true,
+  items: () => [{ id: '5', name: 'Stretched Type Repeater', category: 'Typography', image: '/assets/jitter/template-5-poster.jpg' }, { id: '1', name: 'The Track: Poster', category: 'Social media', image: '/assets/jitter/template-1-poster.jpg' }, { id: '6', name: 'Ripple Effect', category: 'UI & product', image: '/assets/jitter/template-6-poster.jpg' }],
+})
+const emit = defineEmits<{ select: [item: MotionTemplate] }>()
+const query = ref('')
+const category = ref('All')
+const categories = computed(() => ['All', ...new Set(props.items.map(item => item.category))])
+const results = computed(() => props.items.filter(item => (category.value === 'All' || item.category === category.value) && `${item.name} ${item.category}`.toLowerCase().includes(query.value.trim().toLowerCase())))
+function clear() { query.value = ''; category.value = 'All' }
+</script>
+<template><section class="template-browser" :aria-label="title"><header><h3>{{ title }}</h3><label v-if="showSearch" class="template-search"><Search :size="14" /><input v-model="query" type="search" aria-label="Search templates" placeholder="Search templates"><button v-if="query" type="button" aria-label="Clear search" @click="query = ''"><X :size="13" /></button></label></header><div class="template-filters" role="group" aria-label="Template categories"><button v-for="option in categories" :key="option" type="button" :aria-pressed="category === option" @click="category = option">{{ option }}</button></div><div v-if="results.length" class="template-results"><button v-for="item in results" :key="item.id" type="button" :aria-label="`Select ${item.name}`" @click="emit('select', item)"><img :src="item.image" :alt="item.name" loading="lazy"><span><strong>{{ item.name }}</strong><ArrowUpRight :size="15" /></span><small>{{ item.category }}</small></button></div><div v-else class="template-empty"><Search :size="25" /><p>No templates found.</p><button type="button" @click="clear">Clear filters</button></div></section></template>
+<style scoped>
+@font-face{font-family:LibraryLausanne;src:url('/assets/jitter/lausanne-400.woff2') format('woff2');font-weight:400;font-display:swap}
+.template-browser{width:100%;max-width:650px;font-family:LibraryLausanne,Arial,sans-serif;color:#19181b;min-width:0;letter-spacing:0}.template-browser *{box-sizing:border-box}header{display:flex;justify-content:space-between;gap:22px;align-items:center}h3{font-size:28px;line-height:1.1;font-weight:600;max-width:275px;margin:0;overflow-wrap:anywhere}.template-search{display:flex;gap:7px;align-items:center;border:1px solid #e6e3e8;border-radius:5px;padding:9px;width:175px;flex:none;background:white}.template-search svg{flex:none}.template-search input{width:100%;min-width:0;border:0;outline:0;font:inherit;font-size:10px;background:none}.template-search:focus-within{outline:2px solid #8055cf;outline-offset:2px}.template-search button{display:grid;place-items:center;padding:0}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}.template-filters{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0 18px}.template-filters button{padding:8px 10px;border-radius:5px;background:#f0edf4;color:#847a8d;font-size:10px}.template-filters button[aria-pressed=true]{background:#19181b;color:#fff}.template-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.template-results>button{min-width:0;padding:0;text-align:left}.template-results img{width:100%;aspect-ratio:1.12;object-fit:cover;display:block;border-radius:6px;background:#ded8ea}.template-results>button>span{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-top:11px}.template-results strong{font-size:11px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}.template-results svg{flex:none}.template-results small{display:block;color:#918997;font-size:9px;margin-top:5px}.template-empty{display:grid;justify-items:center;padding:35px;min-height:220px;color:#8e8497}.template-empty p{font-size:13px}.template-empty button{font-size:12px;color:#8055cf}button:focus-visible{outline:2px solid #8055cf;outline-offset:4px}@media(max-width:500px){header{flex-direction:column;align-items:flex-start;gap:17px}.template-search{width:100%}.template-results{grid-template-columns:1fr}.template-results img{aspect-ratio:1.4}.template-results strong{font-size:13px}.template-results small{font-size:11px}h3{font-size:28px}}
+</style>
+
+<style scoped>
+.template-results img{object-fit:contain;background:#eeecf1}
+</style>

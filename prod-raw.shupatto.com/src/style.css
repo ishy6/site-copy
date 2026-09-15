@@ -1,0 +1,33 @@
+#app,
+.reference-document {
+  display: contents;
+}
+
+.page-loading,
+.page-error {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  color: #222;
+  background: #eee;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.page-loading span,
+.page-error-brand {
+  font-size: 48px;
+}
+
+.page-error h1 {
+  font-size: 24px;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}

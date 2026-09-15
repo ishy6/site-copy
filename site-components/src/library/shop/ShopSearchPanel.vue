@@ -1,0 +1,34 @@
+<script setup lang="ts">
+import { computed, onUnmounted, ref, watch } from 'vue'
+import { ArrowRight, ArrowUpLeft, Camera, History, Search, Trash2, X } from 'lucide-vue-next'
+const props = withDefaults(defineProps<{ modelValue?: string; placeholder?: string; suggestions?: string[]; allowImages?: boolean; initialHistory?: string[] }>(), { modelValue: '', placeholder: 'What are you shopping for?', suggestions: () => ['Everyday essentials', 'A little home refresh', 'Gifts under $50'], allowImages: true, initialHistory: () => [] })
+const emit = defineEmits<{ 'update:modelValue': [query: string]; search: [request: { query: string; image: File | null }]; 'update:history': [history: string[]] }>()
+const query = ref(props.modelValue)
+const history = ref([...props.initialHistory])
+const historyOpen = ref(false)
+const fileInput = ref<HTMLInputElement>()
+const attachedFile = ref<File | null>(null)
+const imageUrl = ref('')
+const error = ref('')
+const suggestions = computed(() => props.suggestions.filter(item => item.toLowerCase().includes(query.value.trim().toLowerCase())))
+watch(() => props.modelValue, value => { query.value = value })
+watch(() => props.initialHistory, value => { history.value = [...value] })
+function clearImage() { if (imageUrl.value) URL.revokeObjectURL(imageUrl.value); imageUrl.value = ''; attachedFile.value = null; if (fileInput.value) fileInput.value.value = '' }
+function attach(event: Event) { const file = (event.target as HTMLInputElement).files?.[0]; if (!file) return; if (!file.type.startsWith('image/') || file.size > 10 * 1024 * 1024) { error.value = 'Choose an image smaller than 10 MB.'; return } clearImage(); attachedFile.value = file; imageUrl.value = URL.createObjectURL(file); error.value = '' }
+function submit(value = query.value) { const text = value.trim(); if (!text && !attachedFile.value) { error.value = 'Enter a search or choose an image.'; return } query.value = text; error.value = ''; emit('update:modelValue', text); emit('search', { query: text, image: attachedFile.value }); if (text) { history.value = [text, ...history.value.filter(item => item !== text)].slice(0, 8); emit('update:history', [...history.value]) } historyOpen.value = true }
+function clearHistory() { history.value = []; emit('update:history', []) }
+onUnmounted(clearImage)
+</script>
+<template>
+  <section class="shop-search" aria-label="Product search">
+    <form class="search-form" @submit.prevent="submit()"><button v-if="allowImages" type="button" class="round" title="Attach image" aria-label="Attach search image" @click="fileInput?.click()"><Camera :size="20" aria-hidden="true" /></button><Search v-else :size="20" aria-hidden="true" /><input v-model="query" type="search" :placeholder="placeholder" aria-label="Search products and stores" @input="error = ''; emit('update:modelValue', query)" /><button type="submit" class="round go" title="Search" aria-label="Search"><ArrowRight :size="21" aria-hidden="true" /></button></form>
+    <input ref="fileInput" class="file-input" type="file" accept="image/*" aria-label="Search image file" @change="attach" />
+    <div v-if="imageUrl" class="attachment"><img :src="imageUrl" alt="Attached search image" /><span>{{ attachedFile?.name }}</span><button type="button" aria-label="Remove search image" title="Remove image" @click="clearImage"><X :size="16" aria-hidden="true" /></button></div>
+    <div class="section-head"><span>{{ historyOpen ? 'Recent searches' : 'Suggestions' }}</span><button type="button" :aria-label="historyOpen ? 'Show suggestions' : 'Show search history'" :title="historyOpen ? 'Suggestions' : 'History'" @click="historyOpen = !historyOpen"><component :is="historyOpen ? Search : History" :size="17" aria-hidden="true" /></button></div>
+    <div class="search-options"><button v-for="item in historyOpen ? history : suggestions" :key="item" type="button" @click="submit(item)"><component :is="historyOpen ? History : ArrowUpLeft" :size="16" aria-hidden="true" /><span>{{ item }}</span></button><p v-if="!(historyOpen ? history : suggestions).length" class="empty">{{ historyOpen ? 'No recent searches' : 'No matching suggestions' }}</p></div>
+    <button v-if="historyOpen && history.length" class="clear-history" type="button" @click="clearHistory"><Trash2 :size="13" aria-hidden="true" />Clear history</button><p v-if="error" class="error" role="alert">{{ error }}</p>
+  </section>
+</template>
+<style scoped>
+@font-face{font-family:'Library Shop';src:url('/assets/shop/GTStandard-MRegular.woff2') format('woff2');font-weight:400;font-display:swap}.shop-search,.shop-search *{box-sizing:border-box}.shop-search{width:100%;max-width:530px;padding:24px;background:#fff;border-radius:28px;box-shadow:0 7px 26px #0000000d;color:#080808;font-family:'Library Shop',Arial,sans-serif;letter-spacing:0}.shop-search button,.shop-search input{font:inherit}.shop-search button{cursor:pointer;color:inherit}.search-form{display:flex;align-items:center;gap:10px}.search-form>svg{flex-shrink:0}.search-form input{min-width:0;width:100%;height:43px;padding:0;border:0;background:transparent;font-size:15px;outline:0}.search-form:focus-within{outline:2px solid #5433eb;outline-offset:6px;border-radius:24px}.round{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;padding:0;border:1px solid #dedede;border-radius:50%;background:#fff}.round.go{background:#f2f2f2;border-color:transparent}.file-input{display:none}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 0 8px;font-size:12px;color:#6d6d6d}.section-head button{display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:50%;background:#f3f3f3}.search-options{display:flex;flex-direction:column;align-items:flex-start;gap:9px;max-height:217px;overflow:auto}.search-options>button{display:flex;align-items:center;gap:8px;max-width:100%;min-height:35px;padding:8px 12px;border:0;border-radius:20px;background:#f3f3f3;text-align:left;font-size:13px}.search-options button svg{flex-shrink:0;color:#777}.search-options button span{overflow-wrap:anywhere}.search-options>button:hover{background:#e9e5ff}.clear-history{display:flex;align-items:center;gap:6px;margin-top:17px;padding:0;background:transparent;border:0;color:#6d6d6d!important;font-size:11px!important}.attachment{display:flex;align-items:center;gap:9px;margin-top:17px;font-size:11px;color:#6d6d6d}.attachment img{width:45px;height:45px;object-fit:cover;border-radius:7px}.attachment span{flex:1;min-width:0;overflow-wrap:anywhere}.attachment button{display:grid;place-items:center;width:25px;height:25px;border:0;border-radius:50%;background:#f3f3f3}.empty{font-size:12px;color:#777;padding:20px 0}.error{color:#c42d1c;font-size:12px;line-height:1.4;margin:15px 0 0}.shop-search button:focus-visible{outline:2px solid #5433eb;outline-offset:2px}
+</style>
