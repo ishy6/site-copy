@@ -1,0 +1,86 @@
+{
+  "route": "/guides/slush-strategies",
+  "width": 390,
+  "height": 12324,
+  "overflow": 0,
+  "headings": [
+    "Slush Strategies",
+    "What it does",
+    "Why it matters",
+    "Things to know before you begin",
+    "How to use Slush Strategies:  a step-by-step guide",
+    "Step 1: Start from [Home] or [Earn].",
+    "Step 2: Select a strategy.",
+    "Step 3: Review details.",
+    "Step 4: Enter your amount.",
+    "Step 5: Confirm your transaction",
+    "Step 6: Track or withdraw your investment.",
+    "More guides",
+    "Connect to apps",
+    "Slush Tour",
+    "Connect to NFT marketplaces",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/1b3468ac161d-692db6fe7abeca65a184986f_Frame_2147264120__1_.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/00936a66b831-692da0d593144f4d5213fab9_links-img-1.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/edfb83bd6921-69a75d87378643fa62c5e576_links-img-1.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/3d01056c8218-692da0f2f6ed4a6d8de4cae9_links-img-1__2_.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/bab599d6c7a4-692da101d5ef76378c4d8c94_links-img-1__3_.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/1a58ed6827c4-692da10e2a3fe4ade39ccee5_links-img-1__4_.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/079fc0f6fdf2-692da1187139de3c4cb2a8ee_links-img-1__5_.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8d1d03b33763-680905cfdc4507383836495f_guides-cta-apps.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/419bf88d7911-680905cfdc45073838364960_guides-cta-nft.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "first": {
+    "nonzero": 19193,
+    "sum": 3855866,
+    "width": 195,
+    "height": 422
+  },
+  "second": {
+    "nonzero": 19020,
+    "sum": 3684336,
+    "width": 195,
+    "height": 422
+  },
+  "errors": [],
+  "posts": []
+}

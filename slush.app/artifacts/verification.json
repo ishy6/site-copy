@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-09-15T10:39:15.354Z",
+  "pages": 19,
+  "cachedAssets": 214,
+  "sourceFailures": [],
+  "browserChecks": 46,
+  "playwright": {
+    "status": "passed",
+    "failedTests": []
+  },
+  "routeReports": 38,
+  "pageErrors": [],
+  "failedRequests": [],
+  "externalRequests": [],
+  "maxHorizontalOverflow": 0,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "devUrl": "http://127.0.0.1:5180/"
+}

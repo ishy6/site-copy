@@ -1,0 +1,41 @@
+{
+  "route": "/guides/connect-to-apps",
+  "width": 390,
+  "height": 5220,
+  "overflow": 0,
+  "headings": [
+    "Connect to apps",
+    "More guides",
+    "Fund your wallet",
+    "Connect to NFT marketplaces",
+    "Slush Strategies",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/14dc52e4d98a-680905cfdc4507383836495c_apps-img-1-p-500.png",
+      "width": 390,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/419bf88d7911-680905cfdc45073838364960_guides-cta-nft.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

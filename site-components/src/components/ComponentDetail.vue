@@ -5,8 +5,10 @@ import type { ComponentEntry } from '../registry/types'
 import { defaultProps, getSource, siteById } from '../registry'
 import { exportComponent } from '../export'
 import PreviewFrame from './PreviewFrame.vue'
+import ImplementationView from './ImplementationView.vue'
+import HighlightedCode from './HighlightedCode.vue'
 
-const props = defineProps<{ entry: ComponentEntry; saved: boolean; backHref: string }>()
+const props = defineProps<{ entry: ComponentEntry; saved: boolean; backHref: string; initialTab?: 'preview' | 'implementation' }>()
 const emit = defineEmits<{ save: [id: string]; notice: [message: string] }>()
 const activeTab = ref('preview')
 const viewport = ref('desktop')
@@ -18,14 +20,21 @@ const downloading = ref(false)
 const sourceContent = ref('')
 const sourceLoading = ref(false)
 const sourceError = ref('')
+const sourceLine = ref(0)
+const supplementalFile = ref('')
+const sourceFiles = computed(() => [...new Set([...props.entry.files, supplementalFile.value].filter(Boolean))])
+const tabs = [{ id: 'preview', label: 'Preview' }, { id: 'implementation', label: '实现详解' }, { id: 'source', label: 'Source' }, { id: 'usage', label: 'Usage' }]
 let sourceRequest = 0
-watch(() => props.entry.id, () => {
+watch([() => props.entry.id, () => props.initialTab], () => {
   values.value = defaultProps(props.entry)
   activeFile.value = props.entry.files[0] ?? ''
-  activeTab.value = 'preview'
+  activeTab.value = props.initialTab ?? 'preview'
   viewport.value = 'desktop'
+  supplementalFile.value = ''
+  sourceLine.value = 0
 }, { immediate: true })
 const source = computed(() => activeTab.value === 'usage' ? props.entry.usage : sourceContent.value)
+const sourceLanguage = computed(() => activeTab.value === 'usage' ? 'vue' : activeFile.value.split('.').pop() ?? 'text')
 const standaloneUrl = computed(() => `#/preview/${props.entry.id}?${new URLSearchParams({ props: JSON.stringify(values.value) })}`)
 function reset() { values.value = defaultProps(props.entry); refresh.value++ }
 async function loadSource() {
@@ -36,7 +45,9 @@ async function loadSource() {
   if (!sourceLoading.value) return
   try {
     const content = await getSource(activeFile.value)
-    if (request === sourceRequest) sourceContent.value = content
+    if (request === sourceRequest) {
+      sourceContent.value = content
+    }
   } catch {
     if (request === sourceRequest) sourceError.value = '源码加载失败'
   } finally {
@@ -45,6 +56,12 @@ async function loadSource() {
 }
 watch([() => props.entry.id, activeTab, activeFile], loadSource, { immediate: true })
 onBeforeUnmount(() => { sourceRequest++ })
+function openSource(path: string, line: number) {
+  supplementalFile.value = props.entry.files.includes(path) ? '' : path
+  activeFile.value = path
+  sourceLine.value = line
+  activeTab.value = 'source'
+}
 async function copy() {
   const request = sourceRequest
   try {
@@ -60,7 +77,7 @@ async function copy() {
 watch(source, () => { copied.value = false })
 async function download() {
   downloading.value = true
-  try { await exportComponent(props.entry); emit('notice', '组件源码与素材已打包下载') }
+  try { await exportComponent(props.entry); emit('notice', '组件源码、素材与实现文档已打包下载') }
   catch (error) { emit('notice', error instanceof Error ? error.message : '下载失败，请重试') }
   finally { downloading.value = false }
 }
@@ -77,7 +94,7 @@ async function download() {
     <div class="workbench">
       <div class="workbench-toolbar">
         <div class="workbench-tabs" role="tablist" aria-label="组件视图">
-          <button v-for="tab in ['preview', 'source', 'usage']" :key="tab" :id="`tab-${tab}`" role="tab" :aria-selected="activeTab === tab" aria-controls="component-panel" :class="{ active: activeTab === tab }" @click="activeTab = tab">{{ { preview: 'Preview', source: 'Source', usage: 'Usage' }[tab] }}</button>
+          <button v-for="tab in tabs" :key="tab.id" :id="`tab-${tab.id}`" role="tab" :aria-selected="activeTab === tab.id" aria-controls="component-panel" :class="{ active: activeTab === tab.id }" @click="activeTab = tab.id">{{ tab.label }}</button>
         </div>
         <div class="toolbar-actions">
           <a class="icon-button" :href="standaloneUrl" target="_blank" rel="noopener" title="独立窗口预览" aria-label="独立窗口预览"><ArrowUpRight :size="18" /></a>
@@ -109,11 +126,14 @@ async function download() {
           <div v-if="!entry.props.length" class="properties-empty">No configurable properties.</div>
         </aside>
       </div>
+      <div v-else-if="activeTab === 'implementation'" id="component-panel" role="tabpanel" aria-labelledby="tab-implementation">
+        <ImplementationView :id="entry.id" @source="openSource" @notice="$emit('notice', $event)" />
+      </div>
       <div v-else id="component-panel" role="tabpanel" :aria-labelledby="`tab-${activeTab}`" :aria-busy="sourceLoading" class="source-workspace">
-        <div class="source-toolbar"><div class="source-file-list"><button v-for="file in activeTab === 'source' ? entry.files : ['Example.vue']" :key="file" :class="{ active: activeTab === 'usage' || activeFile === file }" @click="activeTab === 'source' && (activeFile = file)"><Code2 :size="13" />{{ file.split('/').pop() }}</button></div><button class="icon-button" :disabled="sourceLoading || !!sourceError" :title="copied ? '已复制' : '复制源码'" :aria-label="copied ? '已复制' : '复制源码'" @click="copy"><component :is="copied ? Check : Copy" :size="16" /></button></div>
+        <div class="source-toolbar"><div class="source-file-list"><button v-for="file in activeTab === 'source' ? sourceFiles : ['Example.vue']" :key="file" :class="{ active: activeTab === 'usage' || activeFile === file }" @click="activeTab === 'source' && (sourceLine = 0, activeFile = file)"><Code2 :size="13" />{{ file.split('/').pop() }}</button></div><button class="icon-button" :disabled="sourceLoading || !!sourceError" :title="copied ? '已复制' : '复制源码'" :aria-label="copied ? '已复制' : '复制源码'" @click="copy"><component :is="copied ? Check : Copy" :size="16" /></button></div>
         <div v-if="sourceLoading" class="source-state" role="status"><LoaderCircle class="source-spinner" :size="20" /><span>Loading source...</span></div>
         <div v-else-if="sourceError" class="source-state" role="alert"><span>{{ sourceError }}</span><button class="icon-button" aria-label="重新加载源码" title="重新加载源码" @click="loadSource"><RotateCcw :size="18" /></button></div>
-        <pre v-else tabindex="0"><code>{{ source }}</code></pre>
+        <HighlightedCode v-else :code="source" :language="sourceLanguage" :active-line="activeTab === 'source' ? sourceLine : 0" />
       </div>
     </div>
     <div class="provenance"><div><h2>Original source</h2><code>{{ entry.source }}</code></div><span class="source-kind">{{ entry.sourceKind === 'extracted' ? 'Existing component' : 'Extracted pattern' }}</span></div>
@@ -122,9 +142,10 @@ async function download() {
 </template>
 
 <style scoped>
-.source-state { height: 520px; display: flex; align-items: center; justify-content: center; gap: 10px; background: #242120; color: #bdbdbd; font-size: 13px; }
+.source-state { height: 520px; display: flex; align-items: center; justify-content: center; gap: 10px; background: #1e1e1e; color: #bdbdbd; font-size: 13px; }
 .source-state .icon-button { color: inherit; }
 .source-spinner { animation: source-spin 1s linear infinite; }
+@media (max-width: 560px) { .workbench-toolbar { flex-wrap: wrap; padding-bottom: 8px; } .workbench-tabs { width: 100%; justify-content: space-between; gap: 10px; } .toolbar-actions { margin-left: auto; } }
 @keyframes source-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .source-spinner { animation: none; } }
 </style>

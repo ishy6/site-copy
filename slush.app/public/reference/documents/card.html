@@ -1,0 +1,839 @@
+<!DOCTYPE html><!-- Last Published: Mon Jul 27 2026 06:47:50 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="slush.app" data-wf-page="69f34016520545be4fba82c6" data-wf-site="680905cfdc450738383648a6" lang="en"><head><meta charset="utf-8"><title>Join Waitlist | Slush Card</title><meta content="Spend crypto instantly with Slush Card while keeping it productive. Accepted at 50M+ merchants in 150+ countries. Join the waitlist today." name="description"><meta content="Join Waitlist | Slush Card" property="og:title"><meta content="Spend crypto instantly with Slush Card while keeping it productive. Accepted at 50M+ merchants in 150+ countries. Join the waitlist today." property="og:description"><meta content="https://cdn.prod.website-files.com/680905cfdc450738383648a6/69fafdf391b32ae27f88adad_Slush-card-open-graph.webp" property="og:image"><meta content="Join Waitlist | Slush Card" name="twitter:title"><meta content="Spend crypto instantly with Slush Card while keeping it productive. Accepted at 50M+ merchants in 150+ countries. Join the waitlist today." name="twitter:description"><meta content="https://cdn.prod.website-files.com/680905cfdc450738383648a6/69fafdf391b32ae27f88adad_Slush-card-open-graph.webp" name="twitter:image"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><link href="/reference/assets/bc2c81fd9834-sui-slush-staging.shared.0ce1286b1.min.css" rel="stylesheet" type="text/css"><link href="/reference/assets/b435810a5b86-680905cfdc45073838364973_favicon.svg" rel="shortcut icon" type="image/x-icon"><link href="/reference/assets/ccaba8ddeb98-680905cfdc45073838364974_webclip.svg" rel="apple-touch-icon"><link href="https://slush.app/card" rel="canonical"><!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<!--Geo guard-->
+
+<meta name="google-site-verification" content="OdcP2iJ0nrGU2x7rllouP5xxxl3UDF-WVnP8jLoO3xA">
+<style>
+
+  html, body {
+    width: 100%;
+    height: auto !important;
+    min-height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  } 
+
+  .w-editor .load-w{
+    display: none;
+  }	 
+
+  .is--transitioning{
+    height:100svh;
+    overflow:hidden;
+  }  
+  
+  .main-w .section:nth-child(1) [data-hero-content]{opacity:0;}
+  .w-editor .main-w .section:nth-child(1) [data-hero-content]{opacity:1;}
+
+	#navContainer{transform: translate(0px, -300%)}
+  .w-editor #navContainer{transform: translate(0px, 0%)}
+  
+</style><style>
+  
+  .af-canvas-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .af-canvas-overlay.is-ready { opacity: 1; }
+</style>
+
+<style>
+
+  
+  .about-heading {
+    bottom: 0;
+  }
+  #step-success-wallet.active .card-background-vid {
+    opacity: 0 !important;
+  }
+
+  .wallet-card {
+    opacity: 0;
+  }
+  .preloader {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .preloader-img.is-2,
+  .preloader-img.is-3,
+  .preloader-img.is-4 {
+    opacity: 0;
+  }
+
+  .h2-about {
+    transform-origin: center center;
+    will-change: transform, color;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  #about-bttn,
+  .about-image-wrapper {
+    will-change: transform, opacity;
+  }
+      @media (min-width: 480px) {
+  .about-image-wrapper {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+        }
+
+  .navbar {
+    opacity: 0;
+  }
+    @media (min-width: 480px) {
+  .section-spend {
+    z-index: 4;
+  }
+      }
+</style>
+
+<style>
+
+    .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+        position: relative;
+  }
+
+
+    /* .stack-wrapper {
+    position: relative;
+    height: 100vh;        /* высота одного экрана */
+    overflow: hidden;     /* обрезаем карточки снизу */
+  } */
+
+  /* [stack-card] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  } */
+    .card-background-vid {
+      opacity: 0;
+    }
+
+    .cookie-banner {
+
+      opacity: 0;
+      pointer-events: none;
+    }
+</style>
+<style>
+  #ez-cookie-notification {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.5s ease;
+    width: 100% !important;
+    bottom: 0px !important;
+    padding: 1rem 1.5rem !important;
+  }
+  #ez-cookie-notification.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .enzuzo-cookie-icon {
+    display: none !important;
+  }
+  #close-notification {
+    display: none !important;
+  }
+
+  .button-main-card {
+    padding: 1rem 2rem !important;
+  }
+  .button-main-card.navbar-btn {
+    padding: 0.69rem 1.38rem !important;
+  }
+  .enzuzo-notification-buttons {
+    padding-right: 0px !important;
+  }
+
+  @media (max-width: 479px) {
+    .button-main-card {
+      padding: 0.75rem 1.75rem !important;
+    }
+    .button-main-card.navbar-btn {
+      padding: 0.75rem 1.75rem !important;
+    }
+
+    #ez-cookie-notification {
+      padding: 1rem 1.25rem 1.25rem !important;
+      border-top: 1px solid #eaeaf0 !important;
+    }
+    .enzuzo-notification-buttons {
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+    }
+    .enzuzo-cookieButtonWrap {
+      flex-direction: row !important;
+    }
+    #notificationManagerLink {
+      margin-left: 0px !important;
+    }
+  }
+
+  .enzuzo-notification-desc.notification-desc {
+    max-width: 52rem;
+  }
+  #notificationManagerLink,
+  #notificationPolicyLink {
+    color: #0a0a0b !important;
+    text-decoration: none;
+  }
+</style></head><body class="body-card"><div class="main-wrapper"><div class="styles"><div class="global-styles w-embed"><style>
+  html {
+    font-size: 1rem;
+  }
+  @media screen and (min-width: 1440px) {
+    html {
+      font-size: calc(0.00007284079084285411rem + 0.85vw);
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    html {
+      font-size: calc(0.00007284079084285411rem + 1.1110301768990636vw);
+    }
+  }
+  @media screen and (max-width: 479px) {
+    html {
+      font-size: calc(0.0012019230769234612rem + 4.26153846153846vw);
+    }
+  }
+</style>
+<style>
+/* Одноэтажная g (ss01 или другой сет — зависит от шрифта) */
+body {
+  font-feature-settings: "ss01" 1;
+}
+  
+    /* Все браузеры */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  /* Chrome/Safari/Opera */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+      /* Make text look crisper and more legible in all browsers */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Focus state style for keyboard navigation for the focusable elements */
+      *[tabindex]:focus-visible,
+        input[type="file"]:focus-visible {
+         outline: 0.125rem solid #4d65ff;
+         outline-offset: 0.125rem;
+      }
+
+      /* Set color style to inherit */
+      .inherit-color * {
+          color: inherit;
+      }
+
+      /* Get rid of top margin on first element in any rich text element */
+      .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+        margin-top: 0 !important;
+      }
+
+      /* Get rid of bottom margin on last element in any rich text element */
+      .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+      	margin-bottom: 0 !important;
+      }
+
+
+      /* Make sure containers never lose their center alignment */
+      .container-medium,.container-small, .container-large {
+      	margin-right: auto !important;
+        margin-left: auto !important;
+      }
+
+      /*
+      Make the following elements inherit typography styles from the parent and not have hardcoded values.
+      Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+      Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+      */
+      /*
+      a,
+      .w-input,
+      .w-select,
+      .w-tab-link,
+      .w-nav-link,
+      .w-dropdown-btn,
+      .w-dropdown-toggle,
+      .w-dropdown-link {
+        color: inherit;
+        text-decoration: inherit;
+        font-size: inherit;
+      }
+      */
+
+      /* Apply "..." after 3 lines of text */
+      .text-style-3lines {
+      	display: -webkit-box;
+      	overflow: hidden;
+      	-webkit-line-clamp: 3;
+      	-webkit-box-orient: vertical;
+      }
+
+      /* Apply "..." after 2 lines of text */
+      .text-style-2lines {
+      	display: -webkit-box;
+      	overflow: hidden;
+      	-webkit-line-clamp: 2;
+      	-webkit-box-orient: vertical;
+      }
+
+      /* These classes are never overwritten */
+      .hide {
+        display: none !important;
+      }
+
+      @media screen and (max-width: 991px) {
+          .hide, .hide-tablet {
+              display: none !important;
+          }
+      }
+        @media screen and (max-width: 767px) {
+          .hide-mobile-landscape{
+            display: none !important;
+          }
+      }
+        @media screen and (max-width: 479px) {
+          .hide-mobile{
+            display: none !important;
+          }
+      }
+
+      .margin-0 {
+        margin: 0rem !important;
+      }
+
+      .padding-0 {
+        padding: 0rem !important;
+      }
+
+      .spacing-clean {
+      padding: 0rem !important;
+      margin: 0rem !important;
+      }
+
+      .margin-top {
+        margin-right: 0rem !important;
+        margin-bottom: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-top {
+        padding-right: 0rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-right {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-right {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-bottom {
+        margin-top: 0rem !important;
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-bottom {
+        padding-top: 0rem !important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-left {
+        margin-top: 0rem !important;
+        margin-right: 0rem !important;
+        margin-bottom: 0rem !important;
+      }
+
+      .padding-left {
+        padding-top: 0rem !important;
+        padding-right: 0rem !important;
+        padding-bottom: 0rem !important;
+      }
+
+      .margin-horizontal {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+      }
+
+      .padding-horizontal {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+      }
+
+      .margin-vertical {
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-vertical {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      
+
+	.navbar-btn {
+  transform: translateX(20px);
+  will-change: transform;
+  transition: transform 1.5s var(--ease-premium);
+}
+    .navbar-container {
+      width: 10.3rem;
+        transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: width;
+    }
+  .nav-bttns-wrap{
+        transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: width;
+    }
+
+    .nav-logo-text {
+        transition:
+            opacity 0.3s ease-out,
+            transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+            width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .navbar-container .nav-bttns-wrap {
+        opacity: 0;
+        width: 0;
+      height: 0;
+    }
+
+    .navbar-container.is-collapsed {
+        width: 13.1rem;
+    }
+      .navbar-container.is-collapsed .navbar-btn{
+          transform: translateX(0px);
+    }
+
+  
+    @media screen and (max-width: 479px) {
+          .navbar-container {
+      width: 7.8rem;
+
+    }
+    .navbar-container.is-collapsed {
+        width: 13.1rem;
+    }
+
+  }
+
+  	.navbar-container.is-collapsed .nav-bttns-wrap{
+      opacity: 1;
+      width: 10rem;
+      height: auto;
+    }
+    	.navbar-container.is-collapsed .navbar-logo{
+      width: auto;
+    }
+
+    	.navbar-container.is-collapsed .nav-logo-text{
+      opacity: 0;
+      width: 0;
+    }
+
+      .step {
+        display: block !important;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+  }
+
+  .step.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style></div><div class="buttons-css w-embed"><style>
+  :root {
+    --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* =========================
+   BUTTON COLORS
+========================= */
+
+  /* =========================
+   BASE STATES
+========================= */
+    .button-main-card {
+    will-change: background-color;
+    transition: background-color 0.4s var(--ease-premium);
+  }
+  .button-main-card.email-submit.is-active {
+    color: white;
+    background-color: #0a0a0b;
+  }
+
+  .button-main-text {
+    will-change: color, background-color;
+    transition: color 0.4s var(--ease-premium), background-color 0.4s var(--ease-premium);
+  }
+
+  .button-main-gradient {
+    opacity: 0;
+    will-change: opacity ;
+    transition: opacity 0.8s var(--ease-premium); 
+}
+
+.button-main-gradient-blur {
+  transform: translateY(25px);
+  will-change: transform;
+  transition: transform 0.8s var(--ease-premium);
+}
+
+.button-main-card .button-main-gradient-blur {
+    filter: blur(25px);
+    background-image: url(/reference/assets/80bc1d98bb99-69faf226da57f08619ef448e_kirby-light.svg);
+    background-repeat: no-repeat;
+    background-size: 9rem;
+    background-position: 50% -50%;
+}
+
+    .button-main-card.is-black .button-main-gradient-blur {
+    filter: blur(20px);
+    background-image: url(/reference/assets/bf2bec90e505-69faefd51f42f6661b33e778_kirby.svg);
+    background-repeat: no-repeat;
+    background-size: 9rem;
+    background-position: 50% -50%;
+}
+    /* 
+  .button-main-card.is-black .button-main-gradient,
+  .button-main-card.email-submit .button-main-gradient {
+    background: radial-gradient(100.04% 104.84% at 0% 37.96%, #9a82d9 23.32%, #483c5f 58.31%, #a53060 100%);
+  } */
+
+  /* .button-main-card.is-black .button-main-gradient-blur,
+  .button-main-card.email-submit .button-main-gradient-blur{
+    background: #0a0a0b;
+  } */
+  /* .button-main-card.is-black .button-main-gradient-blur.is-small,
+    .button-main-card.navbar-btn .button-main-gradient-blur.is-small{
+    width: 83%;
+    height: 65%;
+  } */
+
+  .email-submit .button-main-gradient {
+    visibility: hidden;
+  }
+
+  .email-submit.is-active .button-main-gradient {
+    visibility: visible;
+  }
+
+  /* .email-submit.is-active {
+    color: white;
+    background: #0a0a0b;
+  } */
+  /* =========================
+   HOVER STATES
+========================= */
+  @media (hover: hover) and (pointer: fine) {
+    /* .button-main-card.is-black:hover .button-main-text,
+    .button-main-card.email-submit:hover .button-main-text{
+      color: white;
+    }
+    .button-main-card.navbar-btn:hover{
+      background-color: white;
+    } */
+        .button-main-card:hover .button-main-gradient {
+      opacity: 1;
+    }
+
+    .button-main-card.is-black:hover .button-main-gradient-blur {
+      transform: translateY(10px);
+    }
+        .button-main-card:hover .button-main-gradient-blur {
+      transform: translateY(15px);
+    }
+    .button-main-card.email-submit:hover .button-main-text {
+      color: rgba(10, 10, 10, 0.56) !important;
+    }
+    .button-main-card.email-submit.is-active:hover .button-main-text {
+      color: white !important;
+    }
+  }
+
+  /* =========================
+   NAVBAR BUTTON ANIMATION
+========================= */
+
+  .navbar-btn:after {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: -300%;
+    width: 600%;
+    height: 600%;
+    z-index: -1;
+    background: linear-gradient(135deg, rgba(255, 252, 253, 0) 35%, rgba(255, 232, 240, 0.8) 50%, rgba(255, 252, 253, 0) 65%);
+    animation: fast-sweep 8s infinite linear;
+    pointer-events: none;
+  }
+
+  @keyframes fast-sweep {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    35% {
+      transform: translate(50%, 50%);
+    }
+    100% {
+      transform: translate(50%, 50%);
+    }
+  }
+</style></div><div class="wallet-flip-styles w-embed"><style>
+
+.wallet-card {
+  perspective: 1200px;
+  transition: transform 0.6s ease;
+}
+.wallet-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.wallet-card-face-side,
+.wallet-card-flip-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.wallet-card-flip-side {
+  transform: rotateX(180deg);
+}
+.wallet-card-inner.is-active {
+  transform: rotateX(180deg);
+}
+
+</style></div><div class="email-styles w-embed"><style>
+.email-input {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+  color: #0a0a0b;
+}
+
+/* placeholder */
+.email-input::placeholder {
+  color: #8D8D9A;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+}
+/* hover */
+.email-input:hover {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #7d7d8;
+}
+
+/* focus */
+.email-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #7d7d8;
+}
+
+/* active (клик) */
+.email-input:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #7d7d8;
+}
+
+/* если Webflow/браузер добавляет автостили */
+.email-input:-webkit-autofill,
+.email-input:-webkit-autofill:hover,
+.email-inpute:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #7d7d8 inset;
+  box-shadow: 0 0 0 1000px #7d7d8 inset;
+  -webkit-text-fill-color: #000;
+}
+
+
+
+  
+
+      .step { display: none; }
+    .step.active { display: block; }
+
+.otp-input-circle {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+}
+
+/* placeholder */
+.otp-input-circle::placeholder {
+  color: #0a0a0b;
+}
+
+/* hover */
+.otp-input-circle:hover {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #DBDBE1;
+}
+
+/* focus */
+.otp-input-circle:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #DBDBE1;
+  caret-color: transparent;
+}
+
+/* active (клик) */
+.otp-input-circle:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #DBDBE1;
+}
+
+/* focus-visible (важно для браузеров) */
+.otp-input-circle:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background-color: #DBDBE1;
+}
+
+/* если Webflow/браузер добавляет автостили */
+.otp-input-circle:-webkit-autofill,
+.otp-input-circle:-webkit-autofill:hover,
+.otp-input-circle:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #DBDBE1 inset;
+  box-shadow: 0 0 0 1000px #DBDBE1 inset;
+  -webkit-text-fill-color: #000;
+}
+</style></div><div class="h1-hero-gradient-styles w-embed"><style>
+.h1-hero-gradient {
+  background: linear-gradient(
+    45deg,
+    #0A0A0B 40%,
+    #9C6275 50%,
+    #97566A 53%,
+    #0A0A0B 60%
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s ease infinite;
+}
+
+@keyframes shine {
+  0%   { background-position: 100% 100%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 0% 0%; }
+}
+</style></div></div><div data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar navbar-2 w-nav"><div class="navbar-container"><a href="/" class="navbar-logo w-nav-brand"><div class="nav-logo-svg"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 40" fill="none" class="nav-logo-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C31.0456 0 39.9999 8.95432 39.9999 20C39.9999 31.0458 31.0456 40.0001 20 40.0001C8.95429 40.0001 0 31.0458 0 20C0 8.95432 8.95429 0 20 0ZM29.3283 12.7338C27.8865 7.32879 22.1776 6.4836 17.0015 7.87665C11.7356 9.29392 7.17078 13.5799 8.56458 18.8048C8.89303 20.036 10.0213 21.0199 11.3281 20.99L13.3232 20.9848C13.7332 20.9753 13.5859 21.0092 14.3773 20.9434C15.1669 20.8777 17.271 20.6177 17.2825 20.6163L27.6556 19.4374L27.9226 19.3984C28.5293 19.2945 28.9879 19.4524 29.3755 20.1231C29.9556 21.1267 29.0706 21.8838 28.0113 22.7898C27.9829 22.8141 27.9541 22.8382 27.9256 22.8627L18.8077 30.7562C17.2449 32.1101 16.1471 31.601 15.7626 30.1598L14.4006 25.0549C14.0642 23.7937 12.8382 22.804 11.4021 23.1903C9.60697 23.6735 9.4609 25.7727 9.90145 27.4243C10.8307 30.9075 14.3018 34.0608 21.4826 32.1281C28.334 30.284 32.6278 24.6229 31.5146 20.449C31.1301 19.0076 29.9717 18.0316 28.1862 18.1903L12.2201 19.5266C11.2148 19.6041 10.7539 19.4383 10.488 18.8019C10.2301 18.1956 10.3768 17.5445 11.591 16.9281L23.7418 10.6647C24.6729 10.1888 25.2931 9.98989 25.8599 10.1913C26.2152 10.3209 26.4496 10.8373 26.2348 11.4745L25.4465 13.8107C24.4799 16.6775 26.5494 17.3435 27.7162 17.0295C29.4815 16.5544 29.8969 14.8657 29.3283 12.7338Z" fill="currentColor"></path></svg><div class="nav-logo-text"><svg xmlns="http://www.w3.org/2000/svg" width="93" height="40" viewBox="0 0 93 40" fill="none" class="nav-logo-text-svg"><path d="M73.4883 7.10718H79.9673V18.199C80.5776 17.0018 81.3993 16.098 82.4321 15.4877C83.465 14.8773 84.6857 14.5722 86.0942 14.5722C88.2069 14.5722 89.8032 15.2177 90.883 16.5088C91.9863 17.7999 92.538 19.6897 92.538 22.178V32.636H86.059V22.847C86.059 21.6733 85.8242 20.8047 85.3547 20.2413C84.8852 19.6545 84.1693 19.361 83.2068 19.361C82.526 19.361 81.9392 19.5136 81.4462 19.8188C80.9532 20.124 80.5776 20.5934 80.3194 21.2273C80.0847 21.8376 79.9673 22.5888 79.9673 23.4808V32.636H73.4883V7.10718Z" fill="currentColor"></path><path d="M63.2303 33.0929C61.8218 33.0929 60.5072 32.9521 59.2866 32.6704C58.0659 32.3887 56.9626 31.9661 55.9766 31.4027C54.9907 30.8393 54.1573 30.1468 53.4766 29.3252L56.7865 26.4026C57.5846 27.2242 58.5236 27.8463 59.6035 28.2688C60.7068 28.6914 61.9744 28.9027 63.4064 28.9027C64.4158 28.9027 65.1552 28.797 65.6247 28.5857C66.0942 28.351 66.329 28.0223 66.329 27.5998C66.329 27.1773 66.1646 26.8838 65.836 26.7195C65.5073 26.5317 64.8501 26.3674 63.8641 26.2265L60.4838 25.7336C58.4649 25.4519 56.9626 24.865 55.9766 23.9729C55.0142 23.0574 54.5329 21.8133 54.5329 20.2405C54.5329 19.0902 54.8616 18.0925 55.5189 17.2474C56.1996 16.3788 57.1856 15.7216 58.4767 15.2755C59.7678 14.806 61.3171 14.5713 63.1247 14.5713C64.3688 14.5713 65.5426 14.6887 66.6459 14.9234C67.7492 15.1347 68.7469 15.4516 69.6389 15.8741C70.5544 16.2967 71.3173 16.8249 71.9277 17.4587L69.0755 20.6278C68.2069 19.9705 67.2445 19.4775 66.1881 19.1489C65.1552 18.8202 63.9932 18.6559 62.7021 18.6559C61.8336 18.6559 61.1997 18.7615 60.8007 18.9728C60.4016 19.1606 60.2021 19.454 60.2021 19.8531C60.2021 20.1818 60.3312 20.44 60.5894 20.6278C60.8711 20.7921 61.3406 20.933 61.9979 21.0503L66.1881 21.6489C68.1835 21.9541 69.6272 22.5527 70.5192 23.4448C71.4112 24.3368 71.8573 25.5692 71.8573 27.142C71.8573 28.3627 71.5169 29.4191 70.8361 30.3111C70.1788 31.2032 69.2046 31.8957 67.9135 32.3887C66.6224 32.8582 65.0613 33.0929 63.2303 33.0929Z" fill="currentColor"></path><path d="M40.2955 33.0941C38.1358 33.0941 36.5043 32.5073 35.401 31.3335C34.3212 30.1363 33.7812 28.4226 33.7812 26.1925V15.0303H40.2603V24.9249C40.2603 26.0752 40.495 26.932 40.9645 27.4954C41.434 28.0588 42.1148 28.3405 43.0068 28.3405C43.6641 28.3405 44.2275 28.1996 44.697 27.9179C45.1665 27.6128 45.5186 27.1902 45.7534 26.6503C46.0116 26.1104 46.1407 25.4883 46.1407 24.7841V15.0303H52.6197V32.6364H46.3872V29.3264C45.9177 30.5002 45.1313 31.4274 44.028 32.1082C42.9481 32.7655 41.704 33.0941 40.2955 33.0941Z" fill="currentColor"></path><path d="M31.604 32.6363H25.125V7.10742H31.604V32.6363Z" fill="currentColor"></path><path d="M11.9721 33.2703C10.1411 33.2703 8.45089 33.059 6.90156 32.6364C5.35223 32.1904 3.9907 31.5683 2.81696 30.7702C1.64323 29.9486 0.704241 28.9861 0 27.8828L4.75363 24.1151C5.29355 24.9367 5.92736 25.6527 6.65508 26.263C7.40627 26.8734 8.25136 27.3429 9.19035 27.6715C10.1293 28.0002 11.1505 28.1645 12.2538 28.1645C13.5919 28.1645 14.6482 27.9532 15.4229 27.5307C16.221 27.0846 16.6201 26.4508 16.6201 25.6292C16.6201 25.1128 16.5027 24.6902 16.268 24.3616C16.0332 24.0094 15.6694 23.7395 15.1764 23.5517C14.7069 23.3404 14.0496 23.1526 13.2045 22.9883L9.22556 22.2488C6.76072 21.7793 4.90621 20.9225 3.66205 19.6783C2.41789 18.4107 1.79581 16.7205 1.79581 14.6078C1.79581 13.035 2.21836 11.6852 3.06345 10.5584C3.93201 9.40812 5.1527 8.52781 6.7255 7.91747C8.32178 7.30713 10.2115 7.00195 12.3946 7.00195C13.944 7.00195 15.3994 7.16628 16.7609 7.49492C18.1225 7.82357 19.3549 8.32828 20.4582 9.00905C21.5615 9.66634 22.4888 10.488 23.24 11.4739L19.1201 15.4177C18.6037 14.6899 17.9699 14.0679 17.2187 13.5514C16.491 13.0115 15.6694 12.6007 14.7539 12.319C13.8618 12.0373 12.9228 11.8964 11.9369 11.8964C10.7397 11.8964 9.78895 12.096 9.08471 12.4951C8.40394 12.8941 8.06356 13.4458 8.06356 14.15C8.06356 14.6195 8.18093 15.0186 8.41568 15.3472C8.65043 15.6524 9.01429 15.9224 9.50726 16.1571C10.0237 16.3684 10.7397 16.5679 11.6552 16.7557L15.775 17.5304C17.4652 17.859 18.8385 18.3285 19.8948 18.9389C20.9746 19.5492 21.7845 20.3591 22.3244 21.3685C22.8644 22.3545 23.1343 23.5634 23.1343 24.9954C23.1343 26.6856 22.6883 28.1527 21.7963 29.3969C20.9277 30.6411 19.6483 31.6035 17.9581 32.2843C16.2914 32.9416 14.2961 33.2703 11.9721 33.2703Z" fill="currentColor"></path></svg></div></div></a><nav role="navigation" class="nav-menu w-nav-menu"><a href="/#newsEvents-section" class="nav-link w-nav-link">Features</a><a href="/#newsEvents-section" class="nav-link w-nav-link">Security</a><a href="/#newsEvents-section" class="nav-link w-nav-link">Questions</a></nav><div id="w-node-e5607fab-99f7-c3c2-5936-d83d5e18e562-4fba82c6" class="nav-bttns-wrap"><a navbar-bttn="" href="#section-hero" class="button-main-card navbar-btn w-inline-block"><div class="button-main-card-inner"><div class="button-main-text">Join the waitlist</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></a><div class="mobile-nav-bttn hide"><div class="mobile-nav-bttn-lottie" data-w-id="e5607fab-99f7-c3c2-5936-d83d5e18e56a" data-animation-type="lottie" data-src="/reference/assets/a3adc1251a51-698b10386464fa98cd5a31c1_Hamburger_Menu__1_.json" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1" data-loading="eager"></div></div></div></div><div nav-menu-mobile="" id="w-node-e5607fab-99f7-c3c2-5936-d83d5e18e56b-4fba82c6" class="nav-menu-mobile"><div class="nav-menu-inner-wrapper"><div class="nav-menu-links-wrapper"><a href="#" class="nav-link nav-link-mob-menu w-nav-link">Product</a><a href="#" class="nav-link nav-link-mob-menu w-nav-link">How it works</a><a href="#" class="nav-link nav-link-mob-menu w-nav-link">About</a><a href="https://docs.silopay.io/" target="_blank" class="nav-link nav-link-mob-menu w-nav-link">Docs</a></div><a href="#" target="_blank" class="button-main-card nav-link-button-mob w-inline-block"><div class="button-main-text"><strong>Create Your Account</strong></div></a></div><div class="nav-menu-bg-mob"></div></div></div><div class="page-wrapper"><div id="section-hero" class="section-hero"><div class="container-card hero-container"><div class="padding-global hero-pads no-pads"><div class="hero-content"><div class="hero-content-inner"><div class="hero-text"><div class="hero-heading"><div class="hero-heading-top"><div class="hero-heading-top-text">Slush Card</div><div class="hero-heading-top-text-14">Soon</div></div><h1 class="h1-hero">Spend without <span class="h1-hero-gradient">selling</span></h1></div></div><div class="card-place"><div class="card-container"><div class="wallet-card"><div data-poster-url="/reference/assets/b33fe0854b11-69dc70317416e9ed4adf4cd3_69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/69dc70317416e9ed4adf4cd3%2F69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_mp4.mp4,https://cdn.prod.website-files.com/69dc70317416e9ed4adf4cd3%2F69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="card-background-vid w-background-video w-background-video-atom"><video id="e5607fab-99f7-c3c2-5936-d83d5e18e58f-video" autoplay="" loop="" style="background-image:url(&quot;/reference/assets/b33fe0854b11-69dc70317416e9ed4adf4cd3_69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_poster.0000000.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/69dc70317416e9ed4adf4cd3%2F69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_mp4.mp4" data-wf-ignore="true"><source src="https://cdn.prod.website-files.com/69dc70317416e9ed4adf4cd3%2F69e89a4454b9f47e9700aa01_copy_462F8D02-D383-4C84-8DC1-E88CF228387B_webm.webm" data-wf-ignore="true"></video></div><div class="wallet-card-inner is-active"><div class="wallet-card-face-side"><img src="/reference/assets/1e48e84eecf1-69f83a408d68390c630c1973_card-only.avif" loading="lazy" sizes="(max-width: 1776px) 100vw, 1776px" srcset="/reference/assets/2b6a00dc9c31-69f83a408d68390c630c1973_card-only-p-500.avif 500w, /reference/assets/42beaf2dd094-69f83a408d68390c630c1973_card-only-p-800.avif 800w, /reference/assets/1e48e84eecf1-69f83a408d68390c630c1973_card-only.avif 1776w" alt="" class="card-img"></div><div class="wallet-card-flip-side"><div id="step-loading" class="step"><div class="loader-lottie" data-w-id="c43d58fc-dc3d-d3b5-313a-49b64e79e87d" data-animation-type="lottie" data-src="/reference/assets/6c5469de8078-69f851e62bffd4d60b0019ea_Skeleton_loader__3_.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1" data-loading="lazy"></div></div><div id="step-email" class="step active"><div class="email-step-wrapper"><div class="wallet-step-heading-wrapper"><h3 id="step-email-h3" class="heading-h3">Coming soon. Join the waitlist to&nbsp;get&nbsp;in&nbsp;line&nbsp;for early access</h3><div class="h-subtext step-subtext hide">Get early updates on launch details, card benefits, and exclusive offers</div></div><div class="input-wrapper"><input type="email" id="email-input" placeholder="Enter your email" autocomplete="email" class="email-input"><button id="send-otp-btn" class="button-main-card email-submit"><div class="button-main-card-inner"><div class="button-main-text">Next</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></button><div id="email-error" class="error-msg-email-input"></div></div><div class="agree-text">By clicking 'next,' you agree to receive updates from Mysten Labs about Slush Card. See our <a href="/privacy-policy" target="_blank" class="info-text-link">Privacy Policy</a>.</div></div><div id="geo-banner" style="display:none" class="geo-banner info"></div></div><div id="step-otp" class="step"><div class="step-otp-wrapper"><label class="label"><div class="wallet-step-heading-wrapper gap-0"><h3 class="heading-h3">We have sent you a code to</h3><span id="otp-email-display" class="heading-h3 otp-email-display"></span></div></label><div id="otp-container" class="otp-inputs"><div id="otp-error" class="error-msg"></div><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="0" class="otp-input-circle"><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="1" class="otp-input-circle"><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="2" class="otp-input-circle"><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="3" class="otp-input-circle"><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="4" class="otp-input-circle"><input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="5" class="otp-input-circle"></div><div class="otp-bttns"><div class="otp-right-bottom-btns"><div class="w-embed"><button class="btn-link" onclick="goToStep('email')" style="display: block">Change email</button></div></div><div class="resend-code-wrapper"><div class="w-embed"><button id="resend-btn" class="btn-link resend-code-btn" onclick="handleResendOTP()">Resend in</button></div><span id="resend-countdown" class="hint">60</span></div></div></div></div><div id="step-wallet" class="step"><div class="connect-wallet-wrapper"><div class="wallet-step-heading-wrapper"><h3 id="wallet-step-heading" class="heading-h3">Connect your Slush wallet<br>to lock in your spot</h3><div id="wallet-step-subtitle" class="h-subtext step-subtext">To stay on the waitlist, you need to connect your wallet. </div></div><div class="connect-wallet-bttns"><div class="connect-wallet-button-wrapper"><div id="wallet-error" class="error-msg-connect-wallet"></div><div id="wallet-connect-btn" class="button-main-card is-black _w-100"><div class="button-main-text">Connect Slush wallet</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></div><div class="w-embed"><button id="" class="text-button" onclick="goToStep('success-email-only')">Remind me later</button></div></div></div></div><div id="step-success-email-only" class="step"><div class="connect-wallet-wrapper"><div class="wallet-step-heading-wrapper"><h3 id="soft-hold-heading" class="heading-h3">We'll hold your spot for 5 days!</h3><div id="step-success-email-only-subtitle" class="h-subtext step-subtext">Connect your wallet to keep your waitlist spot. We will send reminders to <span id="display-email">slush@gmail.com</span>.</div></div><div class="connect-wallet-bttns"><div class="connect-wallet-button-wrapper"><div id="wallet-error" class="error-msg-connect-wallet"></div><div id="wallet-connect-btn-success-email-only" class="button-main-card is-black _w-100"><div class="button-main-text">Connect Slush wallet</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></div><a href="https://my.slush.app/Welcome" target="_blank" class="text-button w-inline-block"><div class="text-span-grey-400">Don't have Slush wallet?</div><div>Get started</div></a></div></div></div><div id="step-expired" class="step"><div class="connect-wallet-wrapper"><div class="wallet-step-heading-wrapper"><h3 class="heading-h3">Your spot slipped away</h3><div class="h-subtext step-subtext">Your 5-day hold has ended. Connect your wallet to get back on the waitlist.</div></div><div class="connect-wallet-bttns"><div class="connect-wallet-button-wrapper"><div id="wallet-error" class="error-msg-connect-wallet"></div><div id="wallet-connect-btn-expired" class="button-main-card is-black _w-100"><div class="button-main-text">Connect Slush wallet</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></div><div class="w-embed"><button id="" class="text-button" onclick="goToStep('success-email-only')">Remind me later</button></div></div></div></div><div id="step-geo-blocked" class="step"><div style="text-align:center;margin-bottom:20px;font-size:40px"><span>🌍</span></div><h1 style="text-align:center;font-size:20px">Not available in your region yet</h1><p id="geo-blocked-detail" style="text-align:center" class="subtitle-18"></p><p style="text-align:center" class="hint">Your email has been saved. We'll notify you when the Slush Card waitlist opens in your area.</p></div></div></div></div></div><div id="step-success-wallet" class="step is-step-success-wallet"><div class="step-success-wallet-wrapper"><div class="check-icon-wrapper"><img src="/reference/assets/e2cc2ab9f546-69fc4b98997cd81e5186070d_check-icon.svg" loading="lazy" alt="" class="check-icon"><p style="text-align:center" class="subtitle-18 is-medium">You're on the list!</p></div><p id="step-success-wallet-subtitle" style="text-align:center" class="subtitle-18">Be on the lookout for email updates.</p></div></div></div></div></div><div class="preloader"><div class="preloader-img-wrapper"><img src="/reference/assets/3a9828fa39e7-69f9a1ef3e4b6f8341501372_preloader-3.avif" loading="lazy" alt="" class="preloader-img is-1"><img src="/reference/assets/288bc9d167a6-69f9a1eb91e1e783a0d800e2_preloader-2.avif" loading="lazy" sizes="(max-width: 1200px) 100vw, 1200px" srcset="/reference/assets/74ec53b750e5-69f9a1eb91e1e783a0d800e2_preloader-2-p-500.avif 500w, /reference/assets/288bc9d167a6-69f9a1eb91e1e783a0d800e2_preloader-2.avif 1200w" alt="" class="preloader-img is-2"><img src="/reference/assets/e67c635a5306-69f9a1e9e7f460c547b7944a_preloader-1.avif" loading="lazy" sizes="(max-width: 1200px) 100vw, 1200px" srcset="/reference/assets/0b7ed7332a9c-69f9a1e9e7f460c547b7944a_preloader-1-p-500.avif 500w, /reference/assets/e67c635a5306-69f9a1e9e7f460c547b7944a_preloader-1.avif 1200w" alt="" class="preloader-img is-3"><img src="/reference/assets/27e23e5971aa-69f3401ab8d69050c0fce9c6_4_NO_CARD__1_.avif" loading="lazy" alt="" class="preloader-img is-4"><div class="preloader-progress-bar"><div class="preloader-progress-bar-fill"></div></div></div></div></div></div></div><div class="section-about-wrapper is-test"><div id="section-about" class="section-about"><div class="container-card hero-container"><div class="padding-global pads-about"><div class="about-content is-test"><div class="about-heading is-test"><h2 class="h2-about">Slush Card turns your balance into instant spending power. Tap to pay, your balance stays productive.</h2><a id="about-bttn" href="https://my.slush.app/Welcome" target="_blank" class="button-main-card is-black w-inline-block"><div class="button-main-card-inner"><div class="button-main-text">Get Slush wallet</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div></div></div></a></div><div class="about-image-wrapper is-test"><div section-spend-overlay="" class="section-overlay"></div><img src="/reference/assets/5df0dc86bc8f-69f3401ab8d69050c0fce9ce_App___card__1_.avif" loading="lazy" sizes="(max-width: 1600px) 100vw, 1600px" srcset="/reference/assets/fdb0e640b28d-69f3401ab8d69050c0fce9ce_App_20_2B_20card_20_1_-p-500.avif 500w, /reference/assets/5eaf9bcb97f3-69f3401ab8d69050c0fce9ce_App_20_2B_20card_20_1_-p-800.avif 800w, /reference/assets/5df0dc86bc8f-69f3401ab8d69050c0fce9ce_App___card__1_.avif 1600w" alt="" class="about-image"><div class="scroll-af w-embed"><canvas id="af-canvas" class="about-image af-canvas-overlay"></canvas></div><div section-spend-desk="" class="section-spend is-test-1 is-2"><div spend-inner="" class="stack-section-inner is-2"><div class="spend-bg-wrapper is-2"><img sizes="(max-width: 2628px) 100vw, 2628px" srcset="/reference/assets/178a88d8127a-69f3401ab8d69050c0fcea39_card_compr_201-p-500.avif 500w, /reference/assets/19b48f8e7a05-69f3401ab8d69050c0fcea39_card_compr_201-p-800.avif 800w, /reference/assets/9557b525d046-69f3401ab8d69050c0fcea39_card_compr_201-p-1080.avif 1080w, /reference/assets/64040f6e097f-69f3401ab8d69050c0fcea39_card_compr_1.avif 2628w" alt="" loading="lazy" src="/reference/assets/64040f6e097f-69f3401ab8d69050c0fcea39_card_compr_1.avif" class="spend-card is-2"><img sizes="(max-width: 5114px) 100vw, 5114px" srcset="/reference/assets/8ec42b178d2e-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-500.png 500w, /reference/assets/fb6148debbd7-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-800.png 800w, /reference/assets/94f44071316a-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-1080.png 1080w, /reference/assets/39a9fbec510e-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-1600.png 1600w, /reference/assets/8610889302d3-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-2000.png 2000w, /reference/assets/dda6c9bf4e2d-69f3401ab8d69050c0fcea58_glow_1__2_.avif 5114w" alt="" loading="lazy" src="/reference/assets/dda6c9bf4e2d-69f3401ab8d69050c0fcea58_glow_1__2_.avif" class="spend-terminal-glow is-2"><div class="spend-terminal-img is-2"></div></div><div spend-stack-card-text-wrapper="" class="stack-card-text-wrapper is-spend"><div class="spend-subtext-wrapper"><div spend-subtext="" class="subtext-16 stack-card-subtext is-spend">Virtual or physical, use your Slush Card at&nbsp; ATMs, stores, and online.</div><div spend-subtext="" class="subtext-16 stack-card-subtext is-spend">Accepted in 150+ countries and 130M+ merchants worldwide.</div></div><h2 zoom-heading="" class="h2-58 is-white stack-h is-spend">Spend anywhere, hassle-free</h2></div></div></div></div></div></div></div></div></div><div class="stack-wrapper-bg"><div class="stack-wrapper"><div section-spend-mob="" class="section-spend is-test-1 is-mob"><div spend-inner="" class="stack-section-inner"><div class="spend-bg-wrapper"><img class="spend-card" src="/reference/assets/64040f6e097f-69f3401ab8d69050c0fcea39_card_compr_1.avif" alt="" sizes="(max-width: 2628px) 100vw, 2628px" spend-card-mob="" loading="lazy" srcset="/reference/assets/178a88d8127a-69f3401ab8d69050c0fcea39_card_compr_201-p-500.avif 500w, /reference/assets/19b48f8e7a05-69f3401ab8d69050c0fcea39_card_compr_201-p-800.avif 800w, /reference/assets/9557b525d046-69f3401ab8d69050c0fcea39_card_compr_201-p-1080.avif 1080w, /reference/assets/64040f6e097f-69f3401ab8d69050c0fcea39_card_compr_1.avif 2628w"><img spend-terminal-glow-mob="" class="spend-terminal-glow" src="/reference/assets/dda6c9bf4e2d-69f3401ab8d69050c0fcea58_glow_1__2_.avif" alt="" sizes="(max-width: 5114px) 100vw, 5114px" loading="lazy" srcset="/reference/assets/8ec42b178d2e-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-500.png 500w, /reference/assets/fb6148debbd7-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-800.png 800w, /reference/assets/94f44071316a-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-1080.png 1080w, /reference/assets/39a9fbec510e-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-1600.png 1600w, /reference/assets/8610889302d3-69f3401ab8d69050c0fcea58_glow_1_20_2_-p-2000.png 2000w, /reference/assets/dda6c9bf4e2d-69f3401ab8d69050c0fcea58_glow_1__2_.avif 5114w"><div class="spend-terminal-img"></div></div><div spend-stack-card-text-wrapper="" class="stack-card-text-wrapper is-spend"><h2 spend-heading-mob="" class="h2-58 is-white stack-h is-spend">Spend anywhere, hassle-free</h2><div class="spend-subtext-wrapper"><div spend-subtext-mob="" class="subtext-16 stack-card-subtext is-spend is-mob">Virtual or physical, use your Slush Card at ATMs, stores, and online – accepted in 150+ countries and 50M+ merchants worldwide.</div></div></div><div section-spend-overlay="" class="section-overlay"></div></div></div><div stack-card="" class="repay-section"><div class="stack-section-inner"><div class="repay-bg"></div><div class="stack-card-text-wrapper is-repay"><h2 id="repay-heading" stack-heading="" class="h2-58 is-white stack-h">Repay on your&nbsp;terms</h2><div id="repay-subtext" stack-subtext="" class="subtext-16 stack-card-subtext">Settle directly from your Slush balance. No&nbsp;transfers, no complexity.</div></div><div section-stack-overlay="" class="section-overlay"></div></div></div><div stack-card="" class="section-earn"><div class="stack-section-inner"><div class="earn-bg"><img src="/reference/assets/c9b5516c8b0b-69f3401ab8d69050c0fce9ec_earn-coin.avif" loading="lazy" sizes="(max-width: 1376px) 100vw, 1376px" srcset="/reference/assets/261dd9b12ae2-69f3401ab8d69050c0fce9ec_earn-coin-p-500.avif 500w, /reference/assets/c9b5516c8b0b-69f3401ab8d69050c0fce9ec_earn-coin.avif 1376w" alt="" class="earn-coin"><img src="/reference/assets/b91b0cf3e2fa-69f3401ab8d69050c0fce9d9_earn-bank.avif" loading="lazy" alt="" class="earn-bank-img"></div><div class="stack-card-text-wrapper is-earn"><h2 stack-heading="" class="h2-58 is-white stack-h is-earn">Keep your balance&nbsp;moving</h2><div id="repay-subtext" stack-subtext="" class="subtext-16 stack-card-subtext is-earn">Your balance keeps working while you spend on what you love, rewards included.</div></div><div section-stack-overlay="" class="section-overlay"></div></div></div><div stack-card="" class="section-refer"><div class="stack-section-inner is-last"><div class="refer-bg"></div><div class="stack-card-text-wrapper is-refer"><h2 id="repay-heading" stack-heading="" class="h2-58 is-white stack-h">Refer friends for ongoing rewards</h2><div id="repay-subtext" stack-subtext="" class="subtext-16 stack-card-subtext is-refer">Refer friends, earn rewards when they activate, then keep earning&nbsp;a&nbsp;percentage of their spending activity each month.</div></div><div section-stack-overlay="" class="section-overlay"></div></div></div></div></div><div id="footer" class="footer-card"><div class="container-card footer-container"><div class="padding-global pads-footer"><div class="footer-content"><div class="footer-top"><div class="footer-heading"><div class="footer-heading-wrapper"><h1 class="h2-footer">Be first in&nbsp;line</h1><div class="h-subtext footer-h-subtext">Join the waitlist to get in line for early access</div></div><a id="about-bttn" footer-btn="" href="#section-hero" class="button-main-card is-black w-inline-block"><div class="button-main-card-inner"><div class="button-main-text">Join the waitlist</div><div class="button-main-gradient"><div class="button-main-gradient-blur"></div><div class="button-main-gradient-blur is-small"></div></div></div></a></div><div class="footer-bg"><div class="footer-vid w-embed">  <video class="footer-bg-vid" src="https://pub-8f205df3135d4c179878875f2084db5a.r2.dev/slush-footer-vid-c.mp4" muted="" playsinline="" preload="auto">
+  </video>
+  <style>
+    .footer-bg-vid {
+  position: relative;
+  width: 100%;
+      height: 100%;
+  object-fit: cover;   /* фит cover */
+  z-index: 0;
+}
+    </style></div></div></div><div class="footer-bottom"><div class="footer-info-text-wrapper"><div footer-bottom-el="" class="info-text">Nothing on this page constitutes legal, tax, or financial advice. Card eligibility subject to KYC and other eligibility criteria. Slush Card is a product in development in partnership with <a href="https://www.redotpay.com/" target="_blank" class="info-text-link">RedotPay</a> and details and features are subject to change.</div><div footer-bottom-el="" class="info-text">Disclaimer: You have to repay your loans. Don't pay any intermediaries.</div></div><div class="footer-info-text-wrapper right-info"><div footer-bottom-el="" class="info-text">Money Lender's Licence No: [1715/2025] Hotline: (852) 2765 4472</div><div class="footer-links-wrapper"><a footer-bottom-el="" href="https://support.slush.app/hc/en-us/categories/39723058067995-FAQ" target="_blank" class="legal-link w-inline-block"><div>FAQ</div></a><a footer-bottom-el="" href="/privacy-policy" target="_blank" class="legal-link w-inline-block"><div>Privacy notice</div></a></div></div></div></div></div></div></div></div><div class="background-fixed"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- mailchimp -->
+
+
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/aleksandrRelate/slush@41c06ad/slush-gsap-animations.js"></script> -->
+
+
+
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/aleksandrRelate/slush@8281269/slush-card-email.js"> </script> -->
+</body></html>

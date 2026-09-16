@@ -1,0 +1,20 @@
+{
+  "route": "/mobile-download",
+  "width": 390,
+  "height": 844,
+  "overflow": 0,
+  "headings": [
+    "redirecting",
+    "download Slush"
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    }
+  ]
+}

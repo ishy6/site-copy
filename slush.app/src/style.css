@@ -1,0 +1,10 @@
+html, body, #app, .reference-document { min-height: 100%; }
+body { margin: 0; }
+.page-loading { position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; background: #dceeff; color: #000; font: 900 72px Arial, sans-serif; }
+.page-error { min-height: 100vh; display: flex; gap: 32px; flex-direction: column; justify-content: center; align-items: center; color: #000; background: #dceeff; font: 20px Arial, sans-serif; }
+.page-error-brand { font-size: 72px; font-weight: 900; }
+.local-form-status { margin: 16px 0 0; font-size: 16px; line-height: 1.4; }
+.local-form-status a { text-decoration: underline; }
+.local-card-status { color: #333; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline: 3px solid #fb4903; outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

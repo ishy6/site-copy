@@ -10,11 +10,17 @@
     "test": "vitest run",
     "test:browser": "node scripts/verify-browser.mjs",
     "test:loading": "node scripts/verify-loading.mjs",
+    "test:implementation": "node scripts/verify-implementation.mjs",
+    "test:examples": "node scripts/verify-examples.mjs",
+    "test:highlighting": "node scripts/verify-highlighting.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 5191"
   },
   "dependencies": {
+    "dompurify": "^3.4.15",
     "fflate": "^0.8.2",
     "lucide-vue-next": "^1.0.0",
+    "marked": "^18.0.13",
+    "shiki": "^4.4.3",
     "vue": "^3.5.42"
   },
   "devDependencies": {
@@ -22,6 +28,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/test-utils": "^2.5.0",
     "happy-dom": "^20.14.0",
+    "jsdom": "^29.1.1",
     "playwright": "^1.58.2",
     "typescript": "~5.9.3",
     "vite": "^8.2.2",

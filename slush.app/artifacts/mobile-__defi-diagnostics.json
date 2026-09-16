@@ -1,0 +1,193 @@
+{
+  "route": "/defi",
+  "width": 390,
+  "height": 8448,
+  "overflow": 0,
+  "headings": [
+    "Don’t Just HODL. Grow.",
+    "START HERE: STRATEGIES",
+    "Track your Portfolio",
+    "Discover New Opportunities",
+    "Liquid Stake & Earn Instantly",
+    "Safety and privacy are always built-in",
+    "Join Sui's top DeFi and trade, lend, borrow, stake",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5b26a76af440-6929ee42d4e5eae61ddb5e3a_Frame_2147263371.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8cfcd90b5a4d-6929ef92b65f7fe006e837bd_Frame_2147263272.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/7d0eb5b62b85-6929ef92288974e7ba310e5e_Frame_2147263372.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/cd4aad3b98d2-680905cfdc45073838364951_defi-card-3.avif",
+      "width": 1614,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b9220bfb8434-680905cfdc45073838364965_app-cetus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/252518293ee5-680905cfdc45073838364952_app-aftermath.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8ad90de29357-680905cfdc45073838364968_app-alphafi.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6e26ab928be1-680905cfdc45073838364966_app-bluefin.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/2d6213e2ef0f-680905cfdc45073838364963_app-bucket-black.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5d170c9f41db-680905cfdc45073838364967_app-deep-book.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/83606c0e96f2-680905cfdc4507383836496b_app-haedal.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/0838a6efc108-680905cfdc4507383836496a_app-tynus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/46061f807f3c-680905cfdc45073838364964_app-kai.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b9220bfb8434-680905cfdc45073838364965_app-cetus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/252518293ee5-680905cfdc45073838364952_app-aftermath.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8ad90de29357-680905cfdc45073838364968_app-alphafi.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6e26ab928be1-680905cfdc45073838364966_app-bluefin.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/2d6213e2ef0f-680905cfdc45073838364963_app-bucket-black.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5d170c9f41db-680905cfdc45073838364967_app-deep-book.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/83606c0e96f2-680905cfdc4507383836496b_app-haedal.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/0838a6efc108-680905cfdc4507383836496a_app-tynus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/46061f807f3c-680905cfdc45073838364964_app-kai.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b9220bfb8434-680905cfdc45073838364965_app-cetus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/252518293ee5-680905cfdc45073838364952_app-aftermath.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8ad90de29357-680905cfdc45073838364968_app-alphafi.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6e26ab928be1-680905cfdc45073838364966_app-bluefin.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/2d6213e2ef0f-680905cfdc45073838364963_app-bucket-black.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5d170c9f41db-680905cfdc45073838364967_app-deep-book.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/83606c0e96f2-680905cfdc4507383836496b_app-haedal.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/0838a6efc108-680905cfdc4507383836496a_app-tynus.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/46061f807f3c-680905cfdc45073838364964_app-kai.png",
+      "width": 180,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

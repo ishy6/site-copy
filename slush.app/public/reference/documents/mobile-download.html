@@ -1,0 +1,449 @@
+<!DOCTYPE html><!-- Last Published: Mon Jul 27 2026 06:47:50 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="slush.app" data-wf-page="680905cfdc450738383648a2" data-wf-site="680905cfdc450738383648a6" lang="en"><head><meta charset="utf-8"><title>mobile-download</title><meta content="mobile-download" property="og:title"><meta content="mobile-download" name="twitter:title"><meta content="width=device-width, initial-scale=1" name="viewport"><link href="/reference/assets/bc2c81fd9834-sui-slush-staging.shared.0ce1286b1.min.css" rel="stylesheet" type="text/css"><link href="/reference/assets/b435810a5b86-680905cfdc45073838364973_favicon.svg" rel="shortcut icon" type="image/x-icon"><link href="/reference/assets/ccaba8ddeb98-680905cfdc45073838364974_webclip.svg" rel="apple-touch-icon"><link href="https://slush.app/mobile-download" rel="canonical"><!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<!--Geo guard-->
+
+<meta name="google-site-verification" content="OdcP2iJ0nrGU2x7rllouP5xxxl3UDF-WVnP8jLoO3xA">
+<style>
+
+  html, body {
+    width: 100%;
+    height: auto !important;
+    min-height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  } 
+
+  .w-editor .load-w{
+    display: none;
+  }	 
+
+  .is--transitioning{
+    height:100svh;
+    overflow:hidden;
+  }  
+  
+  .main-w .section:nth-child(1) [data-hero-content]{opacity:0;}
+  .w-editor .main-w .section:nth-child(1) [data-hero-content]{opacity:1;}
+
+	#navContainer{transform: translate(0px, -300%)}
+  .w-editor #navContainer{transform: translate(0px, 0%)}
+  
+</style></head><body data-barba="wrapper"><div class="global"><div class="css-styles w-embed"><style>
+/* ------------------------- Scaling System by Osmo [https://osmo.supply/] -------------------------  */
+
+:root {
+  --size-unit: 16; 
+  --size-container-ideal: 1440;
+  --size-container-min: 992px;
+  --size-container-max: 2250px;
+  --size-container: clamp(var(--size-container-min), 100vw, var(--size-container-max));
+  --size-font: calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  :root {
+    --size-container-ideal: 1200;
+    --size-container-min: 768px;
+    --size-container-max: 991px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 767px) {
+  :root {
+    --size-container-ideal: 550; 
+    --size-container-min: 480px;
+    --size-container-max: 767px;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 479px) {
+  :root {
+    --size-container-ideal: 390;
+    --size-container-min: 320px;
+    --size-container-max: 479px;
+  }
+}
+  
+body {font-size: var(--size-font);}
+  
+/* ------------------------- Hide Scrollbar -------------------------------------------------- */
+
+body ::-webkit-scrollbar{display: none;}
+body {-ms-overflow-style: none;}
+html {scrollbar-width: none;} 
+
+/* ------------------------- body -------------------------------------------------- */
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html {scroll-behavior: initial;}
+html, body {-webkit-font-smoothing: antialiased;}
+svg {max-width: none; height: auto; box-sizing: border-box; vertical-align: middle;}
+button{background: transparent; padding: 0px;}
+  
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+::selection{
+   background-color: black;
+   color: white;
+   text-shadow: none;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+textarea{
+	resize: none;
+}
+
+.main-w{ --overlay: 0; }
+
+.main-w::after{
+	content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height:100%;
+  background:white;
+  z-index:10;
+  pointer-events:none;
+  opacity: var(--overlay);
+}
+
+.download-button__logo img{ width: 100%; height: 100%;}
+
+
+.button-main[data-button-theme="light"] .button-main-inner__bg{
+  background: var(--color--light);
+  border: 0.125em solid var(--color--dark);
+}
+
+.button-main[data-button-theme="light"] .button-main-inner__text{
+  color: var(--color--dark)
+}  
+
+.button-main[data-button-accent="white"]  .button-main-inner__back{ background: var(--color--light) }
+.button-main[data-button-accent="blue"]   .button-main-inner__back{ background: var(--color--blue-700) }
+.button-main[data-button-accent="yellow"] .button-main-inner__back{ background: var(--color--yellow-700) }
+.button-main[data-button-accent="violet"] .button-main-inner__back{ background: var(--color--violet-700) }
+.button-main[data-button-accent="green"]  .button-main-inner__back{ background: var(--color--green-700) }
+.button-main[data-button-accent="orange"] .button-main-inner__back{ background: var(--color--orange-800) }
+.button-main[data-button-accent="dark"] .button-main-inner__back{ background: var(--color--dark); color:var(--color--light); }
+
+[data-box-theme="white"] { background: var(--color--light) !important;  }
+[data-box-theme="black"] { background: var(--color--dark) !important; color: var(--color--light) !important; }
+[data-box-theme="blue"]  { background: var(--color--blue-700) !important;  }
+[data-box-theme="yellow"]{ background: var(--color--yellow-700) !important;  }
+[data-box-theme="violet"]{ background: var(--color--violet-700) !important; }
+[data-box-theme="green"] { background: var(--color--green-700)  !important; }
+[data-box-theme="orange"]{ background: var(--color--orange-800) !important;  }
+[data-box-theme="purple"]{ background: var(--color--purple-800) !important;  }
+[data-box-theme="glacier"]{ background: #DCEEFF !important;  }
+
+.cta-banner-inner .download-cta-el:nth-child(odd) .marquee-cta-h{ font-variation-settings: "slnt" 100; padding-right: 0.05em; }
+.cta-banner-inner .download-cta-el{margin: 0 0.75em;}
+
+@media screen and (max-width: 479px){
+	.cta-banner-inner .download-cta-el{margin: 0 0.125em;}
+}
+
+html.wf-design-mode .tab-content__text{position: relative; visibility: visible;}
+
+body:has( [data-cursor]:hover ) .cursor{ opacity: 1; }
+
+body:has( [data-cursor="download for chrome"]:hover ) #cursorLogoChrome{display:block;}
+body:has( [data-cursor="download for arc"]:hover ) #cursorLogoArc{display:block;}
+body:has( [data-cursor="download for edge"]:hover ) #cursorLogoEdge{display:block;}
+body:has( [data-cursor="download for brave"]:hover ) #cursorLogoBrave{display:block;}
+body:has( [data-cursor="download for android"]:hover ) #cursorLogoAndroid{display:block;}
+body:has( [data-cursor="download for ios"]:hover ) #cursorLogoIos{display:block;}
+
+body:has( [data-cursor-logo]:hover ) .cursor-img__wrap{width:3.625em; height:3em;padding-right:0.625em;}
+body:has( [data-cursor]:not([data-cursor-logo]):hover ) .cursor-paragraph{display:block;}
+
+#lottie-remove-bg rect[fill="#cee6ff"]{display: none;}
+
+[data-na-button]{display: none;}
+.page-w.not-available [data-na-button]{display: flex;}
+.page-w.not-available [data-download-cta]{display: none;}
+
+
+[data-anim-slant] .char{display:inline-block !important; padding: 0 .1em; margin: 0 -.1em;}
+[data-anim-hero] .char{display:inline-block !important; padding: 0 .1em; margin: 0 -.1em;}
+.img-slider .char{display:inline-block !important; padding: 0 .1em; margin: 0 -.1em;}
+
+.guides-detail-asset:not(:first-child){opacity: 0;}
+
+.nav-inner-li:nth-of-type(1) .button-main.w--current .button-main-inner__bg{ background: var(--color--violet-700);}
+.nav-inner-li:nth-of-type(2) .button-main.w--current .button-main-inner__bg{ background: var(--color--blue-700);}
+.nav-inner-li:nth-of-type(3) .button-main.w--current .button-main-inner__bg{ background: var(--color--green-700);}
+.nav-inner-li:nth-of-type(4) .button-main.w--current .button-main-inner__bg{ background: var(--color--yellow-700);}
+.nav-inner-li:nth-of-type(5) .button-main.w--current .button-main-inner__bg{ background: var(--color--orange-800);}
+
+[data-lottie-size="small"]{inset: 20%; width: auto; height: auto;}
+
+.nav-w{
+	transition: top 0.6s var(--elastic-ease-out);
+}
+
+body[data-scrolling-started="false"]:has( .main-w[data-barba-namespace="home"]) .nav-w{top: 4.5em;}
+body[data-scrolling-started="true"] .nav-w{top: 1.5em;}
+
+@media screen and (max-width: 479px){
+
+	body[data-scrolling-started="false"]:has( .main-w[data-barba-namespace="home"]) .nav-w{top: 4em;}
+	body[data-scrolling-started="true"] .nav-w{top: 0.75em;}
+
+}
+
+</style></div><div class="css-animations w-embed"><style>
+
+:root{
+  --cubic-default: cubic-bezier(0.65, 0.05, 0, 1);
+  --cubic-bounce: linear(0, 1.3, 1, 0.92, 1, 0.99, 1, 1.004, 0.998, 1 100% 100%);
+  --duration-default: 0.75s;
+  --duration-medium: 0.85s;
+  --duration-fade: 0.15s;
+  --smooth-ease: cubic-bezier(.32, .72, 0, 1);
+  --color-ease: cubic-bezier(.216, .62, .356, 1);  
+  --elastic-ease-out: linear(
+    0,
+    0.5737 7.6%,
+    0.8382 11.87%,
+    0.9463 14.19%,
+    1.0292 16.54%,
+    1.0886 18.97%,
+    1.1258 21.53%,
+    1.137 22.97%,
+    1.1424 24.48%,
+    1.1423 26.1%,
+    1.1366 27.86%,
+    1.1165 31.01%,
+    1.0507 38.62%,
+    1.0219 42.57%,
+    0.9995 46.99%,
+    0.9872 51.63%,
+    0.9842 58.77%,
+    1.0011 81.26%,
+    1
+  );  
+}
+
+.text-link-underline::before,
+.text-link-underline::after{
+  content: "";
+  position:absolute;
+  right:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background: currentColor;
+}  
+
+.button-main, .nav-btn-circle, .footer-social-link{ transition: 0.5s var(--elastic-ease-out); }
+.nav-btn-circle.is--nav-logo{ transition: 1s var(--elastic-ease-out); }
+.button-main:active, .nav-btn-circle:active { transform: scale(0.955); }
+.button-main-inner__bg { transition: background-color .2s var(--color-ease); }
+.button-main-inner__front {transition: translate var(--duration-medium) var(--elastic-ease-out), rotate var(--duration-default) var(--elastic-ease-out), opacity var(--duration-fade) ease-out;}
+.button-main-inner__text {transition: translate var(--duration-default) var(--elastic-ease-out);}
+
+.button-main-inner__back::before {
+  transition: translate var(--duration-default) var(--elastic-ease-out);
+  translate: 0 .75em 0;
+}
+
+.button-main-inner__back {
+  transition: translate var(--duration-medium) var(--elastic-ease-out), rotate var(--duration-default) var(--elastic-ease-out), opacity .15s ease-out;
+  opacity: 0;
+  translate: 0 2em -6em;
+  rotate: 1 0 0 -90deg;
+}
+
+.button-main-inner__back::before {
+  --index: 1;
+  content: attr(data-text);
+  display: contents;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button-main-inner__back.is--download::before {
+  margin-bottom: -.1em;
+  padding-top: .08em;
+  font-family: Lateral, Impact, sans-serif;
+  font-size: 17.5em;
+  font-weight: 800;
+  line-height: .8;
+  transform: translate(0px, -85%);
+  display: block;
+}
+
+
+/* ————————————— HOVER STUFF ————————————— */
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference){
+
+  .link::after{
+    content: "";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0.125em;
+    background: currentColor;
+    transform: scale(0, 1);
+    transform-origin: left center;
+    transition: transform 0.4s var(--cubic-default);
+  }
+  .link:hover::after{ transform: scale(1, 1); transform-origin: right center;}
+
+	.footer-social-link:hover{transform:scale(0.92)}
+
+  .text-link-underline::before{ transform:translate(-100%, 0px); }
+  .text-link-underline::after{ transform:translate(100%, 0px); }
+  
+  .text-link-underline{
+    transition: transform 0.75s var(--cubic-default);
+    transform: translate(-100%, 0px);
+  }
+
+  [data-text-link]:hover  .text-link-underline{
+    transform: translate(100%, 0px);
+  }
+  
+  .button-main:is(:hover, :focus-visible) .button-main-inner__front {
+  	translate: 0 -2em -6em;
+    rotate: 1 0 0 85deg;
+    opacity: 0;
+  }
+  
+  .button-main:is(:hover, :focus-visible) .button-main-inner__text {
+  	translate: 0 -.75em 0;
+    transition-delay: 0s;
+  }
+  
+  .button-main:is(:hover, :focus-visible) .button-main-inner__back {
+    transition: translate var(--duration-medium) var(--elastic-ease-out), rotate var(--duration-default) var(--elastic-ease-out), opacity .075s ease-in;
+    rotate: 1 0 0 0deg;
+    translate: 0 0 0;
+    opacity: 1;
+  }
+  
+  .button-main:is(:hover, :focus-visible) :is(.button-main-inner__back::before) {
+  	translate: 0 0em 0;
+    transition-delay: calc(var(--index) * .012s);
+  }  
+  
+  .button-main:hover .button-main-inner__back::before {
+  	translate: 0 0em 0 !important;
+  }
+  .button-main-inner__back.is--download::before{
+  	translate: 0 0em 0 !important;
+  	transform: translate(0px, 0%) !important;
+  }
+
+}
+
+@media (hover: hover) and (prefers-reduced-motion){
+  .button-main:is(:hover, :focus-visible) .button-main-inner__bg{
+    background: var(--color--dark) !important;
+  }
+  .button-main:is(:hover, :focus-visible) .button-main-inner__text{
+    color: var(--color--light) !important;
+  }
+  
+  .button-main[data-button-theme="dark"]:is(:hover, :focus-visible) .button-main-inner__bg{
+    background: var(--color--light) !important;
+    border:0.125em solid var(--color--dark) !important;
+  }
+  .button-main[data-button-theme="dark"]:is(:hover, :focus-visible) .button-main-inner__text{
+    color: var(--color--dark) !important;
+  }  
+  
+  .download-cta-el.button-main:is(:hover, :focus-visible) .button-main-inner__bg{
+  	background: var(--color--light) !important;
+  }
+  .download-cta-el.button-main:is(:hover, :focus-visible) .button-main-inner__text{
+  	color: var(--color--dark) !important;
+  }  
+  
+}
+
+@media (hover:hover){
+  #menuButton:hover .nav-btn-menu__line.is--h{ transform: scaleX(0) }
+	
+  .nav-btn-chevron, .nav-chevron-wrap{ transition: 0.5s var(--elastic-ease-out)}
+  .nav-btn-circle:hover .nav-chevron-wrap{ transform: rotate(-90deg); }
+  .nav-btn-circle:hover .nav-btn-chevron{ transform: translate(175%, 0px); }
+	.nav-btn-circle[data-slideshow]:active { transform: scale(0.955) rotate(90deg); }
+  
+	.home-qr-wrap{transition: transform 0.65s cubic-bezier(0.65, 0.05, 0, 1) }
+  
+	.home-qr-el:hover .home-qr-el__col{transform: translate(100%, 0px)}
+	.home-qr-el:hover .home-qr-wrap{transform: translate(1.25em, 0px)}	
+}
+
+
+.home-logo-letter:nth-child(2){clip-path:inset(70% 0px 0px 0px)}
+.home-logo-letter:nth-child(3){clip-path:inset(78% 0px 0px 0px)}
+.home-logo-letter:nth-child(4){clip-path:inset(85% 0px 0px 0px)}
+.home-logo-letter:nth-child(5){clip-path:inset(95% 0px 0px 0px)}
+
+
+@media screen and (max-width: 767px){
+
+  .button-main-inner__back.is--download::before {
+    font-size: 10em;
+  }
+  
+}
+
+
+
+</style></div><div class="cursor"><div class="cursor-img__wrap"><img src="/reference/assets/192b044b1e9f-680905cfdc4507383836496f_logo-brave.svg" loading="lazy" id="cursorLogoBrave" alt="" class="cursor-img"><img src="/reference/assets/2e915efcadfe-680905cfdc4507383836496e_logo-ie.svg" loading="lazy" id="cursorLogoEdge" alt="" class="cursor-img"><img src="/reference/assets/6b3f315c2fc9-680905cfdc45073838364970_logo-arc.svg" loading="lazy" id="cursorLogoArc" alt="" class="cursor-img"><img src="/reference/assets/5f087238b3af-680905cfdc450738383648f3_icon-chrome.png" loading="lazy" id="cursorLogoChrome" alt="" class="cursor-img"><img src="/reference/assets/6611d14dc726-680905cfdc45073838364972_logo-android.svg" loading="lazy" id="cursorLogoAndroid" alt="" class="cursor-img"><img src="/reference/assets/25bb88541513-680905cfdc450738383648f4_icon-ios.png" loading="lazy" id="cursorLogoIos" alt="" class="cursor-img"></div><p class="cursor-paragraph">Learn more</p></div></div><div class="page-w"><div class="nav-w"><div id="navContainer" class="nav-container container"><nav class="nav-inner"><a href="/" class="nav-btn-circle is--nav-logo w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none" class="nav-button-logo"><path d="M2.20389 17.3658C2.99124 20.3042 5.9321 22.9642 12.0166 21.3339C17.8222 19.7783 21.4606 15.0024 20.5172 11.4814C20.1914 10.2655 19.21 9.44245 17.6971 9.57634L4.1685 10.7035C3.31651 10.7689 2.92585 10.6293 2.70047 10.0924C2.48188 9.58079 2.60644 9.03156 3.63549 8.51148L13.931 3.22789C14.7201 2.8264 15.2457 2.65842 15.726 2.82837C16.027 2.93776 16.2252 3.37334 16.0432 3.91082L15.3757 5.88156C14.5564 8.3002 16.3101 8.86199 17.2988 8.59707C18.7946 8.19628 19.1465 6.77164 18.6646 4.97313C17.4429 0.413541 12.6054 -0.299349 8.21953 0.875847C3.75759 2.07142 -0.110259 5.68703 1.07076 10.0946C1.34904 11.1332 2.30504 11.963 3.41235 11.9378L5.10282 11.9337C5.45046 11.9257 5.32529 11.9543 5.99599 11.8987C6.66668 11.8431 8.45787 11.6227 8.45787 11.6227L17.2472 10.6281L17.4736 10.5952C17.9877 10.5075 18.3761 10.641 18.7046 11.2069C19.1961 12.0535 18.4462 12.692 17.5485 13.4563C17.5245 13.4768 17.5004 13.4973 17.4762 13.518L9.75005 20.1765C8.42577 21.3187 7.49552 20.8892 7.16973 19.6733L6.01586 15.367C5.73079 14.3031 4.69194 13.4683 3.47505 13.7944C1.95393 14.202 1.83058 15.9726 2.20389 17.3658Z" fill="currentColor"></path></svg></a><div class="nav-inner-right"><ul role="list" class="nav-inner-list"><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="yellow" href="/get-started" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="get started" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>get started</span></span></span></span></a></li><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="" href="/card" target="_blank" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="card" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>card</span></span></span></span></a></li><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="orange" href="/defi" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="defi" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>defi</span></span></span></span></a></li><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="green" href="/security" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="security" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>security</span></span></span></span></a></li><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="violet" href="/guides" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="guides" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>guides</span></span></span></span></a></li><li class="nav-inner-li"><a data-barba-update="nav" data-button-theme="light" data-button-accent="" href="/download" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="download" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>download</span></span></span></span></a></li></ul><button id="menuButton" class="nav-btn-circle"><div class="nav-btn-menu__lines"><div class="nav-btn-menu__line is--h"></div><div class="nav-btn-menu__line is--v"></div></div></button><a data-barba-update="" data-button-theme="dark" data-button-accent="" href="https://my.slush.app/" target="_blank" class="button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="Launch App" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg"></span><span class="button-main-inner__text"><span>Launch App</span></span></span></span></a></div></nav></div></div><div class="page-transition-el"></div><div class="page-transition-el"></div><div class="page-transition-el"></div><main data-barba-namespace="mobile-download" data-barba="container" class="main-w"><section class="section"><div class="container"><div class="content-container padding-vertical-180 is--hero space--between"><div data-hero-content="" class="centered-hero"><h1 data-anim-hero="" class="h-d">redirecting</h1></div><div data-hero-content="" class="centered-hero no--redirect"><h1 data-anim-hero="" class="h-d">download Slush</h1><div data-wf--component-download-cta-buttons--variant="base" class="button-row"><a data-button-accent="dark" data-load-stagger="" href="https://my.slush.app/" target="_blank" class="button-main download-button text-only w-inline-block"><span class="button-main-inner full-h"><span data-text="Launch web app" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg is--white"></span><span class="button-main-inner__text"><span>Launch web app</span></span></span></span></a><a data-button-accent="yellow" data-download-cta="button" data-load-stagger="" href="https://chromewebstore.google.com/detail/sui-wallet/opcgpfmipidbgpenhmajoajpbobppdil" target="_blank" class="download-button button-main w-inline-block"><span class="button-main-inner full-h"><span data-text="download now" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg is--white"></span><span class="button-main-inner__text has--logo"><div data-download-cta="logo" class="download-button__logo"></div><span data-download-cta="text">Download for chrome</span></span></span></span></a><a data-na-button="" data-load-stagger="" data-button-accent="yellow" href="/download" class="button-main download-button text-only w-inline-block"><span class="button-main-inner full-h"><span data-text="Available on other devices" class="button-main-inner__back"></span><span class="button-main-inner__front"><span class="button-main-inner__bg is--white"></span><span class="button-main-inner__text has--icon"><span>&nbsp;available on other devices</span><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 10 10" fill="none" class="button-main-inner__arrow"><path d="M1.5873 10L0 8.4127L6.30385 2.13152L0.793651 2.1542V0H10V9.20635H7.8458L7.86848 3.67347L1.5873 10Z" fill="currentColor"></path></svg></span></span></span></a></div></div></div></div></section></main></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- mailchimp -->
+
+</body></html>

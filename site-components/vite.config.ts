@@ -12,7 +12,7 @@ function componentSources(): Plugin {
   function collect(directory: string): string[] {
     return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
       const file = join(directory, entry.name)
-      return entry.isDirectory() ? collect(file) : /\.(vue|ts|css)$/.test(entry.name) && !/\.(test|spec)\.ts$/.test(entry.name) ? [file] : []
+      return entry.isDirectory() ? collect(file) : /\.(vue|ts|css)$/.test(entry.name) ? [file] : []
     })
   }
   function refreshSources() {

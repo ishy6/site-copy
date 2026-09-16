@@ -1,0 +1,18 @@
+{
+  "first": {
+    "nonzero": 79140,
+    "sum": 14427425,
+    "width": 720,
+    "height": 450
+  },
+  "second": {
+    "nonzero": 83731,
+    "sum": 18253148,
+    "width": 720,
+    "height": 450
+  },
+  "heroTop": 0,
+  "projectTop": -827.760009765625,
+  "errors": [],
+  "external": []
+}

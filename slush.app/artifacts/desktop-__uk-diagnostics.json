@@ -1,0 +1,13 @@
+{
+  "route": "/uk",
+  "width": 1440,
+  "height": 900,
+  "overflow": 0,
+  "headings": [
+    "Sorry, Slush is currently unavailable in the UK, but we are working to unlock access for all UK retail users. Stay tuned for further updates."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": []
+}

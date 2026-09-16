@@ -1,4 +1,4 @@
-# Site Components
+# Site Components 交互组件库
 
 独立的 Vue 3 + TypeScript + Vite 组件展示项目。界面延续 `osmo.supply` 的 Haffer 字体、黑白底色、紫色与荧光绿点缀。收录八个站点的 43 个可独立预览交互组件，原站无需同时启动。
 
@@ -17,9 +17,12 @@ npm test
 npm run build
 npm run test:browser
 npm run test:loading
+npm run test:implementation
+npm run test:examples
+npm run test:highlighting
 ```
 
-浏览器检查需要本机 Google Chrome 与已启动的开发服务器；可通过 `COMPONENTS_TEST_URL` 指向其他地址，包括 `npm run preview` 启动的生产预览。截图和下载包检查结果保存在 `/tmp/site-components-verification`。
+浏览器检查需要本机 Google Chrome 与已启动的服务器。`test:browser` 和 `test:implementation` 可通过 `COMPONENTS_TEST_URL` 指向其他地址，包括 `npm run preview` 启动的生产预览；`test:loading` 拦截开发源码请求，必须使用开发服务器。常规截图和下载包检查结果保存在 `/tmp/site-components-verification`。
 
 ## 组件目录
 
@@ -41,11 +44,13 @@ npm run test:loading
 ## 预览和复用
 
 - 列表支持中英文搜索、站点与类别筛选、名称排序和本地收藏。
-- 详情提供实时预览、桌面/平板/手机宽度、可编辑参数、重置、源码、使用示例和独立预览链接。
+- 详情提供实时预览、桌面/平板/手机宽度、可编辑参数、重置、实现详解、源码、使用示例和独立预览链接。
 - 所有预览运行在独立 iframe 中；组件样式使用 scoped CSS，字体使用独立名称，避免各站点视觉样式互相覆盖。
 - 组件实现按需加载，列表缩略图接近可视区域时才创建 iframe。首屏、预览和源码均有 loading 状态；预览画布尺寸固定，组件及首屏素材就绪后显示内容，加载失败可重试。
 - Source 只请求当前文件，成功结果缓存；复制和 ZIP 下载复用同一加载器，压缩工具也在下载时才加载。
-- Download 导出 ZIP，包含 `src/library` 中的依赖文件、`public/assets` 中的必要图片/视频/字体及集成说明。Osmo 包额外提供字体样式表。下载后的组件依赖 Vue 3.5+，图标组件依赖 lucide-vue-next 1.x。
+- 「实现详解」逐项展示完整 API、事件处理、状态计算、DOM/CSS 更新、键盘行为与业务边界，附真实代码摘录与行号。点击源码引用可跳到对应文件并定位代码。文档和 Markdown 解析器按需加载，提供加载态、重试、复制和 Markdown 下载。
+- 实现详解、Source 与 Usage 使用 Shiki 的 VS Code Dark+ 语法高亮，支持 Vue 内嵌模板、TypeScript 和 CSS；高亮引擎与语法按需加载，复制和导出保留原始代码，高亮不可用时仍可阅读纯文本。
+- Download 导出 ZIP，包含 `src/library` 中的依赖文件、`public/assets` 中的必要图片/视频/字体、`implementation/<组件 ID>.md` 详解及中文集成说明。文档引用的测试文件作为阅读参考一起提供，运行它们需使用完整项目。Osmo 包额外提供字体样式表。下载后的组件依赖 Vue 3.5+，图标组件依赖 lucide-vue-next 1.x。
 - Styles 展示八个项目的真实配色与字体。色板可复制，CSS 变量可下载；字体资源随对应组件包提供。
 - 列表、商品、选项、价格和业务回调通过 props / emits 注入；轮播、筛选、选配、数量和表单保留完整的本地交互。MAKR 与 ALSO 的异步操作回调使用 `addItem`、`prepareCheckout`、`saveBuild` 等名称，与结果事件分开。
 - 收藏只保存在当前浏览器的 localStorage。站点没有后端；Wise 汇率是可注入的本地示例数据，登录、购买、结算和订阅由宿主服务接入。
@@ -54,13 +59,20 @@ npm run test:loading
 
 Shupatto 的折叠播放器使用 18 张真实图集中的 72 帧，支持播放、暂停、进度拖动、重置及失败恢复；门店目录包含 23 个地区的快照数据。`node scripts/extract-shupatto.mjs` 可从相邻原站快照重新生成数据和素材，需要先安装 `prod-raw.shupatto.com` 的依赖。
 
+## 实现文档
+
+[实现详解总索引](implementation/README.md) 按八个站点列出 43 篇文档和各自的核心机制。文档基于当前 `src/library` 的真实代码，区分原生 DragEvent、Pointer Events 与 range 输入事件；光标、焦点、动画和网络请求仅按已实现行为说明。
+
+每段源码前使用 `<!-- source: src/library/...#L起始行-L结束行 -->` 标记。`npm test` 会对照实际文件校验摘录、行号、链接和 Vue 接入示例；实现修改后需同步更新文档。源码链接含测试文件，可在 Source 中阅读。
+
 ## 新增组件
 
 1. 在 `src/library/<site>/` 中添加独立 Vue SFC，封装参数、事件与样式；仅依赖本目录代码和声明的 npm 依赖。
 2. 将必要素材放到 `public/assets/<site>/`，控制体积，避免引用其他项目的运行服务。
 3. 在 `src/registry/` 对应文件中添加 `ComponentEntry`，通过 `loadComponent: () => import(...)` 登记组件，并填写来源、分类、标签、可编辑 props、使用示例、所有源文件与素材。
 4. 新站点需在 `src/registry/index.ts` 的 `sites` 中登记配色、字体与真实来源文件，并在 `SiteId` 中登记 ID。
-5. 运行类型检查、相关行为测试、生产构建和浏览器检查。
+5. 新建 `implementation/<组件 ID>.md`，补齐接口、事件链路、源码摘录、状态与样式、示例、测试边界，并在 `implementation/README.md` 登记。
+6. 运行类型检查、相关行为测试、文档校验、生产构建和浏览器检查。
 
 动态数组、复杂业务回调及插槽通过组件 API 使用，属性面板仅暴露适合直接编辑的基础参数。Vue SFC 中的 TypeScript 定义是完整 API 的来源。
 
@@ -73,6 +85,9 @@ src/
   components/    组件站工作台、隔离预览和目录界面
   catalog-state.ts
   export.ts
+  implementation.ts       按需请求与缓存实现文档
+  implementation-content.ts  Markdown 解析、净化和源码引用
+implementation/  每个组件的代码级中文详解与总索引
 public/assets/   组件所需本地素材与字体
 scripts/         浏览器验证
 ```
@@ -80,3 +95,9 @@ scripts/         浏览器验证
 组件使用原生交互语义、键盘操作和 `prefers-reduced-motion`。测试覆盖组件业务行为、目录筛选、链接参数防护、导出依赖闭包与示例编译。浏览器检查逐一打开所有组件的 720px / 320px / 280px 预览并下载 ZIP，验证素材加载、缩略图完整性、移动端溢出、目录操作及真实折叠画面的像素变化。
 
 `test:loading` 使用开发服务器模拟延迟请求和网络失败，检查首屏占位、列表按需挂载、预览参数同步、源码按需请求和重试；截图保存在 `/tmp/site-components-loading`。
+
+`test:implementation` 检查全部详解、源码定位、Markdown 与 ZIP 下载、320px 窄屏、延迟请求和错误重试；截图保存在 `/tmp/site-components-implementation`。Markdown 请求失败在面板内重试，解析器脚本加载失败时刷新页面并回到当前详解；`#/component/<组件 ID>?tab=implementation` 可直接打开详解。
+
+`test:examples` 从实现文档提取完整 Vue 示例，在临时目录中执行 `vue-tsc`，检查参数、事件载荷、回调签名和模板类型，运行结束清理生成文件。
+
+`test:highlighting` 验证所有组件详解的代码高亮、Source/Usage 的原文与复制、源码行定位、窄屏横向滚动，以及高亮资源按需加载；截图保存在 `/tmp/site-components-highlighting`。

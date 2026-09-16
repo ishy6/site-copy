@@ -1,0 +1,14 @@
+.local-dialog::backdrop{background:rgb(0 0 0 / .65)}
+.local-dialog{position:fixed;inset:0;z-index:10000;margin:auto;width:min(calc(100% - 48px),520px);padding:40px;background:#fff;color:#111;border:0;border-radius:4px;font:16px/1.5 Arial,sans-serif;letter-spacing:0}
+.local-dialog h2{margin:0 0 20px;font-size:32px;line-height:1.1}
+.local-dialog p{margin:0 0 20px;font-size:16px;line-height:1.5}
+.local-dialog a{display:block;color:#da1646;text-decoration:underline;font:inherit}
+.local-dialog-close{position:absolute;top:10px;right:12px;border:0;background:none;color:#111;font-size:30px;cursor:pointer;width:36px;height:36px}
+.local-dialog .local-dialog-eyebrow{font-size:12px;text-transform:uppercase}
+.local-dialog-done{margin-top:24px;padding:10px 22px;border:0;background:#111;color:#fff;cursor:pointer;font:inherit}
+.local-not-found{min-height:100vh;padding:50px 8%;background:#050505;color:white;font:18px/1.5 Arial,sans-serif;box-sizing:border-box}
+.local-not-found .local-brand{display:block;font-weight:700;margin-bottom:100px}
+.local-not-found h1{font-size:50px;line-height:1.1;margin:20px 0 40px}
+.local-not-found a{color:inherit}
+.local-not-found p{color:#ff174b}
+@media(max-width:600px){.local-dialog{padding:32px 24px}.local-dialog h2{font-size:28px}.local-not-found h1{font-size:40px}}

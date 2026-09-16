@@ -1,46 +1,38 @@
-# Jitter local replica
+# Jitter 本地复刻
 
-A standalone Vue 3 + TypeScript implementation of the Jitter marketing homepage,
-email sign-in interface, and a custom beginner onboarding flow. The original
-homepage and public `/join/` entry were inspected on September 7, 2026. The
-post-verification onboarding and workspace are local implementations, not a claim
-to reproduce private authenticated screens.
+独立的 Vue 3 + TypeScript 项目，包含 Jitter 营销首页、邮箱登录界面和自定义的新用户引导流程。公开首页及 `/join/` 入口于 2026 年 9 月 7 日检查；验证后的引导和工作区由本地实现，不代表原站登录后的私有界面。
 
-## Run
+## 运行
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:5177`. From the parent directory, run `npm run dev:jitter`.
+默认访问 <http://localhost:5177>；也可在父目录执行 `npm run dev:jitter`。
 
-## Routes and demo flow
+## 路由与演示流程
 
-- `/`: homepage, video showcase, product features, customer section, FAQ.
-- `/templates`: searchable/filterable gallery with video preview dialogs.
-- `/pricing`: illustrative plan comparison and functioning billing toggle.
-- `/join` and `/login`: email entry and demo code verification.
-- `/onboarding`: name → role → experience → workspace, with saved progress.
-- `/files`: local workspace, templates, project search, settings, and file deletion.
+| 路由 | 本地内容 |
+| --- | --- |
+| `/` | 首页、视频展示、产品特性、客户区和问答 |
+| `/templates` | 可搜索、筛选的模板图库与视频预览弹窗 |
+| `/pricing` | 演示套餐比较与可操作的计费周期切换 |
+| `/join`、`/login` | 邮箱输入和演示验证码验证 |
+| `/onboarding` | 姓名、角色、经验和工作区设置，保存填写进度 |
+| `/files` | 本地工作区、模板、项目搜索、设置和文件删除 |
 
-Use any example email and the displayed demo code **123456**. No email is sent.
-The Google button opens an explicitly labeled demo-account dialog, not Google OAuth.
-After setup, create a file or choose a template; edit the headline and background,
-play/pause the CSS preview, and download a **static SVG**. Video, Lottie, Figma,
-AI generation, cloud collaboration, real billing, and production authentication
-are not implemented. Choosing a template initializes its name and palette;
-the full source video's animation is not imported into the demo editor.
+使用示例邮箱及界面给出的演示验证码 **123456**，不会发送邮件。Google 按钮打开标明为演示账户的弹窗，不执行 Google OAuth。
 
-Profile and files are stored under `jitter-demo-profile` and
-`jitter-demo-projects:<demo-email>` in localStorage. Signing out preserves the same
-demo profile/files. Switching to a different demo email restarts profile setup,
-but its previously saved files remain available when that demo email is used again.
-This is not an authentication or data-security boundary; do not
-use real secrets or private content. If browser storage is blocked, the UI shows
-a warning and continues in memory. Newsletter submissions only show local feedback.
+完成设置后可新建文件或选择模板，修改标题和背景，播放或暂停 CSS 预览，并下载静态 SVG。当前没有实现视频、Lottie、Figma 导出、AI 生成、云协作、真实计费或生产认证。选择模板只初始化名称和配色，不会将源视频的完整动画导入演示编辑器。
 
-## Verification
+## 本地数据
+
+个人资料保存在 localStorage 的 `jitter-demo-profile`，文件保存在 `jitter-demo-projects:<demo-email>`。退出登录保留当前演示邮箱的资料和文件；切换邮箱会重新进入资料设置，再次使用原邮箱时仍能取回之前保存的文件。
+
+这些存储键不构成认证或数据隔离边界，不应用来存放密钥和私密内容。浏览器禁止存储时，页面显示提示并继续使用内存状态。订阅操作只显示本地反馈。
+
+## 验证
 
 ```bash
 npm test
@@ -48,15 +40,10 @@ npm run typecheck
 npm run build
 ```
 
-The app supports mobile layouts, keyboard focus, native accessible dialogs,
-protected-route redirects, reduced motion, and video playback only in view.
+实现包含移动端布局、键盘焦点、原生可访问对话框和受保护路由跳转；通过 `IntersectionObserver` 管理视频播放，并检查减少动效偏好。
 
-## Reference assets
+## 参考素材
 
-`public/assets` contains the Jitter wordmark, customer logos, Lausanne/Inter fonts,
-six template preview videos, and a product demonstration video downloaded from
-public `jitter.video` / `assets.jitter.video` pages for this local reference build.
-They remain the property of their respective owners. Review asset and brand
-permissions before any public or commercial deployment. The app has no runtime
-analytics, external login SDKs, or remote media dependencies. Official help and
-legal links open the source site in a separate tab.
+`public/assets` 包含为本地参考构建从公开 `jitter.video` / `assets.jitter.video` 页面下载的品牌字标、客户标志、Lausanne / Inter 字体、六个模板预览视频及一个产品演示视频。素材仍归各自权利人所有，公开或商业部署前应核对素材和品牌授权。
+
+应用没有运行时分析脚本、外部登录 SDK 或远程媒体依赖。官方帮助和法律链接在新标签页打开原站。

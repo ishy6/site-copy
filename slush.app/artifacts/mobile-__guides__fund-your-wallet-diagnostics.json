@@ -1,0 +1,51 @@
+{
+  "route": "/guides/fund-your-wallet",
+  "width": 390,
+  "height": 6392,
+  "overflow": 0,
+  "headings": [
+    "Fund your wallet",
+    "More guides",
+    "Slush Tour",
+    "Connect to apps",
+    "Create your account",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/335156a3c285-6929f2b58ae28f2431730ed2_tour-img-1.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/65f893c590fb-680905cfdc45073838364941_fund-img-2-p-500.png",
+      "width": 390,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/ba683fffdc93-680905cfdc45073838364959_fund-img-3-p-500.png",
+      "width": 390,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8d1d03b33763-680905cfdc4507383836495f_guides-cta-apps.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "slush-replica",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5180",
+    "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
+    "preview": "vite preview --host 127.0.0.1 --port 5192",
+    "test": "playwright test",
+    "reference:sync": "node scripts/sync-reference.mjs",
+    "reference:audit": "node scripts/audit-reference.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.4.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "cheerio": "^1.2.0",
+    "postcss": "^8.5.28",
+    "postcss-value-parser": "^4.2.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2",
+    "vue-tsc": "^3.3.11"
+  }
+}

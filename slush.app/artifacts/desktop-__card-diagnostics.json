@@ -1,0 +1,47 @@
+{
+  "route": "/card",
+  "width": 1440,
+  "height": 9490,
+  "overflow": 0,
+  "headings": [
+    "Spend without selling",
+    "Coming soon. Join the waitlist to get in line for early access",
+    "We have sent you a code to",
+    "Connect your Slush walletto lock in your spot",
+    "We'll hold your spot for 5 days!",
+    "Your spot slipped away",
+    "Not available in your region yet",
+    "Slush Card turns your balance into instant spending power. Tap to pay, your balance stays productive.",
+    "Spend anywhere, hassle-free",
+    "Spend anywhere, hassle-free",
+    "Repay on your terms",
+    "Keep your balance moving",
+    "Refer friends for ongoing rewards",
+    "Be first in line"
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/1e48e84eecf1-69f83a408d68390c630c1973_card-only.avif",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e2cc2ab9f546-69fc4b98997cd81e5186070d_check-icon.svg",
+      "width": 20,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/c9b5516c8b0b-69f3401ab8d69050c0fce9ec_earn-coin.avif",
+      "width": 1376,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b91b0cf3e2fa-69f3401ab8d69050c0fce9d9_earn-bank.avif",
+      "width": 2880,
+      "loaded": true
+    }
+  ]
+}

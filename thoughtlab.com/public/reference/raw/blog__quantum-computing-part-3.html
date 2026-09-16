@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WDGPNR');</script>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/favicon/safari-pinned-tab.svg" color="#fc1c46">
+  <meta name="msapplication-TileColor" content="#fc1c46">
+  <meta name="theme-color" content="#fc1c46">
+  <script>
+    window.onFormSubmit = (token) => {
+      console.log('token:', token);
+    }
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcJGQwdAAAAAG_5JesJdLbyzkDGJfrV9Yt1tin2"></script>
+  <title>Quantum Computing Meets Web Design: Securing the Future of UX Part 3 | ThoughtLab</title>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="description" content="Discover how quantum-safe encryption protects us from the quantum computing threat. Learn why it’s essential for the future of digital security and online privacy.">
+<link href='https://www.googletagmanager.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="ThoughtLab &raquo; Quantum Computing Meets Web Design: Securing the Future of UX Part 3 Comments Feed" href="https://www.thoughtlab.com/blog/quantum-computing-part-3/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.thoughtlab.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-3%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.thoughtlab.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-3%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='tl-style-0-css' href='https://www.thoughtlab.com/wp-content/themes/thoughtlab/dist/assets/app.aff7d189.css?ver=1.0.0' media='all' />
+<link rel="https://api.w.org/" href="https://www.thoughtlab.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.thoughtlab.com/wp-json/wp/v2/posts/16614" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.thoughtlab.com/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://www.thoughtlab.com/blog/quantum-computing-part-3/" />
+<link rel='shortlink' href='https://www.thoughtlab.com/?p=16614' />
+  </head>
+  <body class="wp-singular post-template-default single single-post postid-16614 single-format-standard wp-theme-thoughtlab bg-black is-loading">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WDGPNR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div class="sh z20 fix top left x pt30">
+  <div class="sh__inner row row--l gutter aic jcb">
+    <div class="logo">
+      <img src="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/logo-icon.svg" width="405" height="80" alt="Thoughtlab logo" class="db x"/>
+    </div>
+  </div>
+</div>
+
+<header class="sh fix top left x pt30">
+  <div class="sh__inner row row--l gutter aic jcb">
+    <a href="https://www.thoughtlab.com/" class="logo">
+      <img src="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/logo-text.svg" width="405" height="80" alt="Thoughtlab logo" class="db x"/>
+    </a>
+    <div class="dn s:db sh-desc abs f12 pen js-sh-usp js-sh-item">
+      <div data-smooth-item-o>Category-First Brand + Product Studio / 26 Years of Client Partnership</div>
+    </div>
+    <div class="df aic">
+      <button type="button" class="mt | js-menu-toggle" title="menu">
+        <div class="mt-burger df fc aie">
+          <div class="mt-line"></div>
+          <div class="mt-line"></div>
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sh fix top left x pt30 pen">
+  <div class="sh__inner row row--l gutter aic jce">
+    <a
+      href="https://www.thoughtlab.com/contact/"
+      class="tl-button mr35 js-sh-item"
+      data-transition="menu"
+    >Contact Us</a>
+  </div>
+</div>
+
+<aside class="menu fix top left x y c-black oh | js-menu">
+  <div class="menu__inner abs top left x y oh z2 df aic">
+    <div class="row fw gutter rel">
+      <ul class="menu__list df fc ais s:w50 mb60 s:mb0">
+        <li class="menu__item">
+          <a href="/projects/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Work<sup>22</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/about/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">About</div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/careers/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Careers<sup>1</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/blog/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Toniq<sup>BLOG</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/contact/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Contact</div>
+          </a>
+        </li>
+      </ul>
+      <div class="menu__content x s:w30 s:mra s:on1 js-m-fade pt40">
+        <figure class="x dn s:db">
+          <a href="https://www.thoughtlab.com/">
+            <img src="https://www.thoughtlab.com/wp-content/themes/thoughtlab/static/logo-mark.svg" width="143" height="181" alt="Thoughtlab logo" class="db x s:w70"/>
+          </a>
+        </figure>
+        <div class="f16 s:nowrap mt30 oh">Category-First Brand &amp; Product Studio</div>
+        <div class="df ais f14px mt30 x">
+          <div class="w50">
+            <strong class="f14px db oh mb15">Work with us</strong>
+            <ul>
+              <li>
+                <a href="tel:+1 801 355 2696" class="f14px db oh link">+1 801 355 2696</a>
+              </li>
+              <li>
+                <a href="/contact/" class="f14px db oh link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w50">
+            <strong class="f14px db oh mb15">Follow us</strong>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/thoughtlabllc" class="f14px db oh link" target="_blank" rel="noreferrer">Instagram</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/thoughtlabllc" class="f14px db oh link" target="_blank" rel="noreferrer">Twitter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<div class="dn s:db fix top left x y pen z10 | js-pe"></div>
+<div class="mask fix top left x y mask bg-black | js-mask"></div>
+<div id="gl" style='opacity: 0'></div>
+<div class="gl-blob"></div>
+<div data-gl-case></div>
+<main class="scroll js-site-wrap" role="main" itemscope itemprop="mainContentOfPage" data-router-wrapper data-smooth style="visibility: hidden;">
+
+<article data-router-view="blog-single" id="blog-single" class="blog-single bg-white">
+  <div class="bp-hero rel oh bg-black" data-smooth-item>
+    <figure class="bp-hero__figure">
+      <img class="bp-hero__bg" src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_V8FHdAxsiBwdQm_elena-koycheva-GUYCM0jhuSA-unsplash.jpg" alt="A split fortune cookie with the fortune reading: A plan you&#039;ve been working on for a long time is beginning to take shape">
+    </figure>
+    <div class="bp-hero__top pt125 pb60 s:pv0 row df aic rel z2">
+      <div class="bp-hero__top__img img-fill pos abs top50 right x s:col18 dn s:db">
+        <div class="aspect" style="--aspect: 56.25%"></div>
+        <img src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_V8FHdAxsiBwdQm_elena-koycheva-GUYCM0jhuSA-unsplash.jpg" alt="A split fortune cookie with the fortune reading: A plan you&#039;ve been working on for a long time is beginning to take shape">
+      </div>
+      <div class="bp-hero__text col s:col10 s:mcoll2 rel df fc">
+        <a href="https://www.thoughtlab.com/blog/" class="bp-hero__arrow dn s:db">
+          <span class="bp-hero__arrow__wrap">
+            <div class="arrow-foward  direction--left alignment--left ">
+    <div class="arrow-foward__line"></div>
+</div>
+          </span>
+        </a>
+        <div class="bp-hero__hash db pb30">
+                        <span>#futureofux</span>
+                  </div>
+        <h1 class="f37 lh100">Quantum Computing Meets Web Design: Securing the Future of UX Part 3</h1>
+      </div>
+    </div>
+    <div class="bp-hero__content rel row z2 pb60 ">
+      <div class="col8 s:col4 s:mcoll2">
+        <span class="db author lh110">
+          By<br>Paul Kiernan        </span>
+        <span class="db date lh110 mt15">
+          (5.7.2025)        </span>
+        <div class="bp-social">
+          <a href="//twitter.com/intent/tweet?url=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-3%2F" target="_blank" title="Share on Twitter">
+            <span>Twitter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+              <path d="M228.994,987.419a6.189,6.189,0,0,1-1.767.477,3.047,3.047,0,0,0,1.353-1.674,6.214,6.214,0,0,1-1.954.734A3.1,3.1,0,0,0,224.38,986a3.052,3.052,0,0,0-3.077,3.027,2.961,2.961,0,0,0,.08.69,8.786,8.786,0,0,1-6.342-3.163,2.983,2.983,0,0,0-.416,1.522,3.016,3.016,0,0,0,1.368,2.52,3.1,3.1,0,0,1-1.393-.38v0.039a3.042,3.042,0,0,0,2.468,2.968,3.142,3.142,0,0,1-.811.106,3.072,3.072,0,0,1-.579-0.055,3.075,3.075,0,0,0,2.874,2.1,6.229,6.229,0,0,1-3.821,1.3,6.144,6.144,0,0,1-.734-0.042,8.813,8.813,0,0,0,4.717,1.36,8.618,8.618,0,0,0,8.753-8.611c0-.13,0-0.261-0.009-0.392A6.166,6.166,0,0,0,228.994,987.419Z" transform="translate(-214 -986)"/>
+            </svg>
+          </a>
+          <a href="//www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-3%2F" target="_blank" title="Share on Facebook">
+            <span>Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8.937" height="16" viewBox="0 0 8.937 16">
+              <path d="M262.746,1000v-7.3h2.641l0.4-2.845h-3.037v-1.816c0-.824.246-1.385,1.52-1.385h1.624v-2.543a23.2,23.2,0,0,0-2.367-.113c-2.341,0-3.944,1.326-3.944,3.76v2.1H256.93V992.7h2.649v7.3h3.167Z" transform="translate(-256.938 -984)"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="col16 s:col15 f30 bp-intro">
+        <p>Alright, now that we&#039;ve covered the potential dangers of quantum computing to our beloved encryption methods, it’s time to look on the brighter side: quantum-safe encryption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bp-content row c-black pt75 pb100" data-smooth-item>
+    <div class="col s:col11 s:mcoll6 txt txt--bp">
+                      <p class="bp__content"><strong>Part 3: Quantum-Safe Encryption – Building the Future of Digital Security</strong></p>
+<p class="bp__content">Welcome back, dear reader.</p>
+<p class="bp__content">In the time that has passed, I took some kind of mushrooms and shrunk them down to the size of a quantum Frito and lived in the fibers of my carpet for a while. I learned a few things. First, I paid my cleaning lady way too much for the amount of stuff I saw in the quantum land of my carpet. And two, quantum Fritos taste like love. I drank the potion Alice gave me, got back to normal size, and here I am, bringing you Part 3 of our five-part series. Let’s see what’s going on.</p>
+<h2 class="bp__content">Quantum-Safe Encryption: The Next Frontier</h2>
+<p class="bp__content">Alright, now that we&#039;ve covered the potential dangers of quantum computing to our beloved encryption methods, it’s time to look on the brighter side: quantum-safe encryption. I know it sounds a bit like a superhero’s secret weapon, doesn’t it? But in a way, it kind of is.</p>
+<p class="bp__content">Let’s take a step back. Right now, the encryption we use for everything from online shopping to banking is based on pretty complex mathematical problems. The idea is that these problems are hard for classical computers to solve, and without the right key, it’s almost impossible for a bad actor to access our data. Enter quantum computing, and suddenly, these problems are no longer so difficult. In fact, a quantum computer could crack through these encryption methods in mere seconds, which is not exactly comforting.</p>
+<p class="bp__content">But fear not! Just like we’ve got backup plans for our computers when they slow down (who doesn’t have a drawer full of USB sticks you never use?), we’ve got backup plans for encryption, too.</p>
+<p class="bp__content">So, what exactly is quantum-safe encryption? Well, it’s not some fancy gadget or shiny new app; it’s a whole new approach to protecting data from the quantum threat. Think of it as a kind of encryption super suit—something that’s been specifically designed to handle the quantum onslaught without blinking an eye.</p>
+<p class="bp__content">Quantum-safe encryption relies on mathematical problems that are really hard for quantum computers to solve. These problems are kind of like the encryption equivalent of trying to figure out where all those missing socks went after laundry day (spoiler: they’re in quantum space somewhere). It’s not that quantum computers can’t try to solve these problems, but the thing is—they really can’t do it any faster than a regular computer when it comes to these specific tasks. They’ll keep trying, but it’s like asking a quantum computer to crack open a safe with the wrong key—it just won’t happen.</p>
+<p class="bp__content">One of the main approaches being tested for quantum-safe encryption is lattice-based cryptography. Imagine you’re trying to solve a really hard puzzle, and instead of having to guess the next move, you have a clear roadmap that helps you navigate each piece. That’s what lattice-based cryptography does—it uses the geometric structure of a mathematical lattice to keep things secure. Even if a quantum computer tries to break in, it’s like trying to navigate a maze with no exit.</p>
+<p class="bp__content">Another approach that’s making waves is hash-based cryptography. It’s like scrambling the puzzle pieces into a jumbled mess, but in a way that if someone tries to unscramble them, they can’t do it without the key. Even quantum computers would need to spend a lot of time trying to figure out the original puzzle pieces. Essentially, this method relies on hash functions, which are one-way mathematical functions that turn data into a fixed-size string of characters, making it nearly impossible to reverse-engineer.</p>
+<p class="bp__content">These quantum-safe methods are still in development, but the exciting part is that they hold the promise of future-proofing our digital security, ensuring that quantum computers won’t be able to crack our encrypted data anytime soon.</p>
+                      <figure class="bp__figure__img">
+                  <img width="1400" height="932" src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_V8zXdAxsiBwdQy_edge2edge-media-qHhJkxare7A-unsplash.jpg" alt="Silver nuts and bolts on a white background" class="full-width">
+              </figure>
+                      </p>
+<h2 class="bp__content">How Quantum-Safe Encryption Works: The Nuts and Bolts </h2>
+<p class="bp__content">Now that we’ve established what quantum-safe encryption is, let’s take a closer look at how these encryption methods work. Don’t worry, I won’t get into too many technical details, but I’ll explain enough to give you an idea of how these algorithms are designed to hold up against the mighty quantum computers.</p>
+<p class="bp__content">Think of quantum-safe encryption like putting up a security system in your house, but this time, the burglars are quantum computers. Classical encryption is like a lock and key—easy for us to use, but once that key is found, it’s game over. Quantum-safe encryption is like adding a couple of extra layers of security, an alarm system, and a vault to make sure no one gets to your stuff, no matter how fancy their technology is.</p>
+<p class="bp__content">For example, with lattice-based cryptography, we’re dealing with a really tough puzzle made from mathematical structures that don’t give up their secrets easily. To crack the code, a quantum computer would have to take an insane number of tries, making it more time-consuming and complex than your average encryption. Think of it like trying to open a lock with a thousand dials—each dial is a bit different, and you’re going to need a lot of guesses to get it right. These lattice structures work in a way that makes it incredibly hard to break the system using the types of calculations quantum computers excel at. The system is designed to resist even the most powerful quantum algorithms.</p>
+<p class="bp__content">Hash-based cryptography, on the other hand, is a little like putting a jigsaw puzzle together, but with a twist: it’s made of pieces that can only be fit together one way. Trying to reverse-engineer this kind of encryption would take so much time and effort that a quantum computer wouldn’t be able to pull it off in any reasonable amount of time. And this kind of encryption can work for things like digital signatures or verifying that a file hasn’t been tampered with. A quantum computer might have the processing power to solve some problems quickly, but the strength of hash functions is that they create outputs that are virtually impossible to reverse.</p>
+<p class="bp__content">In addition to these methods, there are also multivariate polynomial cryptography systems in development. This approach uses complex systems of polynomial equations, which quantum computers would struggle to solve efficiently. While quantum computers are good at solving certain mathematical problems quickly, they can’t always handle these types of polynomial challenges. It’s like quantum computers trying to solve a Rubik’s Cube—but instead of being handed a cube with colors already matched, the quantum computer is given a cube that’s constantly changing. It’s not an easy task, even for the most advanced quantum system.</p>
+<p class="bp__content">One thing that’s crucial to understand about these quantum-safe algorithms is that they aren’t a magic bullet for security. They’re still under heavy scrutiny and testing, and there are still challenges to overcome in making them both secure and efficient. For instance, while lattice-based cryptography is incredibly secure, it’s not always the fastest when compared to current encryption methods. There’s a trade-off between security and speed, and figuring out how to balance these factors is a huge part of the ongoing development.</p>
+<p class="bp__content">As researchers continue to refine these encryption systems, they’re also considering practical concerns, like how to integrate quantum-safe encryption with existing infrastructure. Right now, most websites and apps are built on classical encryption systems like RSA, so transitioning to new algorithms won’t be instantaneous. It’s more of a gradual shift, similar to how we adapted from older encryption methods to current ones. That means the next decade will likely see a mix of quantum-safe and classical encryption methods working side by side as the new systems get tested and implemented.</p>
+                      <figure class="bp__figure__img">
+                  <img width="1400" height="788" src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_V9cndAxsiBwdRC_aakash-dhage-zRoz_3alNRo-unsplash.jpg" alt="A suspended glass cube with a round light inside" class="full-width">
+              </figure>
+                      <h2 class="bp__content">Why Quantum-Safe Encryption Matters</h2>
+<p class="bp__content">We’ve covered how quantum-safe encryption works and why it’s important, but let’s dive a little deeper into why it matters—both now and in the future. You might be thinking, Alright, this all sounds great, but when do I need to start worrying about it?</p>
+<p class="bp__content">Well, as with all new technology, we don’t have to panic just yet. But the reality is that quantum computers are steadily advancing, and the race to develop quantum-safe encryption is already underway. The thing is, unlike some tech trends that take years or even decades to become mainstream, this one’s different. Quantum computing has the potential to disrupt encryption in a relatively short time frame.</p>
+<p class="bp__content">Let’s break this down further.</p>
+<ol class="lst bp__content">
+<li><strong>The Urgency of Preparing Early</strong></li>
+</ol>
+<p class="bp__content"> Even though we’re not quite at the point where quantum computers are cracking encryption left and right, the reality is that when they do reach that point, it’ll be too late to act. In fact, many experts say that we need to start preparing now for the quantum threat. This means developing, testing, and deploying quantum-safe encryption techniques before quantum computers are fully capable of breaking today’s encryption systems. If you wait until quantum computers are mainstream, your data might already be at risk.</p>
+<ol class="lst bp__content">
+<li><strong>The Long Road to Full Implementation</strong></li>
+</ol>
+<p class="bp__content"> Unlike a lot of tech changes that happen pretty quickly (think about how fast the smartphone revolution took place), the shift to quantum-safe encryption is going to take time. It’s not just about replacing one type of encryption with another. There are a lot of systems in place—especially in the banking, healthcare, and government sectors—that depend on secure communication methods, and transitioning them to quantum-safe encryption will require careful planning and testing.</p>
+<p class="bp__content">This is why the quantum-safe encryption field is so interesting: it&#039;s a long-term investment in our digital future. We need to start implementing these solutions now, so when quantum computers do become powerful enough to crack current encryption methods, we won’t be scrambling to protect our data at the last minute.</p>
+<ol class="lst bp__content">
+<li><strong>The Impact on Different Industries</strong></li>
+</ol>
+<p class="bp__content"> Some industries are going to need quantum-safe encryption sooner than others. For example, the financial industry deals with massive amounts of sensitive data every day, so the transition to quantum-safe encryption will be crucial for protecting everything from transactions to customer data. If quantum computers can break into financial systems, it could have catastrophic consequences.</p>
+<p class="bp__content">Similarly, in healthcare, personal medical information is some of the most sensitive data out there. Protecting this data from quantum decryption is critical to maintaining trust and safeguarding patient privacy.</p>
+<p class="bp__content">The government sector is also a major player in the quantum-safe encryption race. National security depends heavily on secure communication, and if quantum computers can decrypt classified information, the consequences could be far-reaching. In fact, governments around the world are already funding research into quantum-safe encryption, and some are even beginning to adopt quantum-safe methods in classified systems.</p>
+<ol class="lst bp__content">
+<li><strong>A Bit of Hope: The Quantum-Safe Future</strong></li>
+</ol>
+<p class="bp__content"> The good news is that researchers aren’t just sitting around waiting for quantum computers to get powerful enough to break everything. Scientists are actively developing solutions that will keep us ahead of the quantum curve. There are already promising quantum-safe encryption methods that have stood up to initial testing, and we’re continuing to refine and develop these solutions.</p>
+<p class="bp__content">The most important thing we can do right now is stay informed. The future of quantum-safe encryption is going to involve a mix of innovative technologies, collaboration, and a lot of adaptation. By keeping up with developments and thinking about how we can start preparing today, we can make sure that when the quantum era arrives, we’ll be ready.</p>
+<h2 class="bp__content">The Road Ahead: Preparing for the Quantum Shift</h2>
+<p class="bp__content">Now that we’ve covered the fundamentals of quantum-safe encryption and why it matters, let’s talk about the road ahead. You might be wondering, Okay, so when exactly do I need to start worrying about this? Should I panic and start encrypting my cat’s social media accounts?</p>
+<p class="bp__content">The short answer is: no, you don’t need to start panicking just yet. But you do need to keep your eyes on the horizon. The quantum computing revolution is coming, and as with all technological shifts, there are things we can do to prepare.</p>
+<ol class="lst bp__content">
+<li><strong>Why Waiting Isn’t an Option</strong></li>
+</ol>
+<p class="bp__content"> Sure, quantum computers haven’t cracked our encryption systems yet, but the reality is that the clock is ticking. Experts predict that within the next 10 to 20 years, quantum computers could have the power to break traditional encryption methods. That’s not a long time in the world of technology. In fact, it’s more like the time it takes for a good pot of coffee to brew—quick, and suddenly there you are, facing the future.</p>
+<p class="bp__content">This is why it’s so important to prepare now. The sooner we start adopting quantum-safe methods, the less of a scramble we’ll face down the road. Like buying insurance before your house floods, getting ahead of quantum encryption means that when it’s time to make the switch, you’ll already have a solid foundation in place.</p>
+<ol class="lst bp__content">
+<li><strong>It’s Not About Replacing Everything Overnight</strong></li>
+</ol>
+<p class="bp__content"> A lot of people hear “quantum-safe encryption” and think, Great, we need to scrap everything and start over. Not exactly. This won’t be an overnight process. Just like with any big technological shift, we’ll transition gradually, integrating quantum-safe methods alongside the systems we use today.</p>
+<p class="bp__content">The big players in encryption—lattice-based, hash-based, multivariate polynomial encryption—are still being tested and tweaked, and many industries are looking to introduce them incrementally. In other words, we won’t be tossing out RSA encryption tomorrow. Instead, quantum-safe encryption will act like a backup plan that gets stronger and more reliable over time. You won’t even notice it until one day you realize you’ve been using it all along, just like when you switched to a smartphone but didn’t notice until your old flip phone started gathering dust.</p>
+<ol class="lst bp__content">
+<li><strong>What Businesses Should Do Right Now</strong></li>
+</ol>
+<p class="bp__content"> If you’re working in a business that deals with sensitive data (and let’s face it, which business doesn’t these days?), now is the time to start thinking about how quantum-safe encryption fits into your future. Start educating yourself and your team. Keep an eye on developments from trusted organizations like NIST, who are actively working to standardize quantum-safe encryption algorithms. Make sure your systems are adaptable to future changes in encryption.</p>
+<p class="bp__content">You don’t need to switch everything overnight. Start by looking at the areas where security is absolutely essential. For example, if your company is in the financial industry, focusing on encrypting transactions and customer data with future-proof algorithms should be at the top of your to-do list. If your company is in healthcare, start thinking about securing patient information and medical records in anticipation of the quantum threat.</p>
+<ol class="lst bp__content">
+<li><strong>The Role of Collaboration</strong></li>
+</ol>
+<p class="bp__content"> One of the most exciting things about the transition to quantum-safe encryption is how much collaboration is happening in the field. Governments, tech companies, and universities are all working together to develop these new encryption methods. This collaboration is key because it ensures that when quantum-safe encryption is ready, it’ll be a widely accepted and standardized solution.</p>
+<p class="bp__content">Even better, these collaborations aren’t just happening in silos—people are sharing research, ideas, and solutions. This means that by the time we’re ready to make the full switch to quantum-safe encryption, we’ll have a well-tested, globally supported infrastructure in place.</p>
+                      <figure class="bp__figure__img">
+                  <img width="933" height="1400" src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_V-Y3dAxsiBwdRP_miikka-luotio-PnMBEIFtBnc-unsplash.jpg" alt="A person with a knife scaling a fish" class="full-width">
+              </figure>
+                      </p>
+<h2 class="bp__content">How to Prepare for Quantum-Safe Encryption</h2>
+<p class="bp__content">Now that we’ve covered the importance of quantum-safe encryption, its workings, and why it matters, let’s talk about the next step: how you can start preparing for the future of digital security. You might think, Okay, but what does this mean for me right now? Well, it’s time to face facts—the quantum revolution is coming, and there are things we can do now to make sure we’re ready when the shift happens.</p>
+<p class="bp__content"><strong>Start Educating Yourself</strong></p>
+<p class="bp__content"> First, let’s talk about knowledge. The future of quantum computing is both exciting and intimidating, but the more you understand about quantum-safe encryption, the better equipped you’ll be to face the challenges ahead. You don’t need to become a quantum cryptographer (unless that’s your jam), but learning the basics will help you navigate the upcoming changes.</p>
+<p class="bp__content">There are plenty of resources out there, from online courses and webinars to research papers, that break down quantum computing and encryption in ways that are digestible even for non-experts. For example, the NIST (National Institute of Standards and Technology) post-quantum cryptography competition has been a huge milestone in identifying and standardizing quantum-safe algorithms. Keeping an eye on these developments will give you a leg up.</p>
+<p class="bp__content"><strong>Begin Transitioning to Quantum-Safe Algorithms</strong></p>
+<p class="bp__content"> You don’t need to dive in headfirst just yet, but it’s a good idea to start thinking about how your encryption systems could evolve. If you’re running a business, especially one that handles sensitive information (like healthcare or financial data), transitioning to quantum-safe algorithms should be on your radar. Start by researching and testing hybrid encryption models—those that combine classical encryption with quantum-safe methods.</p>
+<p class="bp__content">In the future, the goal will be to seamlessly integrate quantum-safe encryption into our current systems, so the smoother we make that transition now, the better prepared we’ll be when the time comes.</p>
+<p class="bp__content"><strong>Collaborate and Keep the Conversation Going</strong></p>
+<p class="bp__content"> When it comes to security, we’re all in this together. Businesses, governments, and researchers are all working toward the common goal of ensuring that our data stays secure in the quantum age. Collaboration is key. If you’re part of an organization or even a small startup, it’s crucial to stay connected with others in the industry to understand what they’re doing to prepare for the quantum shift. Share resources, ideas, and solutions to help build a stronger, more secure digital world.</p>
+<p class="bp__content"><strong>Take Small Steps to Encrypt Your Data</strong></p>
+<p class="bp__content"> It’s one thing to plan for the future; it’s another to take action today. If you haven’t already, start by ensuring that your data is encrypted using current best practices. This may seem like an obvious step, but you’d be surprised how many systems still rely on outdated security measures. If you’re unsure of where to start, there are plenty of encryption tools available that can secure your emails, files, and communications. Doing this now ensures that you’re building on a strong foundation, so when quantum-safe methods are ready to implement, the transition will be much smoother.</p>
+<h2 class="bp__content">Summing Up</h2>
+<p class="bp__content">And there we have it—the exciting world of quantum-safe encryption. We&#039;ve talked about how quantum computing threatens our current encryption systems, but we also explored the bright future of quantum-safe encryption methods designed to protect our digital world. It’s a little like discovering that your childhood toy is actually a time machine—exciting and a bit confusing, but full of potential.</p>
+<p class="bp__content">We’ve learned that the quantum shift isn’t something we need to panic about today, but we definitely need to keep our eyes on the horizon. The key takeaway here is simple: start preparing now. Whether it’s educating yourself, experimenting with hybrid encryption, or staying connected to the larger conversation about digital security, the future of encryption is in our hands.</p>
+<p class="bp__content">As we continue on this journey through quantum computing, next time we’ll be diving into <em>the impact of quantum computing on web security</em>, and how it could change the way we approach online safety. Spoiler alert: it’s not just about stronger passwords. Stay tuned!</p>
+            </div>
+  </div>
+
+      <article class="bp-next rel row row--l gutter c-white" data-smooth-item>
+      <a href="https://www.thoughtlab.com/blog/the-quantum-impact-on-ux-authentication-in-the-qua/" class="x df aic rel bp-next__inner img-fill">
+        <img src="https://www.thoughtlab.com/wp-content/uploads/2025/05/Z_1xFevxEdbNPCIb_jonathan-cooper-ASQO3wBkLHc-unsplash.jpg" alt="An ATM with a sign over it reading, &quot;Smile You&#039;re On Camera&quot;">
+        <div class="row row--l rel s:abs s:top s:left s:x s:y z2 ph30 s:ph0">
+          <div class="gutter s:col10 s:mcoll2 df fc jcc">
+            <span class="mb30">Next story:</span>
+            <h5 class="bp-next__title f30 s:f37 lh100">
+              The Quantum Impact on UX: Authentication in the Quantum Era            </h5>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+  <footer class="sf sf--light pb45 c-black" data-smooth-item>
+  <div class="row row--s rel gutter  pt45"></div>
+  <div class="row row--s fw sumo_footer">
+    <ul class="dn s:db s:col4">
+      <li><a href="/projects/" class="lh120 f12">Projects<sup>22</sup></a></li>
+      <li><a href="/about/" class="lh120 f12">About</a></li>
+      <li><a href="/careers/" class="lh120 f12">Careers<sup>1</sup></a></li>
+      <li><a href="/contact/" class="lh120 f12">Contact</a></li>
+    </ul>
+    <ul class="dn s:db gutter">
+      <li><a href="/blog/" class="lh120 f12">Toniq<sup>BLOG</sup></a></li>
+      <li><a href="/privacy-policy/" class="lh120 f12">Privacy Policy</a></li>
+    </ul>
+    <form name="Newsletter" id="footer-newsletter-form" method="post" class="nl mla df fc">
+      <input type="hidden" name="action" value="tl_contact_form_submit" />
+      <input type="hidden" name="contact_nonce" value="9cf42955a4" />
+      <input type="hidden" name="form_type" value="newsletter" />
+      <input type="hidden" name="returnUrl" id="returnUrlNewsLetter" value="https://www.thoughtlab.com/thank-you/" />
+      <input type="hidden" name="form_name" placeholder="Form name" value="Newsletter"/>
+      <input type="hidden" name="form_tags" id="form_tags" value="newsletter" />
+      <label class="nl-label f12 mb15">Join our Community</label>
+      <div class="nl-input input-wrap input-wrap--s rel">
+          <input type="email" name="email" placeholder="Email address" />
+          <input type="hidden" name="name" value="Newsletter" />
+          <button type="submit" class="nl__arrow abs top right df aic jce y pr15" aria-label="Submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.11 12.14"><path d="M11.92 5.62c-.01 0-.01 0 0 0-.01 0-.01 0 0 0L6.49.19a.664.664 0 10-.94.94l4.95 4.95L5.58 11a.664.664 0 10.94.94l5.39-5.39c.27-.25.27-.67.01-.93zm-4.14.55c0-.36-.3-.66-.66-.66L.66 5.49a.66.66 0 100 1.32l6.45.02c.37 0 .67-.29.67-.66z"/></svg>
+          </button>
+      </div>
+    </form>
+  </div>
+  <div class="row row--s gutter jcb mt60 footer_copyright">
+    <div class="sf-cr c-grey-2 footer_copyright_year">
+      <p class="f10px s:f14px">&copy; 1999_2026 / ThoughtLab LLC. All rights reserved.</p>
+    </div>
+    <div class="sf-locs c-grey-2 mla footer_copyright_cities">
+      <p class="f10px s:f14px"><a class="f10px s:f14px" href="/locations/salt-lake-city">SLC<sup>HQ</sup></a> / <a class="f10px s:f14px" href="/locations/new-york-city">NYC</a> / <a class="f10px s:f14px" href="/locations/atlanta">ATL</a> / <a class="f10px s:f14px" href="/locations/san-francisco">SF</a></p>
+    </div>
+  </div>
+</footer>
+</article>
+
+</main>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/thoughtlab/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="tl-app-js-extra">
+var tlTheme = {"assetBase":"https://www.thoughtlab.com/wp-content/themes/thoughtlab","ajaxUrl":"https://www.thoughtlab.com/wp-admin/admin-ajax.php","contactNonce":"9cf42955a4"};
+//# sourceURL=tl-app-js-extra
+</script>
+<script type="module" crossorigin id="tl-app-js" src="https://www.thoughtlab.com/wp-content/themes/thoughtlab/dist/assets/app.67105252.js?ver=1.0.0"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.thoughtlab.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.thoughtlab.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b6deb02def1761',t:'MTc4OTQ2NzMyMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

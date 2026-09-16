@@ -139,6 +139,7 @@ try {
     assert.ok(archive['README.md'], `${id}: missing README`)
     assert.ok(Object.keys(archive).some(name => name.endsWith('.vue')), `${id}: missing Vue component`)
     for (const [path, data] of Object.entries(archive)) {
+      if (/\.(test|spec)\.ts$/.test(path)) continue
       if (!path.endsWith('.vue') && !path.endsWith('.ts')) continue
       for (const match of strFromU8(data).matchAll(/['"](\/assets\/[^'"\s]+)['"]/g)) {
         assert.ok(archive[`public${match[1]}`], `${id}: missing exported ${match[1]}`)

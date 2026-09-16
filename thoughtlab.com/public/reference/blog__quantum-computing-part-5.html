@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="en-US" data-reference-route="/blog/quantum-computing-part-5/"><head>
+
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/thoughtlab/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/thoughtlab/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/thoughtlab/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/wp-content/themes/thoughtlab/static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/wp-content/themes/thoughtlab/static/favicon/safari-pinned-tab.svg" color="#fc1c46">
+  <meta name="msapplication-TileColor" content="#fc1c46">
+  <meta name="theme-color" content="#fc1c46">
+  
+  
+  <title>Quantum Computing Meets Web Design: Securing the Future of UX Part 5 | ThoughtLab</title>
+<meta name="robots" content="max-image-preview:large">
+<meta name="description" content="Discover how quantum computing is reshaping web design, UX, and security, and learn how to future-proof your digital experiences for the quantum age.">
+
+
+
+
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="tl-style-0-css" href="/wp-content/themes/thoughtlab/dist/assets/app.aff7d189.css" media="all">
+
+
+
+  <script type="module" src="/src/main.ts" data-local-entry=""></script></head>
+  <body class="wp-singular post-template-default single single-post postid-16638 single-format-standard wp-theme-thoughtlab bg-black is-loading">
+
+    <!-- Google Tag Manager (noscript) -->
+    
+
+<div class="sh z20 fix top left x pt30">
+  <div class="sh__inner row row--l gutter aic jcb">
+    <div class="logo">
+      <img src="/wp-content/themes/thoughtlab/static/logo-icon.svg" width="405" height="80" alt="Thoughtlab logo" class="db x">
+    </div>
+  </div>
+</div>
+
+<header class="sh fix top left x pt30">
+  <div class="sh__inner row row--l gutter aic jcb">
+    <a href="/" class="logo">
+      <img src="/wp-content/themes/thoughtlab/static/logo-text.svg" width="405" height="80" alt="Thoughtlab logo" class="db x">
+    </a>
+    <div class="dn s:db sh-desc abs f12 pen js-sh-usp js-sh-item">
+      <div data-smooth-item-o="">Category-First Brand + Product Studio / 26 Years of Client Partnership</div>
+    </div>
+    <div class="df aic">
+      <button type="button" class="mt | js-menu-toggle" title="menu">
+        <div class="mt-burger df fc aie">
+          <div class="mt-line"></div>
+          <div class="mt-line"></div>
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sh fix top left x pt30 pen">
+  <div class="sh__inner row row--l gutter aic jce">
+    <a href="/contact/" class="tl-button mr35 js-sh-item" data-transition="menu">Contact Us</a>
+  </div>
+</div>
+
+<aside class="menu fix top left x y c-black oh | js-menu">
+  <div class="menu__inner abs top left x y oh z2 df aic">
+    <div class="row fw gutter rel">
+      <ul class="menu__list df fc ais s:w50 mb60 s:mb0">
+        <li class="menu__item">
+          <a href="/projects/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Work<sup>22</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/about/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">About</div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/careers/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Careers<sup>1</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/blog/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Toniq<sup>BLOG</sup>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="/contact/" class="oh db f50 s:f75 ls1" data-transition="menu">
+            <div class="df ais | js-m-reveal">Contact</div>
+          </a>
+        </li>
+      </ul>
+      <div class="menu__content x s:w30 s:mra s:on1 js-m-fade pt40">
+        <figure class="x dn s:db">
+          <a href="/">
+            <img src="/wp-content/themes/thoughtlab/static/logo-mark.svg" width="143" height="181" alt="Thoughtlab logo" class="db x s:w70">
+          </a>
+        </figure>
+        <div class="f16 s:nowrap mt30 oh">Category-First Brand &amp; Product Studio</div>
+        <div class="df ais f14px mt30 x">
+          <div class="w50">
+            <strong class="f14px db oh mb15">Work with us</strong>
+            <ul>
+              <li>
+                <a href="tel:+1 801 355 2696" class="f14px db oh link">+1 801 355 2696</a>
+              </li>
+              <li>
+                <a href="/contact/" class="f14px db oh link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w50">
+            <strong class="f14px db oh mb15">Follow us</strong>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/thoughtlabllc" class="f14px db oh link" target="_blank" rel="noreferrer">Instagram</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/thoughtlabllc" class="f14px db oh link" target="_blank" rel="noreferrer">Twitter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<div class="dn s:db fix top left x y pen z10 | js-pe"></div>
+<div class="mask fix top left x y mask bg-black | js-mask"></div>
+<div id="gl" style="opacity: 0"></div>
+<div class="gl-blob"></div>
+<div data-gl-case=""></div>
+<main class="scroll js-site-wrap" role="main" itemscope="" itemprop="mainContentOfPage" data-router-wrapper="" data-smooth="" style="visibility: hidden;">
+
+<article data-router-view="blog-single" id="blog-single" class="blog-single bg-white">
+  <div class="bp-hero rel oh bg-black" data-smooth-item="">
+    <figure class="bp-hero__figure">
+      <img class="bp-hero__bg" src="/wp-content/uploads/2025/05/Z_gZ-evxEdbNO321_krists-luhaers-V11kq6ksD2s-unsplash.jpg" alt="A port hole with a view of the open ocean">
+    </figure>
+    <div class="bp-hero__top pt125 pb60 s:pv0 row df aic rel z2">
+      <div class="bp-hero__top__img img-fill pos abs top50 right x s:col18 dn s:db">
+        <div class="aspect" style="--aspect: 56.25%"></div>
+        <img src="/wp-content/uploads/2025/05/Z_gZ-evxEdbNO321_krists-luhaers-V11kq6ksD2s-unsplash.jpg" alt="A port hole with a view of the open ocean">
+      </div>
+      <div class="bp-hero__text col s:col10 s:mcoll2 rel df fc">
+        <a href="/blog/" class="bp-hero__arrow dn s:db">
+          <span class="bp-hero__arrow__wrap">
+            <div class="arrow-foward  direction--left alignment--left ">
+    <div class="arrow-foward__line"></div>
+</div>
+          </span>
+        </a>
+        <div class="bp-hero__hash db pb30">
+                        <span>#futureofux</span>
+                  </div>
+        <h1 class="f37 lh100">Quantum Computing Meets Web Design: Securing the Future of UX Part 5</h1>
+      </div>
+    </div>
+    <div class="bp-hero__content rel row z2 pb60 ">
+      <div class="col8 s:col4 s:mcoll2">
+        <span class="db author lh110">
+          By<br>Paul Kiernan        </span>
+        <span class="db date lh110 mt15">
+          (5.12.2025)        </span>
+        <div class="bp-social">
+          <a href="https://www.thoughtlab.com//twitter.com/intent/tweet?url=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-5%2F" target="_blank" title="Share on Twitter" data-router-disabled="" rel="noopener noreferrer">
+            <span>Twitter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+              <path d="M228.994,987.419a6.189,6.189,0,0,1-1.767.477,3.047,3.047,0,0,0,1.353-1.674,6.214,6.214,0,0,1-1.954.734A3.1,3.1,0,0,0,224.38,986a3.052,3.052,0,0,0-3.077,3.027,2.961,2.961,0,0,0,.08.69,8.786,8.786,0,0,1-6.342-3.163,2.983,2.983,0,0,0-.416,1.522,3.016,3.016,0,0,0,1.368,2.52,3.1,3.1,0,0,1-1.393-.38v0.039a3.042,3.042,0,0,0,2.468,2.968,3.142,3.142,0,0,1-.811.106,3.072,3.072,0,0,1-.579-0.055,3.075,3.075,0,0,0,2.874,2.1,6.229,6.229,0,0,1-3.821,1.3,6.144,6.144,0,0,1-.734-0.042,8.813,8.813,0,0,0,4.717,1.36,8.618,8.618,0,0,0,8.753-8.611c0-.13,0-0.261-0.009-0.392A6.166,6.166,0,0,0,228.994,987.419Z" transform="translate(-214 -986)"></path>
+            </svg>
+          </a>
+          <a href="//www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thoughtlab.com%2Fblog%2Fquantum-computing-part-5%2F" target="_blank" title="Share on Facebook">
+            <span>Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8.937" height="16" viewBox="0 0 8.937 16">
+              <path d="M262.746,1000v-7.3h2.641l0.4-2.845h-3.037v-1.816c0-.824.246-1.385,1.52-1.385h1.624v-2.543a23.2,23.2,0,0,0-2.367-.113c-2.341,0-3.944,1.326-3.944,3.76v2.1H256.93V992.7h2.649v7.3h3.167Z" transform="translate(-256.938 -984)"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="col16 s:col15 f30 bp-intro">
+        <p>Here’s the issue, though: If quantum computing is really going to unlock all this crazy potential for faster, more secure encryption, it also means we’ve got to rethink everything.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bp-content row c-black pt75 pb100" data-smooth-item="">
+    <div class="col s:col11 s:mcoll6 txt txt--bp">
+                      <p class="bp__content"><strong><em>Part 5-Securing UX in a Quantum World: Navigating the Future of Web Design</em></strong></p>
+<p class="bp__content">Sweet mother of all that’s holy. For four blogs, I have been talking about quantum computing, and you don’t have to be Einstein to know I have no idea what I’m talking about. It’s like a chicken trying to talk about why mirrors reflect. Just a lot of clucking. However, I do hope you’ve gotten something out of these blogs, and you feel that you’re at least ready to tackle some research of your own with a little better understanding than before you read these blogs. I hope. Now, we’ll wrap this puppy up like a Christmas gift, being sure to leave holes in the wrapping so it can breathe. Off we go!</p>
+<p class="bp__content">So here we are, my friends. After four blogs about quantum computing and how it could completely upend everything we know about encryption, data security, and user experience, I think it’s time we ask: What does this mean for web design?</p>
+<p class="bp__content">Let’s break it down. Quantum computing, while it sounds like something out of a sci-fi thriller, is no longer a distant fantasy. It’s something we need to start thinking about today, not tomorrow. While it may sound like the ultimate villain, quantum computing doesn’t necessarily have to be a bad guy. Like any new technology, it comes with both perks and problems. And let’s face it, we’ve got some serious problems with online security these days, so maybe this quantum wave could be just the thing to turn the tide.</p>
+<p class="bp__content">Here’s the issue, though: If quantum computing is really going to unlock all this crazy potential for faster, more secure encryption, it also means we’ve got to rethink everything. Encryption has been the backbone of web security for decades. But quantum computers will be able to break encryption methods that we’re using today faster than you can say "quantum encryption algorithm." So, are we doomed? Should we just throw our hands up and say, “Well, guess I’ll go back to playing Snake on my old Nokia phone”? No, because while quantum computing will change the game, it’s not going to leave us without a game plan.</p>
+<p class="bp__content">But let’s pause for a moment and appreciate the irony here. For years, we’ve been training ourselves to lock things down—strong passwords, 2FA, SSL encryption, firewalls—only to have quantum computing come in like a wrecking ball, promising to break everything we’ve worked so hard to build. Still, all is not lost.</p>
+<h2 class="bp__content">UX and Web Security: The Big Quantum Tangle</h2>
+<p class="bp__content">Okay, now that we've gotten the fear out of the way (or at least I hope we did), let’s get into the fun stuff—how quantum computing is going to mess with user experience (UX). When I say "fun," I mean "not really fun at all," but that's the price we pay for progress, right?</p>
+<p class="bp__content">We’ve talked a lot about how quantum computing is going to change the way we secure data, but what about the way we use the web? Right now, a lot of our online interactions are dependent on things like passwords, 2FA (two-factor authentication), and encryption methods that keep our personal data under lock and key. These systems, which we all know and love (well, except when we forget our passwords), are the foundation of our UX. The experience of logging in, checking your bank balance, or booking a flight all depend on these relatively simple security measures.</p>
+<p class="bp__content">But hold onto your seats, because quantum computing could disrupt all of that. If encryption methods become obsolete or compromised by quantum power, we’re going to have to rethink everything. Imagine trying to access your bank account, but instead of your usual password and 2FA process, you need to use some super-intense quantum-safe authentication method. It's like having a party where the bouncer demands a secret handshake, a retina scan, and a song in the key of G just to let you in. I mean, sure, it’s secure, but it’s also a little annoying, right?</p>
+<p class="bp__content">Here’s the problem: security and usability don’t always play nice together. The more secure we try to make things, the more complicated the experience can get. Right now, UX thrives on simplicity. If logging in to your favorite shopping site involves an array of biometric scans, passwords, and secret codes, that’s not exactly the streamlined experience we all crave. UX should be seamless, almost invisible. But if we’re living in a world where quantum computing breaks down our standard encryption methods, UX designers are going to have to walk a fine line between keeping things simple and keeping things safe.</p>
+<p class="bp__content">But, let’s not completely freak out. I’m a firm believer that every challenge comes with a solution. And as much as quantum computing is throwing a wrench in things, it’s also giving us the opportunity to reinvent how we approach digital security and UX. We’ve already made major strides in user-centered design, where we focus on creating experiences that make life easier for users. The key will be adapting that mindset to work alongside quantum-safe methods without compromising on the user experience.</p>
+<p class="bp__content">Here’s the good news: quantum-safe authentication systems, like quantum key distribution (QKD), could offer a solution. Imagine if, instead of worrying about cracking passwords or 2FA, we simply used the fundamental properties of quantum mechanics to ensure the security of our data. The user experience would remain smooth, while security protocols are able to adapt to the quantum age. No secret handshakes required. At least, not yet.</p>
+                      <figure class="bp__figure__img">
+                  <img width="933" height="1400" src="/wp-content/uploads/2025/05/Z_gac-vxEdbNO329_john-salvino-bqGBbLq_yfc-unsplash.jpg" alt="A gray scale image of a silver chain and a padlock securing a gate" class="full-width">
+              </figure>
+                      <p></p>
+<h2 class="bp__content">Looking Ahead: The Quantum Future of UX and Security</h2>
+<p class="bp__content">Okay, so now that we’ve gone through the mess of how quantum computing is going to break all the things we’ve come to rely on for secure, convenient web experiences, let's think about what’s next. If we’re looking ahead at this brave new quantum world, what does it mean for the future of web design, user experience, and security?</p>
+<p class="bp__content">The future, folks, is all about quantum resilience—that’s a fancy way of saying, “How do we secure our websites and apps against this thing we barely understand?” It’s like being asked to prep for a hurricane while you’re still waiting on your first meteorology lesson. But the good news is that we’ve got plenty of quantum-safe techniques, like quantum key distribution (QKD), which could help protect us from the worst of what quantum computing has to offer.</p>
+<p class="bp__content">Now, the question is: how do we prepare for this in our UX designs? In the same way that we moved from insecure HTTP to HTTPS to protect online transactions, we’ll need to move from traditional encryption to quantum-safe encryption. This will affect everything from how we authenticate users to how we protect their data while it’s in transit. But just like the shift to HTTPS wasn’t as dramatic as we feared, the transition to quantum-safe encryption won’t be an immediate apocalypse either.</p>
+<p class="bp__content">However, that doesn't mean we can just sit back and relax. UX designers and developers will need to start thinking about this now—integrating quantum-safe protocols into the design process before quantum computers hit mainstream use. This isn’t about going overboard and asking users for retina scans, blood tests, and their firstborn child’s name just to get into a website (although, you know, some people might enjoy that level of complexity). It’s about doing the work upfront so we don’t hit the panic button when quantum computing starts cracking through encryption faster than we can say “quantum supremacy.”</p>
+<p class="bp__content">And here’s where ThoughtLab comes into play. As a design and branding powerhouse, we’re helping our clients not only build secure systems today but also prepare for the future-proofed designs that quantum computing will demand. This means creating user experiences that aren’t just intuitive and beautiful but also secure and adaptable to the quantum age. We’re working with brands to quantum-proof their systems and ensure their users have safe, seamless experiences no matter what tech is thrown their way.</p>
+<h2 class="bp__content">A Quantum Leap for the UX Industry: Preparing for the Inevitable</h2>
+<p class="bp__content">Now, let’s talk about what this all means for the UX industry—because you, my dear friend, are likely a part of this dynamic field, and that’s why you’re reading this blog in the first place (or you’re just really into quantum computing, which is a whole different thing, but hey, I respect that). So, what’s the big takeaway for UX designers and developers? Start thinking quantum.</p>
+<p class="bp__content">I get it, you’ve got a full plate as it is: wireframes, prototypes, user testing, design sprints, and don’t forget about the never-ending battle against the dreaded client revisions. But now, you’ve got this new thing looming on the horizon—quantum computing. It’s like someone handed you a shiny new toy, and you’re thinking, “Great, just what I needed. Another thing to add to the list of ‘stuff that keeps me up at night.’”</p>
+<p class="bp__content">But here’s the thing: quantum computing isn’t just an IT problem. It’s an UX problem too. If quantum computing can break the encryption we currently use to secure personal data, we need to make sure we’re ready to handle it when it happens. As quantum technologies progress, UX professionals will need to design experiences that are not just intuitive and easy to use but also quantum-safe.</p>
+<p class="bp__content">In the same way that the internet of things (IoT) changed the way we think about security for connected devices, quantum computing is going to change the way we think about secure interactions online. It's no longer enough to have a password that’s difficult to guess or even a 2FA code that sends to your phone. We’ll need to design systems that incorporate quantum-resistant encryption without complicating the user experience. That’s the challenge for UX designers in a quantum world—making the complex feel simple and secure.</p>
+<p class="bp__content">But how do we do that?</p>
+<p class="bp__content">It starts by keeping an eye on the future and understanding the role of quantum-safe technologies. We’ve got quantum key distribution, post-quantum cryptography, and the potential for new forms of authentication that don’t just rely on traditional passwords. Some of these systems are still in development, but UX designers need to stay ahead of the curve by familiarizing themselves with these emerging technologies. It’s not enough to just know what quantum computing is—designers need to understand how it will change the very foundation of how users authenticate, interact with data, and even trust websites.</p>
+<p class="bp__content">At <a href="/" target="_blank" rel="noopener noreferrer" class="link bp__content">ThoughtLab</a>, we’re already thinking about this as we help brands future-proof their digital experiences. Our goal isn’t just to design websites that look pretty or that work in the present moment. It’s about creating experiences that can adapt to the future—where quantum-safe protocols are standard, and security is built into every touchpoint, from login screens to checkout pages.</p>
+                      <figure class="bp__figure__img">
+                  <img width="1400" height="933" src="/wp-content/uploads/2025/05/Z_gbCuvxEdbNO33U_mark-rabe-bxagmGPCaFw-unsplash.jpg" alt="A black shoe hanging off the edge of a square black stool" class="full-width">
+              </figure>
+                      <h2 class="bp__content">The Quantum Edge: The Challenges and Opportunities for Web Designers</h2>
+<p class="bp__content">Alright, let’s take a step back for a moment. I’ve been yammering on about the problems quantum computing is going to create for web security and user experience. Now, let’s flip the script and talk about the good stuff. Because, as with any disruptive technology, there are going to be some serious opportunities for web designers and developers who are ready to embrace the change.</p>
+<p class="bp__content">Think about it this way: right now, we’re all on the quantum precipice. We can see it coming, but we’re not quite sure how it’s going to shake out. It’s a little like standing at the edge of a cliff and wondering if you’re about to jump or if someone’s going to push you into a giant vat of liquid nitrogen. Either way, we’re going to experience a major shift. But here’s the thing: those who prepare will have a huge advantage. Web designers, developers, and UX professionals who understand quantum-safe technologies will not just survive—they’ll thrive.</p>
+<p class="bp__content">Here’s where the opportunities start to unfold. Think about how quantum computing is going to change everything from authentication methods to how we handle data privacy. We’re already seeing the development of quantum-safe encryption, which will allow us to create more secure systems that users will trust. As designers, we’ll have the chance to build seamless security into everything from login screens to shopping carts, all while ensuring that users don’t feel like they’re navigating a digital maze of doom.</p>
+<p class="bp__content">One area where quantum computing can really shine is in the world of AI-powered personalization. Imagine that, instead of relying on clunky, traditional methods of data processing, you could use quantum computing’s power to create hyper-personalized experiences at lightning speed. Websites and apps could tailor content, offers, and even the layout based on real-time user behavior, making the experience feel uniquely designed for each individual.</p>
+<p class="bp__content">The catch? Well, the catch is that we’re going to need to be smart about how we integrate quantum-safe protocols into these systems. No one wants to create a cutting-edge AI experience only to have it blown apart by a quantum hack because the security wasn’t up to par. This is where ThoughtLab comes into play. At <a href="https://www.thoughtlab.com/capabilities/branding-agency/" target="_blank" rel="noopener noreferrer" class="link bp__content" data-router-disabled="">ThoughtLab, we’re helping brands</a> not just ride the quantum wave, but lead it. From quantum-safe design principles to securing user data in a quantum world, we’re making sure our clients stay ahead of the curve, creating experiences that aren’t just secure but also adaptable to future tech developments.</p>
+<h2 class="bp__content">The Role of Web Designers in the Quantum Age: Future-Proofing UX</h2>
+<p class="bp__content">Okay, so now we’ve talked about the looming quantum threat and the shiny, sparkly opportunities ahead. But here’s the real question for you, dear web designer: What role do you play in all this?</p>
+<p class="bp__content">As quantum computing becomes more pervasive, the responsibility for securing digital spaces will fall squarely on your shoulders. UX is no longer just about making things look nice or making sure buttons are in the right place. It’s about creating experiences that are both user-friendly and quantum-safe. You’ve got to think about privacy, security, and accessibility all while making sure users have a smooth, seamless experience.</p>
+<p class="bp__content">Here’s the good news: UX designers are naturally problem solvers. So while quantum computing might seem like a huge roadblock, we’re the ones who figure out how to smooth the path. That’s our superpower. And if you think you’re just doing the visual side of things, you’re missing out on the chance to create experiences that are ahead of the curve—experiences that are not just future-proof but also quantum-resilient.</p>
+<p class="bp__content">How can we future-proof UX in the age of quantum computing? Well, let’s start by building security into the design process from the beginning. Think about it: you’re already designing for things like user authentication, data encryption, and privacy policies. What happens when quantum computing makes today’s encryption methods obsolete? You’ll need to start integrating quantum-safe encryption protocols into your designs now—before they become a necessity. It’s about taking a proactive approach instead of a reactive one.</p>
+<p class="bp__content">Additionally, AI and quantum computing will allow us to create hyper-responsive, hyper-intelligent systems. But just because the tech is smarter doesn’t mean it should be harder for the user to interact with. Keep the simplicity and seamlessness of UX while integrating security, because if there’s one thing we know about users, it’s that they won’t stick around if their experience feels like navigating a maze.</p>
+<p class="bp__content">This is where ThoughtLab’s approach shines through. We’re already thinking about how designs can incorporate quantum-safe encryption without sacrificing the user experience. At ThoughtLab, we’re not just adapting to quantum computing—we’re helping our clients embrace it. The future of web design isn’t about keeping things the same; it’s about innovating and staying ahead of quantum risks.</p>
+                      <figure class="bp__figure__img">
+                  <img width="940" height="1400" src="/wp-content/uploads/2025/05/Z_gbhuvxEdbNO33o_juan-goyache-jHccqSfdZ0w-unsplash.jpg" alt="A man on a rope scaling the rock face at the edge of a waterfall" class="full-width">
+              </figure>
+                      <p></p>
+<h2 class="bp__content">Building for the Quantum Future: Why It’s Worth the Effort</h2>
+<p class="bp__content">Alright, so now we’ve got a pretty good handle on what the future of web design might look like in the quantum age. The tools will change, the methods will evolve, and we’ll need to find new ways to secure user data and create experiences that feel secure and intuitive. But here’s the million-dollar question: Is all this effort really worth it?</p>
+<p class="bp__content">In short, absolutely.</p>
+<p class="bp__content">I know, I know—it might seem like a ton of work. You’re already juggling deadlines, revisions, and the constant pressure to out-design your competitors. But here’s the kicker: the quantum future isn’t optional. It’s coming, whether we like it or not. So we can either wait until the quantum revolution is fully upon us and scramble to catch up, or we can start preparing today. And let’s be real—waiting until the last minute is never a good idea. Trust me, I’ve tried that approach with far too many deadlines in my life, and spoiler alert: it doesn’t work.</p>
+<p class="bp__content">By starting the quantum-safe design conversation today, you’re not just making sure your designs are secure; you’re also positioning yourself as an industry leader. Clients want to work with designers who are future-focused and understand the challenges of tomorrow. They want partners who are thinking about how to prepare for quantum risks, not just react to them when they inevitably arrive.</p>
+<p class="bp__content">But the real kicker? User trust. If you’re building websites that use quantum-safe encryption and are prepared for the challenges ahead, your users will feel safer interacting with your platform. And trust is the foundation of any great user experience. When people trust your site to keep their personal information secure, they’re more likely to stick around, make purchases, and engage with your content. So it’s not just about the technology—it’s about the relationships you’re building with your users.</p>
+<p class="bp__content">And let’s not forget that with quantum computing comes the potential for supercharged UX. Think about how quantum computing could accelerate AI, enabling us to create hyper-intelligent interfaces that feel almost human in their ability to anticipate user needs. Imagine websites that predict what you want, personalize the experience in real time, and adapt based on the nuances of your behavior. Sounds pretty cool, right? And it’s not some far-off sci-fi fantasy. This could be the reality within the next decade if we play our cards right.</p>
+<p class="bp__content">So, is it worth it? Yes. It’s worth it because we’re not just building for today—we’re building for a future where quantum computing transforms the way we interact with technology, and where web design needs to be agile, resilient, and ahead of the curve.</p>
+                      <figure class="bp__figure__img">
+                  <img width="1031" height="1400" src="/wp-content/uploads/2025/05/Z_gcSuvxEdbNO339_museums-victoria-yBM9qXvIi5g-unsplash.jpg" alt="A old military recruiting poster with a man blowing a bugle standing astride men with guns" class="full-width">
+              </figure>
+                      <h2 class="bp__content">ThoughtLab: Leading the Charge in Quantum-Resilient Design</h2>
+<p class="bp__content">Okay, so let’s talk about ThoughtLab and how we’re not just sitting back, waiting for the quantum apocalypse to hit us like a bad plot twist. We’re actively shaping the future of web design by focusing on quantum resilience—because if there’s one thing we’ve learned in this series, it’s that the digital landscape is only going to get more complex. And if we’re not ahead of the curve, we’ll be left behind.</p>
+<p class="bp__content">At <a href="/capabilities/web-design-agency/" target="_blank" rel="noopener noreferrer" class="link bp__content">ThoughtLab, we’re not just designers</a> and strategists; we’re forward-thinkers. When it comes to creating brands and digital experiences that can withstand the impact of quantum computing, we’re already working on the strategies that will make sure our clients are secure, adaptable, and ready for anything. This isn’t just about surviving the quantum future—it’s about thriving in it.</p>
+<p class="bp__content">How do we do this? It’s simple. We integrate quantum-safe encryption into our design philosophy right from the start. When we build a brand, we’re thinking about how it will stand up to future tech challenges. When we craft a user experience, we’re not just thinking about what works today. We’re asking: Will this still be secure five, ten, or twenty years from now?</p>
+<p class="bp__content">And let’s face it: designing for the future isn’t just about tech—it's about trust. We don’t want our users just to trust our designs in the moment. We want them to trust that we’ve built something that will stand the test of time—something that doesn’t just protect their data today, but is ready to adapt as quantum computing continues to evolve.</p>
+<p class="bp__content">So, while everyone else is still trying to figure out what the future holds, ThoughtLab is already laying the groundwork for a quantum-resilient future. We’re combining the best of design and technology to make sure our clients are not just prepared but also ahead of the pack.</p>
+<h2 class="bp__content">Summing Up</h2>
+<p class="bp__content">Well, folks, we’ve covered a lot of ground in this quantum computing journey. From encryption nightmares to quantum-safe UX design, we’ve delved deep into the future of web design in the quantum age. So, what’s the final takeaway from all of this?</p>
+<p class="bp__content">One thing is clear: quantum computing is coming, and it’s not going to politely knock on the door and ask if it can crash the party. It’s going to bust through the windows, grab the snacks, and probably rearrange the furniture while it’s at it. But here’s the good news—we’re ready for it. Well, maybe not "ready" in the sense of having all the answers, but we’re preparing, and that’s half the battle.</p>
+<p class="bp__content">The future of web design and UX will be shaped by our ability to integrate quantum-safe systems and embrace the changes quantum computing will bring. It’s about creating secure, seamless, and adaptable user experiences that can stand the test of time and the onslaught of quantum technology.</p>
+<p class="bp__content">And let’s be honest, it’s going to be a wild ride. But that’s the fun of it, right? If we can adapt, innovate, and stay ahead of the quantum curve, we’ll find ourselves not just surviving in the quantum future, but thriving.</p>
+<p class="bp__content">As always, <strong>ThoughtLab </strong>is here to lead the charge. We’re already working on the tools, strategies, and systems that will help our clients build the quantum-resilient designs of tomorrow. We’re not just designing for today—we’re designing for the next generation of web experiences, ones that will keep users safe, engaged, and, hopefully, a little less stressed about the digital world.</p>
+<p class="bp__content">So, quantum computing might seem like a futuristic threat, but it's really an opportunity to level up our security, UX, and overall web experience. And guess what? We’re ready. Are you?</p>
+            </div>
+  </div>
+
+      <article class="bp-next rel row row--l gutter c-white" data-smooth-item="">
+      <a href="https://www.thoughtlab.com/blog/is-your-job-safe-from-the-quantum-revolution/" class="x df aic rel bp-next__inner img-fill" data-router-disabled="" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/2025/05/Z_7I0OvxEdbNPGLg_eric-prouzet-B3UFXwcVbc4-unsplash.jpg" alt="A borded up window with two red signs; We Are Hiring &amp; Apply Today">
+        <div class="row row--l rel s:abs s:top s:left s:x s:y z2 ph30 s:ph0">
+          <div class="gutter s:col10 s:mcoll2 df fc jcc">
+            <span class="mb30">Next story:</span>
+            <h5 class="bp-next__title f30 s:f37 lh100">
+              &nbsp;Is Your Job Safe from the Quantum Revolution?            </h5>
+          </div>
+        </div>
+      </a>
+    </article>
+  
+  <footer class="sf sf--light pb45 c-black" data-smooth-item="">
+  <div class="row row--s rel gutter  pt45"></div>
+  <div class="row row--s fw sumo_footer">
+    <ul class="dn s:db s:col4">
+      <li><a href="/projects/" class="lh120 f12">Projects<sup>22</sup></a></li>
+      <li><a href="/about/" class="lh120 f12">About</a></li>
+      <li><a href="/careers/" class="lh120 f12">Careers<sup>1</sup></a></li>
+      <li><a href="/contact/" class="lh120 f12">Contact</a></li>
+    </ul>
+    <ul class="dn s:db gutter">
+      <li><a href="/blog/" class="lh120 f12">Toniq<sup>BLOG</sup></a></li>
+      <li><a href="/privacy-policy/" class="lh120 f12">Privacy Policy</a></li>
+    </ul>
+    <form name="Newsletter" id="footer-newsletter-form" method="post" class="nl mla df fc" action="/local-api/contact">
+      <input type="hidden" name="action" value="tl_contact_form_submit">
+      <input type="hidden" name="contact_nonce" value="9cf42955a4">
+      <input type="hidden" name="form_type" value="newsletter">
+      <input type="hidden" name="returnUrl" id="returnUrlNewsLetter" value="https://www.thoughtlab.com/thank-you/">
+      <input type="hidden" name="form_name" placeholder="Form name" value="Newsletter">
+      <input type="hidden" name="form_tags" id="form_tags" value="newsletter">
+      <label class="nl-label f12 mb15">Join our Community</label>
+      <div class="nl-input input-wrap input-wrap--s rel">
+          <input type="email" name="email" placeholder="Email address">
+          <input type="hidden" name="name" value="Newsletter">
+          <button type="submit" class="nl__arrow abs top right df aic jce y pr15" aria-label="Submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.11 12.14"><path d="M11.92 5.62c-.01 0-.01 0 0 0-.01 0-.01 0 0 0L6.49.19a.664.664 0 10-.94.94l4.95 4.95L5.58 11a.664.664 0 10.94.94l5.39-5.39c.27-.25.27-.67.01-.93zm-4.14.55c0-.36-.3-.66-.66-.66L.66 5.49a.66.66 0 100 1.32l6.45.02c.37 0 .67-.29.67-.66z"></path></svg>
+          </button>
+      </div>
+    </form>
+  </div>
+  <div class="row row--s gutter jcb mt60 footer_copyright">
+    <div class="sf-cr c-grey-2 footer_copyright_year">
+      <p class="f10px s:f14px">© 1999_2026 / ThoughtLab LLC. All rights reserved.</p>
+    </div>
+    <div class="sf-locs c-grey-2 mla footer_copyright_cities">
+      <p class="f10px s:f14px"><a class="f10px s:f14px" href="/locations/salt-lake-city/">SLC<sup>HQ</sup></a> / <a class="f10px s:f14px" href="/locations/new-york-city/">NYC</a> / <a class="f10px s:f14px" href="/locations/atlanta/">ATL</a> / <a class="f10px s:f14px" href="/locations/san-francisco/">SF</a></p>
+    </div>
+  </div>
+</footer>
+</article>
+
+</main>
+
+<script id="tl-app-js-extra">var tlTheme={assetBase:"/wp-content/themes/thoughtlab",ajaxUrl:"/local-api/contact",contactNonce:"local-preview"};</script>
+<script type="module" id="tl-app-js" src="/wp-content/themes/thoughtlab/dist/assets/app.67105252.js"></script>
+
+
+
+<div id="local-app"></div></body></html>

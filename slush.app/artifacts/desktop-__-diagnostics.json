@@ -1,0 +1,325 @@
+{
+  "route": "/",
+  "width": 1440,
+  "height": 12605,
+  "overflow": 0,
+  "headings": [
+    "Slush",
+    "Your money. Unstuck.",
+    "All Things Sui",
+    "All in",
+    "SLUSH wallet",
+    "Your shortcut to DeFi.",
+    "Explore DeFi Opportunities",
+    "SIMPLE, DIRECT EXECUTION",
+    "Wallet Ready, Simplified Options",
+    "Earn, swap, and explore securely on Sui—with none of the hassle",
+    "Slush is always within reach",
+    "Don’tBelieve us?",
+    "Crypto for humans.Not just degens.",
+    "Seamlessly connect to the Sui ecosystem",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/3fe228a8a8a9-6870becddb972b0b143dfe65_Slush_Logo_3D_Blue.avif",
+      "width": 2896,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/87865eaf6476-680905cfdc45073838364990_slush-download-qr.png",
+      "width": 656,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/69f2e27ac9a4-6929d1f2c1b319b79884aac5_Frame_2147264130.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/84dd93ee8695-6929d1f2709cc1f9afbd703a_Frame_2147264131.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/cd700a082b5b-69a75c92e65e1b79e8fd2335_Group_2147261352.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e725a6178a96-6929f2042f74bf0088a4c48e_Group_2147261264.svg",
+      "width": 538,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/3cf9fa3dc711-680905cfdc4507383836497e_logo-icon-8.png",
+      "width": 528,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b70687d342c2-680905cfdc4507383836498e_logo-icon-2.png",
+      "width": 528,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/42d27cbc51f3-680905cfdc45073838364983_logo-icon-5.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/92d87e3b613f-680905cfdc45073838364985_logo-icon-3.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b6f41f5ae0de-680905cfdc45073838364980_logo-icon-4.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/c1fa0f2c5628-680905cfdc4507383836497d_logo-icon-1.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/3cf9fa3dc711-680905cfdc4507383836497e_logo-icon-8.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b70687d342c2-680905cfdc4507383836498e_logo-icon-2.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/42d27cbc51f3-680905cfdc45073838364983_logo-icon-5.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/92d87e3b613f-680905cfdc45073838364985_logo-icon-3.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b6f41f5ae0de-680905cfdc45073838364980_logo-icon-4.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/c1fa0f2c5628-680905cfdc4507383836497d_logo-icon-1.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/3cf9fa3dc711-680905cfdc4507383836497e_logo-icon-8.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b70687d342c2-680905cfdc4507383836498e_logo-icon-2.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/42d27cbc51f3-680905cfdc45073838364983_logo-icon-5.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/6dff6b5de63d-680905cfdc45073838364982_logo-icon-7.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/92d87e3b613f-680905cfdc45073838364985_logo-icon-3.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b6f41f5ae0de-680905cfdc45073838364980_logo-icon-4.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/c1fa0f2c5628-680905cfdc4507383836497d_logo-icon-1.png",
+      "width": 528,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/afd0029f6187-680905cfdc45073838364989_logo-icon-15.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/962901138a14-680905cfdc45073838364988_logo-icon-10.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e3834774286b-680905cfdc45073838364987_logo-icon-13.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/f69026ca7396-680905cfdc4507383836498b_logo-icon-14.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/4aa5f98557b4-680905cfdc45073838364984_logo-icon-11.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/214568171194-680905cfdc4507383836498a_logo-icon-12.png",
+      "width": 531,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/feb9fa494b55-680905cfdc4507383836497f_logo-icon-9.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e6df40661bd2-680905cfdc45073838364986_logo-icon-6.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/afd0029f6187-680905cfdc45073838364989_logo-icon-15.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/962901138a14-680905cfdc45073838364988_logo-icon-10.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e3834774286b-680905cfdc45073838364987_logo-icon-13.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/f69026ca7396-680905cfdc4507383836498b_logo-icon-14.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/4aa5f98557b4-680905cfdc45073838364984_logo-icon-11.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/214568171194-680905cfdc4507383836498a_logo-icon-12.png",
+      "width": 531,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/feb9fa494b55-680905cfdc4507383836497f_logo-icon-9.png",
+      "width": 1440,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e6df40661bd2-680905cfdc45073838364986_logo-icon-6.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/afd0029f6187-680905cfdc45073838364989_logo-icon-15.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/962901138a14-680905cfdc45073838364988_logo-icon-10.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e3834774286b-680905cfdc45073838364987_logo-icon-13.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/f69026ca7396-680905cfdc4507383836498b_logo-icon-14.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/4aa5f98557b4-680905cfdc45073838364984_logo-icon-11.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/214568171194-680905cfdc4507383836498a_logo-icon-12.png",
+      "width": 531,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/feb9fa494b55-680905cfdc4507383836497f_logo-icon-9.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/e6df40661bd2-680905cfdc45073838364986_logo-icon-6.png",
+      "width": 1440,
+      "loaded": false
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

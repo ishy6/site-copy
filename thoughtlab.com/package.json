@@ -1,0 +1,25 @@
+{
+  "name": "thoughtlab-replica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5179",
+    "typecheck": "vue-tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5191",
+    "test": "playwright test",
+    "reference:sync": "node scripts/sync-reference.mjs",
+    "reference:audit": "node scripts/audit-reference.mjs"
+  },
+  "dependencies": {"vue": "^3.5.42"},
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.4.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "cheerio": "^1.2.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2",
+    "vue-tsc": "^3.3.11"
+  }
+}

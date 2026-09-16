@@ -1,0 +1,54 @@
+{
+  "route": "/guides",
+  "width": 1440,
+  "height": 4196,
+  "overflow": 0,
+  "headings": [
+    "User Guides",
+    "Slush Strategies",
+    "Slush Tour",
+    "Use Slush Links",
+    "Fund your wallet",
+    "Connect to NFT marketplaces",
+    "Create your account",
+    "Connect to apps",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/4bc00347dfc8-680905cfdc45073838364961_guides-cta-links.avif",
+      "width": 1281,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/419bf88d7911-680905cfdc45073838364960_guides-cta-nft.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/8d1d03b33763-680905cfdc4507383836495f_guides-cta-apps.avif",
+      "width": 1287,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

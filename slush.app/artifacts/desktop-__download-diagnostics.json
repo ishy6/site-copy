@@ -1,0 +1,45 @@
+{
+  "route": "/download",
+  "width": 1440,
+  "height": 4924,
+  "overflow": 0,
+  "headings": [
+    "downloadslush",
+    "Get started with the Slush web app",
+    "Download the Slush extension",
+    "Download the Slush app",
+    "Your inbox just got better",
+    "Always Here to Help",
+    "Download Slush. Then Make it All Happen."
+  ],
+  "errors": [],
+  "failures": [],
+  "remote": [],
+  "media": [
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5a43a23271d8-67f7ce4359a6e2706dc1b2a6_icon-chrome.png",
+      "width": 193,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/c8cbb171a8c5-698cb1663852399254502f70_Group_2147260871.svg",
+      "width": 42,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/b1478cc80225-698cb1ab864adcbc173ae72b_logo-android.svg",
+      "width": 43,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/5ebd18e0ad95-698cb3c4fa3379976a7ecb5d_Group_2147260870.svg",
+      "width": 188,
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5192/reference/assets/735f44c0b81a-698cb34210045db18a3b10ee_Vector.svg",
+      "width": 26,
+      "loaded": true
+    }
+  ]
+}

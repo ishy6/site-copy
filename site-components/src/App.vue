@@ -86,7 +86,7 @@ onBeforeUnmount(() => { window.removeEventListener('hashchange', updateHash); wi
       <div class="sidebar-bottom"><Asterisk :size="24" /><div>Collected with care.<span>Built from real projects.</span></div><span class="sidebar-bottom-count">{{ entries.length.toString().padStart(2, '0') }}</span></div>
     </aside>
     <main id="main-content" class="main-content" tabindex="-1">
-      <ComponentDetail v-if="route.view === 'component' && selected" :entry="selected" :saved="favorites.includes(selected.id)" :back-href="backHref" @save="toggleSave" @notice="showNotice" />
+      <ComponentDetail v-if="route.view === 'component' && selected" :entry="selected" :saved="favorites.includes(selected.id)" :back-href="backHref" :initial-tab="route.query.get('tab') === 'implementation' ? 'implementation' : 'preview'" @save="toggleSave" @notice="showNotice" />
       <div v-else-if="route.view === 'component' || !['', 'styles', 'saved'].includes(route.view)" class="empty-state"><Boxes :size="32" /><h1>Page not found.</h1><a href="#/">Back to collection<ArrowUpRight :size="16" /></a></div>
       <template v-else>
         <div class="breadcrumb"><span>Workspace</span><ChevronRight :size="12" /><span>{{ isStyles ? 'Styles' : 'Components' }}</span></div>
